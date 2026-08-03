@@ -160,3 +160,18 @@ The shape language is **Strict and Professional**. A "Soft" roundedness (4px - 8
 - **Chips/Badges:** Small, all-caps labels in `label-sm` style. Use for dietary tags (e.g., "KETO", "VEGAN") with a light gold tint background.
 - **Progress Bars:** For tracking weight or health goals, use a thin 4px bar with a `prestige-gold` fill against a `slate-subtle` track.
 - **Service Lists:** Use elegant serif numbering (1, 2, 3) for program steps to emphasize the "methodology" of the clinic.
+- **FAQ Accordion:** Native `<details>/<summary>` elements — no JS required, fully crawlable and accessible. Question uses `headline-md` styling; a `material-symbols-outlined` "add" icon rotates 45° on `[open]` to become a close (×) affordance. Divider rows use `slate-subtle` borders, matching the card border language rather than shadows.
+
+## Heading Hierarchy
+
+Strict, no-skip nesting is enforced site-wide: one `h1` (hero), `h2` for each major section title ("Bespoke Wellness Programs," "Your Personal Nutrition Expert, Gauri," "Select Your Trajectory," "Client Success Stories," "Frequently Asked Questions," "Understand your body metrics clearly," "Ready to begin your transformation?"), and `h3` for any sub-block within a section (program cards, goal-preview protocol titles, footer column labels). Never skip a level (e.g. `h2` straight to `h4`) — screen readers and search crawlers both rely on the outline to understand page structure.
+
+## SEO & AEO (Answer Engine Optimization)
+
+- **Metadata:** `<title>` and meta description should name the service + location ("Nutritionist & Dietitian in Mumbai") since local-intent search and AI answer engines both weight locality heavily. Every page needs `og:site_name`, `og:locale`, `og:url`, and explicit `og:image` width/height — partial Open Graph tags degrade how link previews render on WhatsApp, LinkedIn, and X.
+- **Images:** Do not ship AI-tool preview URLs (e.g. `lh3.googleusercontent.com/aida/...`) as production `og:image`/`twitter:image`/logo sources — they are ephemeral and will 404 silently, breaking social previews and image search with no visible error. Self-host all production imagery before publishing, and always pair `<img>` with explicit `width`/`height` (real intrinsic dimensions, not display size) to prevent layout shift.
+- **Structured data must match visible content.** A `FAQPage` schema is only valid — and only useful to AI answer engines — if the same questions and answers are visibly rendered on the page (see the FAQ Accordion component above). Don't ship JSON-LD for content that isn't on the page.
+- **Reviews/ratings:** testimonials rendered on the page are mirrored in `MedicalBusiness` JSON-LD as `review` + `aggregateRating`, and the six program cards are mirrored as a `hasOfferCatalog` list of `Service` offers — this gives both Google rich results and LLM-based answer engines a structured, citable summary of what the clinic offers, not just prose.
+- **No dead CTAs:** every button/link in a hero or nav must resolve to a real anchor or action (e.g. "Explore Programs" → `#programs`). Dead buttons hurt bounce rate, which is itself an indirect ranking signal.
+- **Favicon & theme-color:** every deployed site needs a `rel="icon"` and a `theme-color` meta at minimum — their absence is a common oversight that affects bookmark/tab branding and mobile browser chrome.
+- **Canonical URL:** must match the real publish domain exactly (protocol, subdomain, trailing slash) before going live — a mismatched canonical can cause search engines to index the wrong URL or none at all.
