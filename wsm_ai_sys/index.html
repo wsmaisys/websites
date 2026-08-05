@@ -1,0 +1,1742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSM AI SYS — Web Development & AI Solutions in Dehradun</title>
+    <meta
+      name="description"
+      content="WSM AI SYS builds web development, custom apps, and AI solutions for small businesses in Dehradun, Uttarakhand. Practical digital tools to grow leads, automate operations, and improve customer experience."
+    />
+    <meta
+      name="keywords"
+      content="Web development Dehradun, AI solutions for small business, business automation, custom app development, AI chatbot development, local web agency Uttarakhand"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://wsmaisys.github.io/" />
+    <!-- SEO: Open Graph and social preview tags -->
+    <meta
+      property="og:title"
+      content="WSM AI SYS — Web Development & AI Solutions in Dehradun"
+    />
+    <meta
+      property="og:description"
+      content="Practical websites, custom business apps, and AI solutions for small businesses in Dehradun. Built clearly, delivered reliably, and designed to help you grow."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wsmaisys.github.io/" />
+    <meta
+      property="og:image"
+      content="https://wsmaisys.github.io/assets/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="WSM AI SYS website and AI solutions preview"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://wsmaisys.github.io/assets/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="WSM AI SYS website and AI solutions preview"
+    />
+    <!-- SEO: Favicons and Apple Touch Icon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- Performance: font preconnect and prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "WSM AI SYS",
+        "url": "https://wsmaisys.github.io/",
+        "logo": "https://wsmaisys.github.io/logo.png",
+        "image": "https://wsmaisys.github.io/assets/og-image.png",
+        "telephone": "+917253923415",
+        "email": "wsmaisys@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dehradun",
+          "addressRegion": "Uttarakhand",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "30.3165",
+          "longitude": "78.0322"
+        },
+        "areaServed": "Dehradun, Uttarakhand, India",
+        "sameAs": [
+          "https://www.linkedin.com/in/wsmaisys",
+          "https://github.com/wsmaisys"
+        ],
+        "description": "WSM AI SYS builds web development, custom apps, and AI solutions for small businesses in Dehradun, Uttarakhand."
+      }
+    </script>
+    <style>
+      :root {
+        --bg-void: #0a0e1a;
+        --bg-panel: #12172c;
+        --bg-panel-hi: #171d38;
+        --accent-indigo: #6c5ce7;
+        --accent-cyan: #3fe0d0;
+        --accent-amber: #ffb86b;
+        --text-primary: #f2f4fa;
+        --text-muted: #8d93ac;
+        --border-glass: rgba(255, 255, 255, 0.08);
+        --border-glass-hi: rgba(255, 255, 255, 0.16);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        position: relative;
+        background: var(--bg-void);
+        color: var(--text-primary);
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      #bg-canvas {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        pointer-events: none;
+      }
+      footer {
+        position: relative;
+        z-index: 1;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .eyebrow {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-cyan);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent-cyan);
+        box-shadow: 0 0 8px var(--accent-cyan);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      section {
+        position: relative;
+        padding: 96px 0;
+      }
+      @media (max-width: 720px) {
+        section {
+          padding: 64px 0;
+        }
+      }
+
+      /* ---------- NAV ---------- */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(10, 14, 26, 0.72);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border-glass);
+      }
+      .nav-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 16px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: -0.01em;
+      }
+      .logo span {
+        color: var(--accent-cyan);
+      }
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 14.5px;
+        color: var(--text-muted);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--text-primary);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 14.5px;
+        cursor: pointer;
+        border: none;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+        white-space: nowrap;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent-amber), #ff9d4d);
+        color: #1a1206;
+        box-shadow: 0 4px 20px rgba(255, 184, 107, 0.25);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(255, 184, 107, 0.4);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border-glass-hi);
+      }
+      .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: var(--accent-cyan);
+      }
+      .nav-cta {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 26px;
+        cursor: pointer;
+      }
+      @media (max-width: 860px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-cta .btn-ghost {
+          display: none;
+        }
+        .menu-toggle {
+          display: block;
+        }
+      }
+
+      /* ---------- HERO ---------- */
+      .hero {
+        padding-top: 160px;
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 40px;
+        align-items: center;
+      }
+      @media (max-width: 900px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding-top: 130px;
+          min-height: auto;
+        }
+      }
+      .hero h1 {
+        font-size: clamp(34px, 5vw, 58px);
+        line-height: 1.08;
+        margin: 20px 0 22px;
+      }
+      .hero h1 .accent {
+        background: linear-gradient(
+          90deg,
+          var(--accent-cyan),
+          var(--accent-indigo)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero p {
+        font-size: 17.5px;
+        color: var(--text-muted);
+        max-width: 480px;
+        margin-bottom: 34px;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .hero-visual {
+        position: relative;
+        height: 460px;
+      }
+      #hero-canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      @media (max-width: 900px) {
+        .hero-visual {
+          height: 320px;
+        }
+      }
+
+      .trust-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        margin-top: 48px;
+        padding-top: 28px;
+        border-top: 1px solid var(--border-glass);
+      }
+      .trust-strip .item {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .trust-strip .item svg {
+        flex-shrink: 0;
+      }
+
+      /* ---------- SECTION HEAD ---------- */
+      .section-head {
+        max-width: 600px;
+        margin-bottom: 56px;
+      }
+      .section-head h2 {
+        font-size: clamp(26px, 3.4vw, 38px);
+        margin-top: 14px;
+      }
+      .section-head p {
+        color: var(--text-muted);
+        font-size: 16px;
+        margin-top: 14px;
+      }
+
+      /* ---------- SERVICES ---------- */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      @media (max-width: 900px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .service-card {
+        background: linear-gradient(
+          160deg,
+          var(--bg-panel-hi),
+          var(--bg-panel)
+        );
+        border: 1px solid var(--border-glass);
+        border-radius: 18px;
+        padding: 30px 26px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition:
+          border-color 0.25s,
+          box-shadow 0.25s;
+        will-change: transform;
+      }
+      .service-card:hover {
+        border-color: var(--border-glass-hi);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      }
+      .service-card.specialty {
+        grid-column: span 1;
+        border-color: rgba(63, 224, 208, 0.35);
+        background: linear-gradient(160deg, #16233a, var(--bg-panel));
+      }
+      .service-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(108, 92, 231, 0.14);
+        color: var(--accent-cyan);
+        margin-bottom: 22px;
+      }
+      .service-card.specialty .service-icon {
+        background: rgba(63, 224, 208, 0.16);
+      }
+      .service-tag {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent-amber);
+        background: rgba(255, 184, 107, 0.12);
+        padding: 4px 10px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 14px;
+      }
+      .service-card h3 {
+        font-size: 19px;
+        margin-bottom: 10px;
+      }
+      .service-card p {
+        color: var(--text-muted);
+        font-size: 14.5px;
+      }
+
+      /* ---------- WHY ---------- */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      @media (max-width: 900px) {
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 520px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .why-item .num {
+        font-family: "JetBrains Mono", monospace;
+        color: var(--accent-indigo);
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+      .why-item h3 {
+        font-size: 17px;
+        margin-bottom: 8px;
+      }
+      .why-item p {
+        color: var(--text-muted);
+        font-size: 14px;
+      }
+
+      /* ---------- ABOUT ---------- */
+      .about-inner {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      @media (max-width: 860px) {
+        .about-inner {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
+      .about-card {
+        background: var(--bg-panel);
+        border: 1px solid var(--border-glass);
+        border-radius: 20px;
+        padding: 34px;
+      }
+      .about-card .big {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 44px;
+        color: var(--accent-cyan);
+      }
+      .about-card .label {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-top: 6px;
+      }
+      .about-text p {
+        color: var(--text-muted);
+        margin-bottom: 16px;
+        font-size: 16px;
+      }
+      .about-text strong {
+        color: var(--text-primary);
+      }
+
+      /* ---------- WORK ---------- */
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      @media (max-width: 860px) {
+        .work-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .work-card {
+        border-radius: 18px;
+        border: 1px solid var(--border-glass);
+        overflow: hidden;
+        background: var(--bg-panel);
+      }
+      .work-thumb {
+        display: block;
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        object-position: center;
+        border-bottom: 1px solid var(--border-glass);
+        background: linear-gradient(
+          135deg,
+          rgba(108, 92, 231, 0.35),
+          rgba(63, 224, 208, 0.2)
+        );
+      }
+      .work-body {
+        padding: 22px;
+      }
+      .work-body h3 {
+        font-size: 16.5px;
+        margin-bottom: 8px;
+      }
+      .work-body p {
+        color: var(--text-muted);
+        font-size: 13.5px;
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 18px;
+      }
+      details {
+        border: 1px solid var(--border-glass);
+        border-radius: 18px;
+        padding: 22px 24px;
+        background: var(--bg-panel);
+      }
+      details summary {
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-primary);
+        outline: none;
+      }
+      details p {
+        margin-top: 14px;
+        color: var(--text-muted);
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      /* ---------- CONTACT ---------- */
+      .contact-inner {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 50px;
+      }
+      @media (max-width: 900px) {
+        .contact-inner {
+          grid-template-columns: 1fr;
+        }
+      }
+      .contact-side h2 {
+        font-size: clamp(26px, 3.4vw, 36px);
+        margin-top: 14px;
+        margin-bottom: 16px;
+      }
+      .contact-side p {
+        color: var(--text-muted);
+        font-size: 15.5px;
+        margin-bottom: 28px;
+        max-width: 400px;
+      }
+      .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .contact-method {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px;
+        border: 1px solid var(--border-glass);
+        border-radius: 14px;
+        font-size: 14.5px;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .contact-method:hover {
+        border-color: var(--accent-cyan);
+        background: rgba(63, 224, 208, 0.05);
+      }
+      .contact-method .icon-circle {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(108, 92, 231, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--accent-cyan);
+      }
+      .form-panel {
+        background: var(--bg-panel);
+        border: 1px solid var(--border-glass);
+        border-radius: 22px;
+        padding: 36px;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      @media (max-width: 520px) {
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .field label {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .field input,
+      .field select,
+      .field textarea {
+        background: #0d1122;
+        border: 1px solid var(--border-glass);
+        border-radius: 10px;
+        padding: 13px 14px;
+        color: var(--text-primary);
+        font-family: "Inter", sans-serif;
+        font-size: 14.5px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        border-color: var(--accent-cyan);
+      }
+      .field textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      .form-submit {
+        width: 100%;
+        padding: 15px;
+        font-size: 15.5px;
+        margin-top: 6px;
+      }
+      .form-note {
+        font-size: 12.5px;
+        color: var(--text-muted);
+        margin-top: 14px;
+        text-align: center;
+      }
+      .form-success {
+        display: none;
+        background: rgba(63, 224, 208, 0.1);
+        border: 1px solid rgba(63, 224, 208, 0.35);
+        color: var(--accent-cyan);
+        padding: 14px 16px;
+        border-radius: 12px;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      /* ---------- FOOTER ---------- */
+      footer {
+        border-top: 1px solid var(--border-glass);
+        padding: 40px 0;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .footer-inner p {
+        color: var(--text-muted);
+        font-size: 13.5px;
+      }
+      .footer-links {
+        display: flex;
+        gap: 20px;
+      }
+      .footer-links a {
+        color: var(--text-muted);
+        font-size: 13.5px;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--accent-cyan);
+      }
+
+      ::selection {
+        background: var(--accent-indigo);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav>
+      <div class="nav-inner">
+        <div class="logo">WSM AI <span>SYS</span></div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#why">Why Us</a>
+          <a href="#work">Our Work</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a
+            href="https://wa.me/917253923415"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-ghost"
+            >Talk to Us</a
+          >
+          <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <span class="eyebrow"
+            >Based in Dehradun · Serving businesses everywhere</span
+          >
+          <h1>
+            Web Development &amp; AI Solutions,<br /><span class="accent"
+              >made simple</span
+            >
+            for your business.
+          </h1>
+          <p>
+            Websites, apps and AI tools that help your business save time, find
+            more customers, and grow — explained in plain language, built for
+            how you actually work.
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary"
+              >Get a Free Consultation</a
+            >
+            <a href="#services" class="btn btn-ghost">See What We Do</a>
+          </div>
+          <div class="trust-strip">
+            <div class="item">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              No confusing tech-talk
+            </div>
+            <div class="item">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              Personal, one-on-one support
+            </div>
+            <div class="item">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              AI is our specialty
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <canvas id="hero-canvas"></canvas>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What we do</span>
+          <h2>Five ways we help your business grow</h2>
+          <p>
+            Pick one, or combine a few — everything is explained clearly and
+            built around what you actually need, not what sounds impressive.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M3 9h18" />
+                <circle cx="6.5" cy="6.5" r=".5" fill="currentColor" />
+                <circle cx="9" cy="6.5" r=".5" fill="currentColor" />
+              </svg>
+            </div>
+            <h3>Website Design &amp; Development</h3>
+            <p>
+              A clean, professional website that looks great on every phone and
+              computer, and makes it easy for customers to find and contact you.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+              </svg>
+            </div>
+            <h3>Custom Business Apps</h3>
+            <p>
+              Software built specifically for how your business runs — booking
+              systems, inventory tools, customer trackers, and more.
+            </p>
+          </div>
+
+          <div class="service-card specialty">
+            <span class="service-tag">Our Specialty</span>
+            <div class="service-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <circle cx="12" cy="4" r="1.6" />
+                <circle cx="12" cy="20" r="1.6" />
+                <circle cx="4" cy="12" r="1.6" />
+                <circle cx="20" cy="12" r="1.6" />
+                <path d="M12 6.6V9M12 15v2.4M6.6 12H9M15 12h2.4" />
+              </svg>
+            </div>
+            <h3>AI Solutions</h3>
+            <p>
+              Chatbots that answer customer questions instantly, tools that
+              predict sales trends, and smart systems that recognise images —
+              built around your business.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09A1.7 1.7 0 009 19.4a1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.7 1.7 0 004.6 15a1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09A1.7 1.7 0 004.6 9a1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06A1.7 1.7 0 009 4.6a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06A1.7 1.7 0 0019.4 9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.55 1z"
+                />
+              </svg>
+            </div>
+            <h3>Business Automation</h3>
+            <p>
+              We connect your tools and use AI to handle repetitive tasks — so
+              paperwork, follow-ups, and admin work happen on their own.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M3 11l18-7-7 18-2.5-7.5L3 11z" />
+              </svg>
+            </div>
+            <h3>AI-Powered Social Media Marketing</h3>
+            <p>
+              AI creates and schedules engaging posts for your social media
+              pages, so you stay active online without spending hours on it.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path
+                  d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"
+                />
+              </svg>
+            </div>
+            <h3>Not Sure What You Need?</h3>
+            <p>
+              That's completely fine. Tell us what's slowing your business down,
+              and we'll suggest the simplest solution that works.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY ================= -->
+    <section
+      id="why"
+      style="
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(108, 92, 231, 0.04),
+          transparent
+        );
+      "
+    >
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Why work with us</span>
+          <h2>Built for small businesses, not big corporations</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="num">01</div>
+            <h3>We speak plainly</h3>
+            <p>
+              No confusing terms. We explain everything in a way that makes
+              sense to you, not just to other developers.
+            </p>
+          </div>
+          <div class="why-item">
+            <div class="num">02</div>
+            <h3>Fair, honest pricing</h3>
+            <p>
+              You'll know the cost upfront. No hidden charges, no surprise bills
+              after the work is done.
+            </p>
+          </div>
+          <div class="why-item">
+            <div class="num">03</div>
+            <h3>One person, full attention</h3>
+            <p>
+              You work directly with the person building your project — not a
+              call centre or a rotating team.
+            </p>
+          </div>
+          <div class="why-item">
+            <div class="num">04</div>
+            <h3>Modern AI expertise</h3>
+            <p>
+              The same AI technology used by large companies, made practical and
+              affordable for small businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <div class="wrap about-inner">
+        <div class="about-card">
+          <div class="big">8+</div>
+          <div class="label">
+            Years working closely with businesses before moving into technology
+          </div>
+          <div
+            style="height: 1px; background: var(--border-glass); margin: 26px 0"
+          ></div>
+          <div class="big">100%</div>
+          <div class="label">
+            Focused on AI &amp; software built specifically for small businesses
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="eyebrow">About WSM AI SYS</span>
+          <h2 style="margin: 14px 0 18px; font-size: clamp(24px, 3vw, 32px)">
+            A technology partner who understands business first
+          </h2>
+          <p>
+            I'm <strong>Wasim</strong>, the person behind WSM AI SYS. Before
+            working in technology, I spent over eight years in real-world
+            business — legal services, real estate, and international trade — so
+            I understand the everyday problems small businesses actually face.
+          </p>
+          <p>
+            Today I build websites, apps, and AI tools that solve those exact
+            problems. My focus is <strong>practical AI</strong> — chatbots,
+            automation, and smart tools — combined with clean, simple websites
+            and applications, delivered without the technical jargon.
+          </p>
+          <a href="#contact" class="btn btn-primary" style="margin-top: 8px"
+            >Let's Talk About Your Business</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORK ================= -->
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Recent work</span>
+          <h2>A few things we've built</h2>
+          <p>
+            A mix of AI tools, business software, and websites — case studies
+            and live demos added as projects launch.
+          </p>
+        </div>
+        <div class="work-grid">
+          <div class="work-card">
+            <img
+              src="https://via.placeholder.com/620x350.png?text=AI+Hiring+Assistant"
+              alt="AI Hiring Assistant project screenshot"
+              width="620"
+              height="350"
+              class="work-thumb"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="work-body">
+              <h3>AI Hiring Assistant</h3>
+              <p>
+                An AI system that reads resumes and matches the right candidates
+                to the right jobs automatically.
+              </p>
+            </div>
+          </div>
+          <div class="work-card">
+            <img
+              src="https://via.placeholder.com/620x350.png?text=Customer+Support+Chatbot"
+              alt="Customer Support Chatbot project screenshot"
+              width="620"
+              height="350"
+              class="work-thumb"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="work-body">
+              <h3>Customer Support Chatbot</h3>
+              <p>
+                A chatbot that answers customer questions instantly, any time of
+                day, without a human needing to reply.
+              </p>
+            </div>
+          </div>
+          <div class="work-card">
+            <img
+              src="https://via.placeholder.com/620x350.png?text=Real+Estate+Website"
+              alt="Real Estate Website project screenshot"
+              width="620"
+              height="350"
+              class="work-thumb"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="work-body">
+              <h3>Real Estate Website</h3>
+              <p>
+                A modern property website with lead capture, built to turn
+                visitors into enquiries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>
+            Frequently asked questions about AI, websites, and business
+            automation
+          </h2>
+          <p>
+            Clear answers for business owners who want practical digital tools
+            that improve customer experience, save time, and grow sales.
+          </p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>
+              What services does WSM AI SYS offer for small businesses?
+            </summary>
+            <p>
+              WSM AI SYS builds modern websites, custom business apps, AI
+              chatbots, automation workflows, and marketing systems that help
+              small businesses generate more leads and operate more efficiently.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can you build AI chatbots and business automation tools?
+            </summary>
+            <p>
+              Yes. We create chatbots, appointment tools, customer follow-up
+              automations, and workflow systems that reduce manual work and make
+              your business feel faster to customers.
+            </p>
+          </details>
+          <details>
+            <summary>
+              How long does a website or app project usually take?
+            </summary>
+            <p>
+              Most website and app projects are scoped around your business
+              goals. Simple websites can launch in a few weeks, while custom AI
+              tools are delivered in phases to match your budget and timeline.
+            </p>
+          </details>
+          <details>
+            <summary>Do you work with businesses outside Dehradun?</summary>
+            <p>
+              Absolutely. WSM AI SYS is based in Dehradun but serves businesses
+              across India and beyond, working remotely with clients through
+              video calls, chat, and email.
+            </p>
+          </details>
+          <details>
+            <summary>How do I start a project with WSM AI SYS?</summary>
+            <p>
+              Use the contact form below or send a message on WhatsApp. Tell us
+              about your business, your current challenge, and the outcome you
+              want.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <div class="wrap contact-inner">
+        <div class="contact-side">
+          <span class="eyebrow">Get in touch</span>
+          <h2>Tell us about your business — we'll take it from there</h2>
+          <p>
+            Fill in the form, or reach out directly. We usually reply within a
+            few hours.
+          </p>
+          <div class="contact-methods">
+            <a href="tel:+917253923415" class="contact-method">
+              <span class="icon-circle"
+                ><svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                  /></svg
+              ></span>
+              Call us directly
+            </a>
+            <a
+              href="https://wa.me/917253923415"
+              class="contact-method"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="icon-circle"
+                ><svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                  /></svg
+              ></span>
+              Message us on WhatsApp
+            </a>
+            <a href="mailto:wsmaisys@gmail.com" class="contact-method">
+              <span class="icon-circle"
+                ><svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 6l-10 7L2 6" /></svg
+              ></span>
+              Email us
+            </a>
+          </div>
+        </div>
+
+        <div class="form-panel">
+          <div class="form-success" id="formSuccess">
+            Thanks! Your message has been noted — we'll get back to you shortly.
+          </div>
+          <form
+            id="leadForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="06c6d7e5-fd90-45a5-a305-e30269ff5e18"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New lead from WSM AI SYS website"
+            />
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="e.g. Rohit Sharma"
+                />
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="e.g. 98765 43210"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="you@business.com"
+              />
+            </div>
+            <div class="field">
+              <label for="business">What kind of business do you run?</label>
+              <select id="business" name="business">
+                <option>Retail / Shop</option>
+                <option>Real Estate</option>
+                <option>Clinic / Healthcare</option>
+                <option>Restaurant / Food</option>
+                <option>Education / Coaching</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Tell us what you need help with</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="e.g. I want a chatbot for my website that can answer customer questions..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              Send Message
+            </button>
+            <p class="form-note">
+              By sending this, you agree to be contacted about your enquiry. No
+              spam, ever.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <p>© 2026 WSM AI SYS. Built with care in Dehradun.</p>
+        <div class="footer-links">
+          <a
+            href="https://wsmaisys.github.io/waseemmansari.github.io/"
+            target="_blank"
+            rel="noopener"
+            >Portfolio</a
+          >
+          <a href="https://github.com/wsmaisys" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/wsmaisys"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // ---------- FULL-PAGE ANIMATED BACKGROUND (Three.js) ----------
+      (function () {
+        const canvas = document.getElementById("bg-canvas");
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+          60,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          100,
+        );
+        camera.position.z = 13;
+
+        const renderer = new THREE.WebGLRenderer({
+          canvas,
+          antialias: true,
+          alpha: true,
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        const field = new THREE.Group();
+        scene.add(field);
+
+        // sparse node field
+        const count = 170;
+        const pos = new Float32Array(count * 3);
+        for (let i = 0; i < count; i++) {
+          pos[i * 3] = (Math.random() - 0.5) * 28;
+          pos[i * 3 + 1] = (Math.random() - 0.5) * 18;
+          pos[i * 3 + 2] = (Math.random() - 0.5) * 16;
+        }
+        const pGeo = new THREE.BufferGeometry();
+        pGeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+        const pMat = new THREE.PointsMaterial({
+          color: 0x8b93f0,
+          size: 0.045,
+          transparent: true,
+          opacity: 0.4,
+        });
+        field.add(new THREE.Points(pGeo, pMat));
+
+        // faint connecting lines between nearby nodes (drawn once)
+        const lineVerts = [];
+        const maxDist = 3.6;
+        for (let i = 0; i < count; i++) {
+          for (let j = i + 1; j < count; j++) {
+            const dx = pos[i * 3] - pos[j * 3],
+              dy = pos[i * 3 + 1] - pos[j * 3 + 1],
+              dz = pos[i * 3 + 2] - pos[j * 3 + 2];
+            if (Math.sqrt(dx * dx + dy * dy + dz * dz) < maxDist) {
+              lineVerts.push(
+                pos[i * 3],
+                pos[i * 3 + 1],
+                pos[i * 3 + 2],
+                pos[j * 3],
+                pos[j * 3 + 1],
+                pos[j * 3 + 2],
+              );
+            }
+          }
+        }
+        const lGeo = new THREE.BufferGeometry();
+        lGeo.setAttribute(
+          "position",
+          new THREE.Float32BufferAttribute(lineVerts, 3),
+        );
+        const lMat = new THREE.LineBasicMaterial({
+          color: 0x3fe0d0,
+          transparent: true,
+          opacity: 0.07,
+        });
+        field.add(new THREE.LineSegments(lGeo, lMat));
+
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        let mx = 0,
+          my = 0;
+        // Improve pointer responsiveness: support pointer/touch and normalize coords
+        const pointerSensitivity = 0.9; // increase for stronger camera follow
+        const cameraLerp = 0.08; // smoothing factor (higher = snappier)
+
+        function handlePointerMove(e) {
+          const clientX =
+            e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX;
+          const clientY =
+            e.touches && e.touches[0] ? e.touches[0].clientY : e.clientY;
+          const nx = (clientX / window.innerWidth - 0.5) * 2; // -1..1
+          const ny = (clientY / window.innerHeight - 0.5) * 2; // -1..1
+          mx = Math.max(-1, Math.min(1, nx)) * pointerSensitivity;
+          my = Math.max(-1, Math.min(1, ny)) * pointerSensitivity;
+        }
+
+        window.addEventListener("pointermove", handlePointerMove, {
+          passive: true,
+        });
+        window.addEventListener("touchmove", handlePointerMove, {
+          passive: true,
+        });
+
+        function animateBg() {
+          requestAnimationFrame(animateBg);
+          if (!reduceMotion) {
+            // slightly livelier rotation
+            field.rotation.y += 0.00065;
+            field.rotation.x += 0.00025;
+          }
+          camera.position.x += (mx * 2.0 - camera.position.x) * cameraLerp;
+          camera.position.y += (-my * 1.2 - camera.position.y) * cameraLerp;
+          camera.lookAt(scene.position);
+          renderer.render(scene, camera);
+        }
+        animateBg();
+
+        window.addEventListener("resize", () => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+      })();
+
+      // ---------- HERO: FLOATING AI BOT (Three.js) ----------
+      (function () {
+        const canvas = document.getElementById("hero-canvas");
+        const container = canvas.parentElement;
+        let w = container.clientWidth,
+          h = container.clientHeight;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
+        camera.position.set(0, 0.3, 6);
+
+        const renderer = new THREE.WebGLRenderer({
+          canvas,
+          antialias: true,
+          alpha: true,
+        });
+        renderer.setSize(w, h);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        scene.add(new THREE.AmbientLight(0x40405f, 1.3));
+        const key = new THREE.PointLight(0x6c5ce7, 1.5, 20);
+        key.position.set(3, 3, 4);
+        scene.add(key);
+        const rim = new THREE.PointLight(0x3fe0d0, 1.2, 20);
+        rim.position.set(-3, -1, 3);
+        scene.add(rim);
+
+        const bodyMat = new THREE.MeshStandardMaterial({
+          color: 0xe7e9f5,
+          metalness: 0.35,
+          roughness: 0.35,
+        });
+        const darkMat = new THREE.MeshStandardMaterial({
+          color: 0x2a3050,
+          metalness: 0.4,
+          roughness: 0.4,
+        });
+        const cyanMat = new THREE.MeshBasicMaterial({ color: 0x3fe0d0 });
+        const amberMat = new THREE.MeshBasicMaterial({
+          color: 0xffb86b,
+          transparent: true,
+        });
+
+        const bot = new THREE.Group();
+
+        const head = new THREE.Mesh(
+          new THREE.BoxGeometry(1.05, 0.85, 0.9),
+          bodyMat,
+        );
+        head.position.y = 1.15;
+        bot.add(head);
+
+        const visor = new THREE.Mesh(
+          new THREE.BoxGeometry(0.92, 0.28, 0.94),
+          darkMat,
+        );
+        visor.position.y = 1.12;
+        bot.add(visor);
+
+        const eyeGeo = new THREE.SphereGeometry(0.09, 16, 16);
+        const eyeL = new THREE.Mesh(eyeGeo, cyanMat);
+        eyeL.position.set(-0.24, 1.12, 0.48);
+        bot.add(eyeL);
+        const eyeR = eyeL.clone();
+        eyeR.position.x = 0.24;
+        bot.add(eyeR);
+
+        const antStem = new THREE.Mesh(
+          new THREE.CylinderGeometry(0.02, 0.02, 0.35, 8),
+          darkMat,
+        );
+        antStem.position.set(0, 1.75, 0);
+        bot.add(antStem);
+        const antTip = new THREE.Mesh(
+          new THREE.SphereGeometry(0.07, 12, 12),
+          amberMat,
+        );
+        antTip.position.set(0, 1.95, 0);
+        bot.add(antTip);
+
+        const body = new THREE.Mesh(
+          new THREE.BoxGeometry(1.25, 1.15, 0.85),
+          bodyMat,
+        );
+        body.position.y = -0.05;
+        bot.add(body);
+
+        const core = new THREE.Mesh(
+          new THREE.CircleGeometry(0.16, 24),
+          cyanMat,
+        );
+        core.position.set(0, -0.05, 0.44);
+        bot.add(core);
+        const coreRing = new THREE.Mesh(
+          new THREE.RingGeometry(0.19, 0.23, 24),
+          cyanMat,
+        );
+        coreRing.position.set(0, -0.05, 0.435);
+        bot.add(coreRing);
+
+        const armGeo = new THREE.CylinderGeometry(0.12, 0.12, 0.75, 10);
+        const armL = new THREE.Mesh(armGeo, darkMat);
+        armL.position.set(-0.78, -0.05, 0);
+        armL.rotation.z = 0.15;
+        bot.add(armL);
+        const armR = new THREE.Mesh(armGeo, darkMat);
+        armR.position.set(0.78, -0.05, 0);
+        armR.rotation.z = -0.15;
+        bot.add(armR);
+
+        const hoverRing = new THREE.Mesh(
+          new THREE.TorusGeometry(0.55, 0.02, 8, 60),
+          cyanMat,
+        );
+        hoverRing.rotation.x = Math.PI / 2;
+        hoverRing.position.y = -0.85;
+        hoverRing.material.transparent = true;
+        hoverRing.material.opacity = 0.55;
+        bot.add(hoverRing);
+
+        bot.position.y = -0.3;
+        scene.add(bot);
+
+        let mouseX = 0,
+          mouseY = 0;
+        container.addEventListener("mousemove", (e) => {
+          const rect = container.getBoundingClientRect();
+          mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+          mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        });
+
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        let t = 0;
+
+        function animate() {
+          requestAnimationFrame(animate);
+          t += 0.016;
+          if (!reduceMotion) {
+            bot.position.y = -0.3 + Math.sin(t * 1.3) * 0.12;
+            bot.rotation.y = Math.sin(t * 0.5) * 0.35 + mouseX * 0.3;
+            bot.rotation.x = mouseY * 0.12;
+            hoverRing.rotation.z += 0.01;
+            hoverRing.scale.setScalar(1 + Math.sin(t * 1.3) * 0.06);
+            antTip.material.opacity = 0.6 + Math.sin(t * 3) * 0.4;
+            armL.rotation.z = 0.15 + Math.sin(t * 1.1) * 0.05;
+            armR.rotation.z = -0.15 - Math.sin(t * 1.1 + 0.5) * 0.05;
+          }
+          renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener("resize", () => {
+          w = container.clientWidth;
+          h = container.clientHeight;
+          camera.aspect = w / h;
+          camera.updateProjectionMatrix();
+          renderer.setSize(w, h);
+        });
+      })();
+
+      // ---------- SERVICE CARD 3D TILT ----------
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          card.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(4px)`;
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform =
+            "perspective(600px) rotateY(0deg) rotateX(0deg) translateZ(0)";
+        });
+      });
+
+      // ---------- CONTACT FORM ----------
+      document
+        .getElementById("leadForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const form = this;
+          const formSuccess = document.getElementById("formSuccess");
+          const phoneInput = document.getElementById("phone");
+          const data = new FormData(form);
+          if (phoneInput) {
+            data.set("phone", phoneInput.value || "");
+          }
+
+          formSuccess.style.display = "none";
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: data,
+            });
+            const result = await response.json();
+            if (result.success) {
+              form.reset();
+              formSuccess.textContent =
+                "Thanks! Your message has been noted — we will get back to you shortly.";
+              formSuccess.style.display = "block";
+              formSuccess.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            } else {
+              throw new Error(result.message || "Submission failed.");
+            }
+          } catch (error) {
+            formSuccess.textContent =
+              "Oops — something went wrong sending your message. Please try again or contact us directly.";
+            formSuccess.style.display = "block";
+            formSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+            console.error("Web3Forms submit error:", error);
+          }
+        });
+    </script>
+  </body>
+</html>
