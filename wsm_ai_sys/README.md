@@ -24,6 +24,7 @@ python -m http.server 8000
 Owner: Wasim
 Email: wsmaisys@gmail.com
 Phone: +91 72539 23415
+https://wsmaisys.github.io/websites/wsm_ai_sys/
 
 ---
 
