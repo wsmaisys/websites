@@ -32,10 +32,15 @@ jobs:
         working-directory: ./truaspect_solutions
         run: npm run build
 
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p ./pages-artifact/truaspect_solutions
+          cp -r ./truaspect_solutions/dist/. ./pages-artifact/truaspect_solutions/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./truaspect_solutions/dist
+          path: ./pages-artifact
 
   deploy:
     needs: build
