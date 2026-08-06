@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "./",
+  base: "/websites/truaspect_solutions/",
   server: {
     host: "0.0.0.0",
     port: 3000,

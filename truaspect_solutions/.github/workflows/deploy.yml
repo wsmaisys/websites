@@ -22,17 +22,20 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: truaspect_solutions/package-lock.json
 
       - name: Install dependencies
+        working-directory: ./truaspect_solutions
         run: npm install
 
       - name: Build
+        working-directory: ./truaspect_solutions
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./truaspect_solutions/dist
 
   deploy:
     needs: build
