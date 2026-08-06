@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This sitemap currently lists only the pages that exist today.
+  As the dedicated service/product landing pages recommended in the
+  SEO roadmap (/rooftop-solar, /commercial-solar, /solar-water-heaters,
+  etc.) are built and deployed, add a <url> entry for each one here,
+  then resubmit this file in Google Search Console / Bing Webmaster Tools.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://primenterprises.org/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
