@@ -1,0 +1,1766 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Truaspect Solutions - Enterprise SAP IS-U Delivery</title>
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Sora:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="TruAspect Solutions delivers enterprise SAP IS-U consulting, AMS, and modernization services for utilities."
+    />
+    <style>
+      /* Hide scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+
+      .glass-card {
+        background: rgba(17, 24, 39, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(55, 65, 81, 1);
+      }
+
+      .ambient-glow {
+        box-shadow: 0 0 40px rgba(245, 158, 11, 0.1);
+      }
+
+      /* Typography utilities mapping */
+      .font-metric-xl {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(22px, 3vw, 30px);
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+      }
+      .font-body-md {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(13px, 1.1vw, 15px);
+        line-height: 1.55;
+        font-weight: 400;
+      }
+      .font-display-lg {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(26px, 4vw, 42px);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        word-break: break-word;
+      }
+      .font-headline-lg-mobile {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(20px, 3vw, 24px);
+        line-height: 1.3;
+        font-weight: 600;
+      }
+      .font-headline-md {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(15px, 1.6vw, 18px);
+        line-height: 1.35;
+        font-weight: 600;
+      }
+      .font-headline-lg {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(20px, 2.6vw, 28px);
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+        word-break: break-word;
+      }
+      .font-body-lg {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(14px, 1.3vw, 16px);
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      .font-label-caps {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      span,
+      a,
+      button {
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+      .glass-card,
+      .cube-inner {
+        min-width: 0;
+      }
+
+      /* ---- Section reveal-on-scroll ---- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .reveal.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ---- Holographic building floors (Who We Are) ---- */
+      .floor-stack {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2px;
+      }
+      .floor {
+        border: 1px solid rgba(78, 222, 163, 0.25);
+        background: linear-gradient(
+          90deg,
+          rgba(78, 222, 163, 0.05),
+          rgba(0, 210, 255, 0.08)
+        );
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .floor::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(78, 222, 163, 0.4),
+          transparent
+        );
+        transform: translateX(-100%);
+        animation: floor-scan 3.5s ease-in-out infinite;
+      }
+      .floor:nth-child(1)::after {
+        animation-delay: 0s;
+      }
+      .floor:nth-child(2)::after {
+        animation-delay: 0.5s;
+      }
+      .floor:nth-child(3)::after {
+        animation-delay: 1s;
+      }
+      .floor:nth-child(4)::after {
+        animation-delay: 1.5s;
+      }
+      .floor:nth-child(5)::after {
+        animation-delay: 2s;
+      }
+      .floor:nth-child(6)::after {
+        animation-delay: 2.5s;
+      }
+      .floor:hover {
+        border-color: rgba(78, 222, 163, 0.9);
+        box-shadow: 0 0 20px rgba(78, 222, 163, 0.35);
+      }
+      @keyframes floor-scan {
+        0% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      /* ---- Meter-to-Cash pipeline ---- */
+      .pipeline-track {
+        position: relative;
+        height: 3px;
+        background: rgba(255, 193, 116, 0.12);
+        overflow: hidden;
+        border-radius: 999px;
+      }
+      .pipeline-track::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #4edea3,
+          #00d2ff,
+          transparent
+        );
+        animation: pipeline-flow 3s linear infinite;
+      }
+      @keyframes pipeline-flow {
+        0% {
+          left: -40%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+      .pipeline-node {
+        box-shadow: 0 0 0 rgba(78, 222, 163, 0.6);
+        animation: node-pulse 2.6s ease-in-out infinite;
+      }
+      .pipeline-node:nth-child(2n) {
+        animation-delay: 0.4s;
+      }
+      .pipeline-node:nth-child(3n) {
+        animation-delay: 0.8s;
+      }
+      @keyframes node-pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 6px rgba(78, 222, 163, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 22px rgba(78, 222, 163, 0.9);
+        }
+      }
+
+      /* ---- Service holographic cubes ---- */
+      .cube-card {
+        perspective: 1000px;
+      }
+      .cube-inner {
+        transition:
+          transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+          border-color 0.4s ease,
+          box-shadow 0.4s ease;
+        transform-style: preserve-3d;
+      }
+      .cube-card:hover .cube-inner {
+        transform: rotateY(6deg) rotateX(-4deg) translateY(-6px);
+        border-color: rgba(0, 210, 255, 0.6);
+        box-shadow:
+          0 20px 40px -10px rgba(0, 210, 255, 0.25),
+          0 0 30px rgba(78, 222, 163, 0.15);
+      }
+
+      /* ---- Delivery platforms ---- */
+      .platform-line {
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(0, 210, 255, 0.6),
+          transparent
+        );
+        width: 1px;
+      }
+
+      /* ---- Why Truaspect pillars ---- */
+      .pillar {
+        position: relative;
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+      .pillar:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 30px rgba(255, 193, 116, 0.25);
+      }
+      .pillar::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -14px;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 14px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 193, 116, 0.8),
+          transparent
+        );
+      }
+
+      /* ---- Engagement orbital stations ---- */
+      .orbit-ring {
+        position: absolute;
+        inset: 0;
+        border: 1px dashed rgba(0, 210, 255, 0.25);
+        border-radius: 999px;
+        animation: orbit-rotate 40s linear infinite;
+      }
+      @keyframes orbit-rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .station-card:hover {
+        border-color: rgba(78, 222, 163, 0.7);
+        box-shadow: 0 0 24px rgba(78, 222, 163, 0.25);
+      }
+
+      /* ---- Final CTA particle converge ---- */
+      .converge-dot {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        background: #00d2ff;
+        animation: converge 4s ease-in-out infinite;
+        opacity: 0;
+      }
+      @keyframes converge {
+        0% {
+          opacity: 0;
+          transform: translate(var(--dx), var(--dy)) scale(0.5);
+        }
+        40% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate(0, 0) scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"
+  >
+    <!-- Global Background Animations -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <!-- STITCH_WORLDMAP_START:ANIMATION_17 class="absolute inset-0 w-full h-full opacity-70" -->
+      <div
+        class="absolute inset-0 w-full h-full opacity-70"
+        style="display: block"
+      >
+        <canvas
+          id="worldmap-canvas-ANIMATION_17"
+          style="display: block; width: 100%; height: 100%"
+        ></canvas>
+        <script>
+          (function () {
+            const canvas = document.getElementById(
+              "worldmap-canvas-ANIMATION_17",
+            );
+            const ctx = canvas.getContext("2d");
+
+            function syncSize() {
+              const w = canvas.clientWidth || 1280;
+              const h = canvas.clientHeight || 720;
+              const dpr = Math.min(window.devicePixelRatio || 1, 2);
+              canvas.width = w * dpr;
+              canvas.height = h * dpr;
+              ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            if (typeof ResizeObserver !== "undefined") {
+              new ResizeObserver(syncSize).observe(canvas);
+            }
+            syncSize();
+
+            // Rough world landmass dot-clusters (normalized 0-1 coords, equirectangular-ish).
+            // Sparse, stylised continents rather than precise coastlines.
+            const continentBlobs = [
+              // North America
+              { cx: 0.16, cy: 0.3, rx: 0.09, ry: 0.1, density: 90 },
+              { cx: 0.12, cy: 0.42, rx: 0.05, ry: 0.06, density: 40 },
+              // South America
+              { cx: 0.22, cy: 0.62, rx: 0.05, ry: 0.13, density: 60 },
+              // Europe
+              { cx: 0.48, cy: 0.26, rx: 0.045, ry: 0.06, density: 55 },
+              // Africa
+              { cx: 0.5, cy: 0.48, rx: 0.07, ry: 0.14, density: 85 },
+              // Middle East / Gulf (core business region)
+              { cx: 0.58, cy: 0.38, rx: 0.035, ry: 0.045, density: 45 },
+              // Asia
+              { cx: 0.68, cy: 0.3, rx: 0.11, ry: 0.11, density: 110 },
+              { cx: 0.78, cy: 0.45, rx: 0.06, ry: 0.07, density: 50 },
+              // Australia
+              { cx: 0.82, cy: 0.68, rx: 0.05, ry: 0.045, density: 35 },
+            ];
+
+            const landDots = [];
+            continentBlobs.forEach((b) => {
+              for (let i = 0; i < b.density; i++) {
+                const ang = Math.random() * Math.PI * 2;
+                const r = Math.sqrt(Math.random());
+                landDots.push({
+                  x: b.cx + Math.cos(ang) * b.rx * r,
+                  y: b.cy + Math.sin(ang) * b.ry * r,
+                  tw: Math.random() * Math.PI * 2,
+                });
+              }
+            });
+
+            // Business hub cities: Gulf delivery targets + global SAP/utility centers.
+            const hubs = [
+              { name: "Dubai", x: 0.585, y: 0.375 },
+              { name: "Riyadh", x: 0.565, y: 0.395 },
+              { name: "Doha", x: 0.578, y: 0.385 },
+              { name: "Houston", x: 0.145, y: 0.355 },
+              { name: "London", x: 0.475, y: 0.235 },
+              { name: "Mumbai", x: 0.645, y: 0.42 },
+              { name: "Singapore", x: 0.735, y: 0.52 },
+              { name: "Frankfurt", x: 0.495, y: 0.24 },
+            ];
+
+            // Animated arcs: data connections between the Gulf hubs and global delivery centers.
+            const routes = [
+              ["Houston", "London"],
+              ["London", "Dubai"],
+              ["London", "Riyadh"],
+              ["Houston", "Dubai"],
+              ["Dubai", "Mumbai"],
+              ["Dubai", "Doha"],
+              ["Frankfurt", "Riyadh"],
+              ["Mumbai", "Singapore"],
+              ["Riyadh", "Doha"],
+              ["London", "Frankfurt"],
+              ["Doha", "Mumbai"],
+            ].map(([a, b]) => ({
+              from: hubs.find((h) => h.name === a),
+              to: hubs.find((h) => h.name === b),
+              offset: Math.random(),
+              speed: 0.08 + Math.random() * 0.06,
+            }));
+
+            function arcPoint(p0, p1, t, w, h) {
+              const x0 = p0.x * w,
+                y0 = p0.y * h;
+              const x1 = p1.x * w,
+                y1 = p1.y * h;
+              const mx = (x0 + x1) / 2;
+              const my =
+                (y0 + y1) / 2 -
+                Math.abs(x1 - x0) * 0.18 -
+                Math.abs(y1 - y0) * 0.12;
+              const u = 1 - t;
+              const x = u * u * x0 + 2 * u * t * mx + t * t * x1;
+              const y = u * u * y0 + 2 * u * t * my + t * t * y1;
+              return { x, y };
+            }
+
+            let time = 0;
+            function render() {
+              const w = canvas.clientWidth || 1280;
+              const h = canvas.clientHeight || 720;
+              ctx.clearRect(0, 0, w, h);
+
+              time += 0.008;
+
+              // Landmass dot-grid (dim, twinkling — represents the global utility footprint)
+              ctx.fillStyle = "rgba(78, 222, 163, 0.28)";
+              landDots.forEach((d) => {
+                const twinkle = 0.35 + 0.35 * Math.sin(time * 1.5 + d.tw);
+                ctx.globalAlpha = twinkle;
+                ctx.beginPath();
+                ctx.arc(d.x * w, d.y * h, 1.1, 0, Math.PI * 2);
+                ctx.fill();
+              });
+              ctx.globalAlpha = 1;
+
+              // Arced data routes between delivery hubs (Gulf-centric network)
+              routes.forEach((r) => {
+                const segs = 40;
+                ctx.beginPath();
+                for (let i = 0; i <= segs; i++) {
+                  const p = arcPoint(r.from, r.to, i / segs, w, h);
+                  if (i === 0) ctx.moveTo(p.x, p.y);
+                  else ctx.lineTo(p.x, p.y);
+                }
+                ctx.strokeStyle = "rgba(0, 210, 255, 0.16)";
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                // Traveling pulse along the arc
+                const t = (time * r.speed + r.offset) % 1;
+                const pulse = arcPoint(r.from, r.to, t, w, h);
+                const grad = ctx.createRadialGradient(
+                  pulse.x,
+                  pulse.y,
+                  0,
+                  pulse.x,
+                  pulse.y,
+                  6,
+                );
+                grad.addColorStop(0, "rgba(0, 210, 255, 0.95)");
+                grad.addColorStop(1, "rgba(0, 210, 255, 0)");
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(pulse.x, pulse.y, 6, 0, Math.PI * 2);
+                ctx.fill();
+              });
+
+              // Hub markers (delivery / business centers)
+              hubs.forEach((hub) => {
+                const pulseSize = 3 + Math.sin(time * 2 + hub.x * 10) * 1.2;
+                ctx.beginPath();
+                ctx.arc(hub.x * w, hub.y * h, pulseSize + 4, 0, Math.PI * 2);
+                ctx.strokeStyle = "rgba(255, 193, 116, 0.35)";
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.arc(hub.x * w, hub.y * h, pulseSize, 0, Math.PI * 2);
+                ctx.fillStyle = "rgba(255, 193, 116, 0.9)";
+                ctx.fill();
+              });
+
+              requestAnimationFrame(render);
+            }
+            render();
+          })();
+        </script>
+      </div>
+      <!-- STITCH_WORLDMAP_END:ANIMATION_17 -->
+      <!-- STITCH_THREEJS_START:ANIMATION_18 class="absolute inset-0 w-full h-full opacity-80" -->
+      <div
+        class="absolute inset-0 w-full h-full opacity-40"
+        style="display: block"
+      >
+        <div
+          id="threejs-container-ANIMATION_18"
+          class="three-scene absolute inset-0"
+        ></div>
+      </div>
+      <!-- STITCH_THREEJS_END:ANIMATION_18 -->
+      <!-- Overlay gradient to ensure text readability -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-0"
+      ></div>
+    </div>
+    <!-- Main Content Container (z-index above backgrounds) -->
+    <main
+      class="relative z-10 w-full h-screen overflow-y-auto scroll-smooth snap-y snap-mandatory"
+    >
+      <!-- TopNavBar (JSON Implementation) -->
+      <header
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md max-w-full bg-surface/30 backdrop-blur-md bg-surface-container/20 backdrop-blur-xl border-b border-outline-variant/10"
+      >
+        <div class="font-headline-md font-bold text-on-surface">
+          Truaspect Solutions
+        </div>
+        <nav class="hidden lg:flex gap-lg">
+          <a
+            class="text-primary border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+            href="#hero"
+            >Experience</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+            href="#who-we-are"
+            >Intelligence</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+            href="#meter-to-cash"
+            >Ecosystem</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+            href="#services"
+            >Services</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+            href="#delivery"
+            >Governance</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+            href="#engagement"
+            >Partner</a
+          >
+        </nav>
+        <div class="flex items-center gap-sm">
+          <button
+            class="hidden md:block bg-primary-container text-on-primary-container px-lg py-sm rounded-DEFAULT font-label-caps hover:bg-primary transition-colors scale-95 active:scale-90 transition-transform"
+          >
+            Schedule Discovery Call
+          </button>
+          <button
+            id="mobile-nav-toggle"
+            class="inline-flex lg:hidden h-11 w-11 items-center justify-center rounded-full border border-outline-variant/30 bg-surface-container/70 text-on-surface backdrop-blur-md"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            type="button"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </header>
+      <div
+        id="mobile-nav-menu"
+        class="fixed left-4 right-4 top-[72px] z-40 hidden rounded-2xl border border-outline-variant/20 bg-surface-container/95 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
+      >
+        <div class="flex flex-col gap-3">
+          <a
+            class="font-label-caps text-on-surface hover:text-primary transition-colors"
+            href="#hero"
+            >Experience</a
+          >
+          <a
+            class="font-label-caps text-on-surface hover:text-primary transition-colors"
+            href="#who-we-are"
+            >Intelligence</a
+          >
+          <a
+            class="font-label-caps text-on-surface hover:text-primary transition-colors"
+            href="#meter-to-cash"
+            >Ecosystem</a
+          >
+          <a
+            class="font-label-caps text-on-surface hover:text-primary transition-colors"
+            href="#services"
+            >Services</a
+          >
+          <a
+            class="font-label-caps text-on-surface hover:text-primary transition-colors"
+            href="#delivery"
+            >Governance</a
+          >
+          <a
+            class="font-label-caps text-on-surface hover:text-primary transition-colors"
+            href="#engagement"
+            >Partner</a
+          >
+        </div>
+      </div>
+      <!-- SideNavBar (JSON Implementation) -->
+      <nav
+        class="hidden lg:flex fixed right-8 top-1/2 -translate-y-1/2 flex-col gap-base z-40 items-center bg-transparent"
+      >
+        <a
+          class="text-secondary scale-125 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#hero"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+        <a
+          class="text-outline/40 scale-100 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#who-we-are"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+        <a
+          class="text-outline/40 scale-100 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#transformation"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+        <a
+          class="text-outline/40 scale-100 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#meter-to-cash"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+        <a
+          class="text-outline/40 scale-100 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#services"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+        <a
+          class="text-outline/40 scale-100 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#delivery"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+        <a
+          class="text-outline/40 scale-100 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#why-truaspect"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+        <a
+          class="text-outline/40 scale-100 hover:text-secondary-fixed transition-all cursor-pointer transition-all duration-500 font-label-caps text-label-caps group relative flex items-center justify-center h-8 w-8"
+          href="#engagement"
+        >
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </a>
+      </nav>
+      <!-- 1. HERO SECTION -->
+      <section
+        class="w-full h-screen snap-center flex items-center px-margin-mobile md:px-margin-desktop relative"
+        id="hero"
+      >
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-gutter w-full max-w-[1440px] mx-auto z-10 items-center"
+        >
+          <div class="flex flex-col justify-center">
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Strategic Delivery Narrative
+            </p>
+            <h1 class="font-display-lg mb-lg text-on-surface">
+              Enterprise SAP IS-U Delivery, Designed for Utility Transformation
+            </h1>
+            <h2 class="font-headline-md text-on-surface-variant mb-xl">
+              Aligning complex operations, modern platforms, and measurable
+              business outcomes
+            </h2>
+            <p class="font-body-lg text-outline mb-xl max-w-2xl">
+              TRUASPECT Solutions helps utilities modernize Meter-to-Cash
+              operations with focused SAP IS-U expertise, dependable delivery,
+              and governance that scales with every phase of change.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-md">
+              <button
+                class="bg-primary-container text-on-primary-container px-xl py-md rounded-DEFAULT font-label-caps font-semibold uppercase tracking-[0.2em] shadow-[0_0_30px_rgba(255,193,116,0.25)] hover:bg-primary transition-all duration-300 flex items-center justify-center gap-sm"
+              >
+                SCHEDULE DISCOVERY CALL
+                <span class="material-symbols-outlined text-[16px]"
+                  >arrow_forward</span
+                >
+              </button>
+              <button
+                class="border border-secondary text-secondary px-xl py-md rounded-DEFAULT font-label-caps hover:bg-secondary/10 transition-colors flex items-center justify-center"
+              >
+                Explore Our Expertise
+              </button>
+            </div>
+          </div>
+          <div class="hidden lg:flex items-center justify-center">
+            <div
+              class="relative w-[360px] h-[360px] rounded-full border border-secondary/20 bg-gradient-to-br from-surface-container/70 to-surface-container-lowest/90 shadow-[0_0_80px_rgba(0,210,255,0.15)] flex items-center justify-center overflow-hidden"
+            >
+              <div
+                class="absolute inset-6 rounded-full border border-primary/20 animate-[spin_24s_linear_infinite]"
+              ></div>
+              <div
+                class="absolute inset-12 rounded-full border border-secondary/20 animate-[spin_16s_linear_infinite_reverse]"
+              ></div>
+              <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,210,255,0.2),_transparent_55%)]"
+              ></div>
+              <div
+                class="w-44 h-44 rounded-full border border-primary/30 relative"
+              >
+                <div
+                  class="absolute inset-2 rounded-full border border-secondary/25"
+                ></div>
+                <div
+                  class="absolute inset-0 rounded-full bg-[radial-gradient(circle,_rgba(0,210,255,0.8),_rgba(0,210,255,0.1)_50%,_transparent_80%)] animate-pulse"
+                ></div>
+                <div
+                  class="absolute left-1/2 top-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/40"
+                ></div>
+              </div>
+              <div
+                class="absolute left-[18%] top-[22%] h-3 w-3 rounded-full bg-primary shadow-[0_0_12px_rgba(255,193,116,0.9)]"
+              ></div>
+              <div
+                class="absolute right-[16%] top-[30%] h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_10px_rgba(78,222,163,0.9)]"
+              ></div>
+              <div
+                class="absolute bottom-[24%] left-[22%] h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_10px_rgba(78,222,163,0.9)]"
+              ></div>
+              <div
+                class="absolute right-[18%] bottom-[24%] h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_10px_rgba(255,193,116,0.9)]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. WHO WE ARE -->
+      <section
+        class="w-full min-h-screen snap-center flex items-center px-margin-mobile md:px-margin-desktop py-xl relative"
+        id="who-we-are"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full max-w-[1440px] mx-auto z-10"
+        >
+          <div
+            class="col-span-1 md:col-span-6 flex flex-col justify-center reveal"
+          >
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Who We Are
+            </p>
+            <h2 class="font-headline-lg text-on-surface mb-lg">
+              A specialist partner for utility complexity
+            </h2>
+            <p class="font-body-lg text-outline mb-md">
+              We focus on SAP IS-U because utilities need specialists who
+              understand both the business and the systems behind it.
+            </p>
+            <p class="font-body-md text-on-surface-variant mb-md">
+              Our teams work alongside System Integrators and utility leaders to
+              strengthen every stage of the Meter-to-Cash lifecycle with
+              clarity, consistency, and delivery discipline.
+            </p>
+            <p class="font-body-md text-on-surface-variant mb-xl">
+              Rather than acting as a distant vendor, we operate as an extension
+              of your governance model, delivery framework, and engineering
+              team.
+            </p>
+            <div class="grid grid-cols-2 gap-sm">
+              <div
+                class="glass-card rounded-lg px-md py-sm font-label-caps text-secondary"
+              >
+                Utility-Focused Delivery
+              </div>
+              <div
+                class="glass-card rounded-lg px-md py-sm font-label-caps text-secondary"
+              >
+                SAP IS-U Specialists
+              </div>
+              <div
+                class="glass-card rounded-lg px-md py-sm font-label-caps text-secondary"
+              >
+                Meter-to-Cash Alignment
+              </div>
+              <div
+                class="glass-card rounded-lg px-md py-sm font-label-caps text-secondary"
+              >
+                Embedded Delivery Teams
+              </div>
+              <div
+                class="glass-card rounded-lg px-md py-sm font-label-caps text-secondary"
+              >
+                Governance-Centered Execution
+              </div>
+              <div
+                class="glass-card rounded-lg px-md py-sm font-label-caps text-secondary"
+              >
+                Long-Term Partnership Model
+              </div>
+            </div>
+          </div>
+          <!-- Holographic Enterprise Building: floors light up as data flows between layers -->
+          <div
+            class="col-span-1 md:col-span-6 flex items-center justify-center reveal"
+          >
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg w-full max-w-md"
+            >
+              <p
+                class="font-label-caps text-on-surface-variant mb-md text-center"
+              >
+                Meter-to-Cash Building
+              </p>
+              <div class="floor-stack">
+                <div
+                  class="floor rounded-DEFAULT px-md py-md flex items-center justify-between"
+                >
+                  <span class="font-body-md text-on-surface"
+                    >Device Management</span
+                  ><span
+                    class="material-symbols-outlined text-secondary text-[18px]"
+                    >bolt</span
+                  >
+                </div>
+                <div
+                  class="floor rounded-DEFAULT px-md py-md flex items-center justify-between"
+                >
+                  <span class="font-body-md text-on-surface">Meter Data</span
+                  ><span
+                    class="material-symbols-outlined text-secondary text-[18px]"
+                    >bolt</span
+                  >
+                </div>
+                <div
+                  class="floor rounded-DEFAULT px-md py-md flex items-center justify-between"
+                >
+                  <span class="font-body-md text-on-surface">Billing</span
+                  ><span
+                    class="material-symbols-outlined text-secondary text-[18px]"
+                    >bolt</span
+                  >
+                </div>
+                <div
+                  class="floor rounded-DEFAULT px-md py-md flex items-center justify-between"
+                >
+                  <span class="font-body-md text-on-surface"
+                    >Customer Service</span
+                  ><span
+                    class="material-symbols-outlined text-secondary text-[18px]"
+                    >bolt</span
+                  >
+                </div>
+                <div
+                  class="floor rounded-DEFAULT px-md py-md flex items-center justify-between"
+                >
+                  <span class="font-body-md text-on-surface">FI-CA</span
+                  ><span
+                    class="material-symbols-outlined text-secondary text-[18px]"
+                    >bolt</span
+                  >
+                </div>
+                <div
+                  class="floor rounded-DEFAULT px-md py-md flex items-center justify-between"
+                >
+                  <span class="font-body-md text-on-surface"
+                    >Regulatory Reporting</span
+                  ><span
+                    class="material-symbols-outlined text-secondary text-[18px]"
+                    >bolt</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. INDUSTRY TRANSFORMATION -->
+      <section
+        class="w-full min-h-screen snap-center flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl relative"
+        id="transformation"
+      >
+        <div class="w-full max-w-[1440px] mx-auto z-10">
+          <div class="text-center mb-xl reveal">
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Industry Transformation
+            </p>
+            <h2 class="font-headline-lg text-on-surface mb-md">
+              Modernization is now a business priority, not a future initiative
+            </h2>
+            <p class="font-body-lg text-outline max-w-3xl mx-auto">
+              Utilities are balancing aging platforms, rising customer
+              expectations, stricter compliance demands, and increasing data
+              complexity while trying to protect service continuity.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"
+          >
+            <div class="glass-card rounded-xl p-lg reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[32px] mb-md block"
+                >dns</span
+              >
+              <h3 class="font-headline-md text-on-surface mb-sm">
+                Legacy Platform Pressure
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Aging SAP landscapes require a clear path to modernization
+                without disrupting critical utility operations.
+              </p>
+            </div>
+            <div class="glass-card rounded-xl p-lg reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[32px] mb-md block"
+                >sensors</span
+              >
+              <h3 class="font-headline-md text-on-surface mb-sm">
+                Connected Meter Data
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                The growth of smart devices creates a constant flow of data that
+                must be validated, processed, and translated into reliable
+                outcomes.
+              </p>
+            </div>
+            <div class="glass-card rounded-xl p-lg reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[32px] mb-md block"
+                >verified</span
+              >
+              <h3 class="font-headline-md text-on-surface mb-sm">
+                Compliance and Control
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Accurate and auditable reporting is essential for meeting
+                regulatory expectations and maintaining trust.
+              </p>
+            </div>
+            <div class="glass-card rounded-xl p-lg reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[32px] mb-md block"
+                >groups</span
+              >
+              <h3 class="font-headline-md text-on-surface mb-sm">
+                Talent and Capacity
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Utility transformation requires experienced SAP IS-U
+                specialists, and TRUASPECT helps bridge that gap with focused
+                domain delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. METER TO CASH -->
+      <section
+        class="w-full min-h-screen snap-center flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl relative"
+        id="meter-to-cash"
+      >
+        <div class="w-full max-w-[1440px] mx-auto z-10">
+          <div class="text-center mb-xl reveal">
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Meter to Cash
+            </p>
+            <h2 class="font-headline-lg text-on-surface mb-md">
+              One connected utility journey from meter to revenue
+            </h2>
+            <p class="font-body-lg text-outline max-w-2xl mx-auto">
+              We help each stage of the utility lifecycle work in sync so data
+              movement, billing accuracy, and customer impact remain aligned.
+            </p>
+          </div>
+          <!-- Glowing pipeline: energy flows continuously, each module activates as data reaches it -->
+          <div class="glass-card ambient-glow rounded-xl p-lg reveal">
+            <div class="pipeline-track mb-lg"></div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-md">
+              <div class="flex flex-col items-center text-center gap-sm">
+                <div
+                  class="pipeline-node w-3 h-3 rounded-full bg-secondary"
+                ></div>
+                <span class="font-label-caps text-on-surface">Device Mgmt</span>
+                <p class="font-body-md text-on-surface-variant text-[13px]">
+                  Support asset readiness, installation, and long-term field
+                  reliability.
+                </p>
+              </div>
+              <div class="flex flex-col items-center text-center gap-sm">
+                <div
+                  class="pipeline-node w-3 h-3 rounded-full bg-secondary"
+                ></div>
+                <span class="font-label-caps text-on-surface"
+                  >Meter Data Mgmt</span
+                >
+                <p class="font-body-md text-on-surface-variant text-[13px]">
+                  Validate and process high-volume meter data with consistency
+                  and control.
+                </p>
+              </div>
+              <div class="flex flex-col items-center text-center gap-sm">
+                <div
+                  class="pipeline-node w-3 h-3 rounded-full bg-secondary"
+                ></div>
+                <span class="font-label-caps text-on-surface"
+                  >Billing & Invoicing</span
+                >
+                <p class="font-body-md text-on-surface-variant text-[13px]">
+                  Deliver accurate billing outcomes that support trust and
+                  compliance.
+                </p>
+              </div>
+              <div class="flex flex-col items-center text-center gap-sm">
+                <div
+                  class="pipeline-node w-3 h-3 rounded-full bg-secondary"
+                ></div>
+                <span class="font-label-caps text-on-surface"
+                  >Customer Service</span
+                >
+                <p class="font-body-md text-on-surface-variant text-[13px]">
+                  Strengthen service delivery across customer-facing operations.
+                </p>
+              </div>
+              <div class="flex flex-col items-center text-center gap-sm">
+                <div
+                  class="pipeline-node w-3 h-3 rounded-full bg-secondary"
+                ></div>
+                <span class="font-label-caps text-on-surface"
+                  >Contract Accounting</span
+                >
+                <p class="font-body-md text-on-surface-variant text-[13px]">
+                  Support payments, collections, and financial clarity across
+                  the process.
+                </p>
+              </div>
+              <div class="flex flex-col items-center text-center gap-sm">
+                <div
+                  class="pipeline-node w-3 h-3 rounded-full bg-secondary"
+                ></div>
+                <span class="font-label-caps text-on-surface"
+                  >Regulatory Reporting</span
+                >
+                <p class="font-body-md text-on-surface-variant text-[13px]">
+                  Generate reporting that is timely, complete, and audit-ready.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center gap-md mt-xl reveal">
+            <span
+              class="font-label-caps text-on-surface-variant px-md py-sm border border-outline-variant/30 rounded-DEFAULT"
+              >SAP FI-CA</span
+            >
+            <span
+              class="font-label-caps text-on-surface-variant px-md py-sm border border-outline-variant/30 rounded-DEFAULT"
+              >SAP CRM</span
+            >
+            <span
+              class="font-label-caps text-on-surface-variant px-md py-sm border border-outline-variant/30 rounded-DEFAULT"
+              >Work & Asset Management</span
+            >
+            <span
+              class="font-label-caps text-on-surface-variant px-md py-sm border border-outline-variant/30 rounded-DEFAULT"
+              >AMI Platforms</span
+            >
+            <span
+              class="font-label-caps text-on-surface-variant px-md py-sm border border-outline-variant/30 rounded-DEFAULT"
+              >Head-End Systems</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. OUR SERVICES -->
+      <section
+        class="w-full min-h-screen snap-center flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl relative"
+        id="services"
+      >
+        <div class="w-full max-w-[1440px] mx-auto z-10">
+          <div class="text-center mb-xl reveal">
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Our Services
+            </p>
+            <h2 class="font-headline-lg text-on-surface mb-md">
+              Delivery support that spans strategy, operations, and execution
+            </h2>
+            <p class="font-body-lg text-outline max-w-2xl mx-auto">
+              From managed support to transformation delivery, we help utilities
+              keep their SAP environments reliable, compliant, and ready for
+              what comes next.
+            </p>
+          </div>
+          <!-- Each service as a floating holographic cube: hover tilts it into a dashboard -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"
+          >
+            <div class="cube-card reveal">
+              <div
+                class="cube-inner glass-card rounded-xl p-lg h-full border border-outline-variant/20"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[28px] mb-md block"
+                  >support_agent</span
+                >
+                <h3 class="font-headline-md text-on-surface mb-sm">
+                  Managed Support
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Dependable L1–L3 support that keeps critical processes stable
+                  and responsive.
+                </p>
+              </div>
+            </div>
+            <div class="cube-card reveal">
+              <div
+                class="cube-inner glass-card rounded-xl p-lg h-full border border-outline-variant/20"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[28px] mb-md block"
+                  >architecture</span
+                >
+                <h3 class="font-headline-md text-on-surface mb-sm">
+                  SAP IS-U Advisory
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Functional and technical guidance for implementations,
+                  upgrades, and continuous optimization.
+                </p>
+              </div>
+            </div>
+            <div class="cube-card reveal">
+              <div
+                class="cube-inner glass-card rounded-xl p-lg h-full border border-outline-variant/20"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[28px] mb-md block"
+                  >cloud_sync</span
+                >
+                <h3 class="font-headline-md text-on-surface mb-sm">
+                  S/4HANA Readiness
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Roadmaps, assessments, and execution strategies for
+                  future-ready SAP environments.
+                </p>
+              </div>
+            </div>
+            <div class="cube-card reveal">
+              <div
+                class="cube-inner glass-card rounded-xl p-lg h-full border border-outline-variant/20"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[28px] mb-md block"
+                  >assignment</span
+                >
+                <h3 class="font-headline-md text-on-surface mb-sm">
+                  Program Governance
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Structured governance, delivery oversight, and risk management
+                  for enterprise change.
+                </p>
+              </div>
+            </div>
+            <div class="cube-card reveal">
+              <div
+                class="cube-inner glass-card rounded-xl p-lg h-full border border-outline-variant/20"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[28px] mb-md block"
+                  >fact_check</span
+                >
+                <h3 class="font-headline-md text-on-surface mb-sm">
+                  QA and Testing
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Functional, regression, integration, and user acceptance
+                  testing with clear control points.
+                </p>
+              </div>
+            </div>
+            <div class="cube-card reveal">
+              <div
+                class="cube-inner glass-card rounded-xl p-lg h-full border border-outline-variant/20"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[28px] mb-md block"
+                  >rule_settings</span
+                >
+                <h3 class="font-headline-md text-on-surface mb-sm">
+                  Exception Management
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Reduce operational bottlenecks through targeted exception
+                  handling and smarter workflows.
+                </p>
+              </div>
+            </div>
+            <div class="cube-card reveal">
+              <div
+                class="cube-inner glass-card rounded-xl p-lg h-full border border-outline-variant/20"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-[28px] mb-md block"
+                  >bolt</span
+                >
+                <h3 class="font-headline-md text-on-surface mb-sm">
+                  Rapid Enhancements
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Fast delivery for tariff updates, configuration changes, and
+                  business-driven improvements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. DELIVERY APPROACH -->
+      <section
+        class="w-full min-h-screen snap-center flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl relative"
+        id="delivery"
+      >
+        <div class="w-full max-w-[1440px] mx-auto z-10">
+          <div class="text-center mb-xl reveal">
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Delivery Approach
+            </p>
+            <h2 class="font-headline-lg text-on-surface mb-md">
+              A structured path from stabilization to transformation
+            </h2>
+            <p class="font-body-lg text-outline max-w-2xl mx-auto">
+              Our delivery model combines technical depth, operational
+              discipline, and continuous improvement at every step.
+            </p>
+          </div>
+          <!-- Four floating platforms, unlocked in sequence with particle bridges between them -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+            <div
+              class="hidden md:block platform-line absolute top-1/2 left-0 right-0 h-px -translate-y-1/2 z-0"
+            ></div>
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg relative z-10 reveal"
+            >
+              <span class="font-label-caps text-primary">01</span>
+              <h3 class="font-headline-md text-on-surface my-sm">
+                Assess and Stabilize
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Evaluate current landscapes, remove blockers, and restore
+                operational confidence.
+              </p>
+            </div>
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg relative z-10 reveal"
+            >
+              <span class="font-label-caps text-primary">02</span>
+              <h3 class="font-headline-md text-on-surface my-sm">
+                Support and Operate
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Deliver proactive AMS services with responsive monitoring and
+                clear root-cause action.
+              </p>
+            </div>
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg relative z-10 reveal"
+            >
+              <span class="font-label-caps text-primary">03</span>
+              <h3 class="font-headline-md text-on-surface my-sm">
+                Optimize and Enhance
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Improve performance through automation, insight, and practical
+                process refinement.
+              </p>
+            </div>
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg relative z-10 reveal"
+            >
+              <span class="font-label-caps text-primary">04</span>
+              <h3 class="font-headline-md text-on-surface my-sm">
+                Modernize and Transform
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Prepare organizations for future SAP journeys and sustained
+                innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. WHY TRUASPECT -->
+      <section
+        class="w-full min-h-screen snap-center flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl relative"
+        id="why-truaspect"
+      >
+        <div class="w-full max-w-[1440px] mx-auto z-10">
+          <div class="text-center mb-xl reveal">
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Why Truaspect
+            </p>
+            <h2 class="font-headline-lg text-on-surface mb-md">
+              A specialist partner built for utility complexity
+            </h2>
+          </div>
+          <!-- Six holographic pillars connected into one network -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter gap-y-xl">
+            <div class="pillar glass-card rounded-xl p-lg text-center reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[28px] mb-sm block mx-auto"
+                >psychology</span
+              >
+              <h3 class="font-headline-md text-on-surface">
+                Deep Utility Domain Knowledge
+              </h3>
+            </div>
+            <div class="pillar glass-card rounded-xl p-lg text-center reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[28px] mb-sm block mx-auto"
+                >verified_user</span
+              >
+              <h3 class="font-headline-md text-on-surface">
+                Quality-Driven Delivery
+              </h3>
+            </div>
+            <div class="pillar glass-card rounded-xl p-lg text-center reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[28px] mb-sm block mx-auto"
+                >schedule</span
+              >
+              <h3 class="font-headline-md text-on-surface">
+                Dependable Enterprise Delivery
+              </h3>
+            </div>
+            <div class="pillar glass-card rounded-xl p-lg text-center reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[28px] mb-sm block mx-auto"
+                >groups</span
+              >
+              <h3 class="font-headline-md text-on-surface">
+                Embedded Team Collaboration
+              </h3>
+            </div>
+            <div class="pillar glass-card rounded-xl p-lg text-center reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[28px] mb-sm block mx-auto"
+                >tune</span
+              >
+              <h3 class="font-headline-md text-on-surface">
+                Flexible Engagement Models
+              </h3>
+            </div>
+            <div class="pillar glass-card rounded-xl p-lg text-center reveal">
+              <span
+                class="material-symbols-outlined text-primary text-[28px] mb-sm block mx-auto"
+                >visibility</span
+              >
+              <h3 class="font-headline-md text-on-surface">
+                Transparent Governance
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. ENGAGEMENT MODELS -->
+      <section
+        class="w-full min-h-screen snap-center flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl relative"
+        id="engagement"
+      >
+        <div class="w-full max-w-[1440px] mx-auto z-10">
+          <div class="text-center mb-xl reveal">
+            <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+              Engagement Models
+            </p>
+            <h2 class="font-headline-lg text-on-surface mb-md">
+              Flexible ways to partner at every stage of change
+            </h2>
+            <p class="font-body-lg text-outline max-w-2xl mx-auto">
+              Every engagement begins with a collaborative discovery process so
+              we can align to your landscape, priorities, and delivery needs.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter reveal"
+          >
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg border border-outline-variant/20"
+            >
+              <div class="flex items-center gap-sm mb-sm">
+                <span class="material-symbols-outlined text-primary text-[22px]"
+                  >autorenew</span
+                >
+                <h3 class="font-headline-md text-on-surface">AMS Retainer</h3>
+              </div>
+              <p class="font-body-md text-on-surface-variant">
+                Ongoing support with clear operating rhythms and rapid response.
+              </p>
+            </div>
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg border border-outline-variant/20"
+            >
+              <div class="flex items-center gap-sm mb-sm">
+                <span class="material-symbols-outlined text-primary text-[22px]"
+                  >rocket_launch</span
+                >
+                <h3 class="font-headline-md text-on-surface">
+                  Project Delivery
+                </h3>
+              </div>
+              <p class="font-body-md text-on-surface-variant">
+                Structured execution for transformation programs and critical
+                initiatives.
+              </p>
+            </div>
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg border border-outline-variant/20"
+            >
+              <div class="flex items-center gap-sm mb-sm">
+                <span class="material-symbols-outlined text-primary text-[22px]"
+                  >badge</span
+                >
+                <h3 class="font-headline-md text-on-surface">
+                  Staff Augmentation
+                </h3>
+              </div>
+              <p class="font-body-md text-on-surface-variant">
+                Embedded specialists that accelerate delivery without
+                overextending your team.
+              </p>
+            </div>
+            <div
+              class="glass-card ambient-glow rounded-xl p-lg border border-outline-variant/20"
+            >
+              <div class="flex items-center gap-sm mb-sm">
+                <span class="material-symbols-outlined text-primary text-[22px]"
+                  >forum</span
+                >
+                <h3 class="font-headline-md text-on-surface">
+                  On-Demand Consulting
+                </h3>
+              </div>
+              <p class="font-body-md text-on-surface-variant">
+                Focused advisory support for urgent decisions and targeted
+                problem solving.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. FINAL CTA -->
+      <section
+        class="w-full min-h-screen snap-center flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl relative overflow-hidden"
+        id="final-cta"
+      >
+        <!-- Particles converging into the brand mark before the footer -->
+        <div
+          class="converge-dot"
+          style="
+            left: 20%;
+            top: 30%;
+            --dx: -40px;
+            --dy: -30px;
+            animation-delay: 0s;
+          "
+        ></div>
+        <div
+          class="converge-dot"
+          style="
+            left: 75%;
+            top: 20%;
+            --dx: 50px;
+            --dy: -20px;
+            animation-delay: 0.6s;
+          "
+        ></div>
+        <div
+          class="converge-dot"
+          style="
+            left: 15%;
+            top: 70%;
+            --dx: -30px;
+            --dy: 40px;
+            animation-delay: 1.2s;
+          "
+        ></div>
+        <div
+          class="converge-dot"
+          style="
+            left: 85%;
+            top: 75%;
+            --dx: 45px;
+            --dy: 35px;
+            animation-delay: 1.8s;
+          "
+        ></div>
+        <div
+          class="converge-dot"
+          style="
+            left: 50%;
+            top: 10%;
+            --dx: 0px;
+            --dy: -45px;
+            animation-delay: 2.4s;
+          "
+        ></div>
+        <div class="w-full max-w-[1440px] mx-auto z-10 text-center reveal">
+          <p class="font-label-caps text-secondary mb-md tracking-[0.2em]">
+            Final CTA
+          </p>
+          <h2 class="font-headline-lg text-on-surface mb-lg max-w-3xl mx-auto">
+            Bring clarity and momentum to your SAP IS-U roadmap
+          </h2>
+          <p class="font-body-lg text-outline max-w-2xl mx-auto mb-xl">
+            Whether you are modernizing legacy SAP IS-U processes, preparing for
+            S/4HANA, or strengthening day-to-day delivery, TRUASPECT helps you
+            move forward with confidence.
+          </p>
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-md mb-xl"
+          >
+            <div
+              class="glass-card rounded-xl px-lg py-md flex items-center gap-sm"
+            >
+              <span class="font-label-caps text-primary">Step 1</span
+              ><span class="font-body-md text-on-surface">Discovery Call</span>
+            </div>
+            <span class="material-symbols-outlined text-outline hidden md:block"
+              >arrow_forward</span
+            >
+            <div
+              class="glass-card rounded-xl px-lg py-md flex items-center gap-sm"
+            >
+              <span class="font-label-caps text-primary">Step 2</span
+              ><span class="font-body-md text-on-surface"
+                >Landscape Assessment</span
+              >
+            </div>
+            <span class="material-symbols-outlined text-outline hidden md:block"
+              >arrow_forward</span
+            >
+            <div
+              class="glass-card rounded-xl px-lg py-md flex items-center gap-sm"
+            >
+              <span class="font-label-caps text-primary">Step 3</span
+              ><span class="font-body-md text-on-surface"
+                >Tailored Delivery Proposal</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-md justify-center">
+            <button
+              class="bg-primary-container text-on-primary-container px-xl py-md rounded-DEFAULT font-label-caps font-semibold uppercase hover:bg-primary transition-colors flex items-center justify-center gap-sm"
+            >
+              START YOUR SAP TRANSFORMATION
+              <span class="material-symbols-outlined text-[16px]"
+                >arrow_forward</span
+              >
+            </button>
+            <button
+              class="border border-secondary text-secondary px-xl py-md rounded-DEFAULT font-label-caps hover:bg-secondary/10 transition-colors flex items-center justify-center"
+            >
+              Talk to Our Experts
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer (JSON Implementation - Placed at end of main scroll container) -->
+      <footer
+        class="w-full py-xl px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-lg bg-surface-container-lowest border-t border-outline-variant/20 snap-end mt-xl"
+      >
+        <div class="font-label-caps text-on-surface">Truaspect Solutions</div>
+        <div
+          class="font-body-md text-on-surface-variant text-center md:text-left"
+        >
+          © 2026 Truaspect Solutions.
+        </div>
+        <div class="flex gap-lg flex-wrap justify-center">
+          <a
+            class="font-label-caps text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity"
+            href="#"
+            >Global Network</a
+          >
+          <a
+            class="font-label-caps text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity"
+            href="#"
+            >Privacy Protocol</a
+          >
+          <a
+            class="font-label-caps text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity"
+            href="#"
+            >System Status</a
+          >
+          <a
+            class="font-label-caps text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity"
+            href="#"
+            >Security Compliance</a
+          >
+        </div>
+      </footer>
+    </main>
+    <script>
+      // Simple script to handle navigation active states based on scroll position
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+
+      const observerOptions = {
+        root: document.querySelector("main"),
+        rootMargin: "0px",
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+
+            // Update Top Nav
+            document.querySelectorAll("header nav a").forEach((link) => {
+              link.classList.remove(
+                "text-primary",
+                "border-b-2",
+                "border-primary",
+                "pb-1",
+              );
+              link.classList.add("text-on-surface-variant");
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add(
+                  "text-primary",
+                  "border-b-2",
+                  "border-primary",
+                  "pb-1",
+                );
+                link.classList.remove("text-on-surface-variant");
+              }
+            });
+
+            // Update Side Nav
+            document.querySelectorAll("nav.fixed a").forEach((link) => {
+              link.classList.remove("text-secondary", "scale-125");
+              link.classList.add("text-outline/40", "scale-100");
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("text-secondary", "scale-125");
+                link.classList.remove("text-outline/40", "scale-100");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Reveal-on-scroll for content blocks (fades/slides in as user scrolls)
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        { root: document.querySelector("main"), threshold: 0.2 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => revealObserver.observe(el));
+
+      const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+      const mobileNavMenu = document.getElementById("mobile-nav-menu");
+
+      if (mobileNavToggle && mobileNavMenu) {
+        const setMenuState = (isOpen) => {
+          mobileNavMenu.classList.toggle("hidden", !isOpen);
+          mobileNavToggle.setAttribute("aria-expanded", String(isOpen));
+          const icon = mobileNavToggle.querySelector("span");
+          if (icon) {
+            icon.textContent = isOpen ? "close" : "menu";
+          }
+        };
+
+        mobileNavToggle.addEventListener("click", () => {
+          const isOpen =
+            mobileNavToggle.getAttribute("aria-expanded") === "false";
+          setMenuState(isOpen);
+        });
+
+        mobileNavMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => setMenuState(false));
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 1024) {
+            setMenuState(false);
+          }
+        });
+      }
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
