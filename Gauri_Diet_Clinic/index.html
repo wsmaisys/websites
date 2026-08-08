@@ -541,8 +541,65 @@
       html {
         scroll-behavior: smooth;
       }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      img,
+      svg,
+      video,
+      iframe {
+        max-width: 100%;
+        height: auto;
+      }
       section[id] {
         scroll-margin-top: 110px;
+      }
+
+      /* Responsive helpers */
+      .hero-3d-frame {
+        max-width: 100%;
+      }
+      #mobile-menu {
+        overflow-y: auto;
+      }
+      .goal-btn {
+        min-height: 64px;
+      }
+      @media (max-width: 1024px) {
+        .hero-3d-frame {
+          aspect-ratio: 4 / 3;
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-badge-float,
+        .hero-badge-float.float-slow-delay {
+          display: none;
+        }
+
+        .tilt-card {
+          min-width: 0;
+        }
+
+        .goal-btn {
+          min-height: 64px;
+        }
+
+        .hero-animate {
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }
+      @media (max-width: 640px) {
+        .hero-3d-frame {
+          border-width: 2px;
+        }
+
+        #mobile-menu {
+          padding-top: 5rem;
+        }
       }
 
       /* ============ 3D SYSTEM ============ */
@@ -693,6 +750,11 @@
         );
       }
 
+      /* Star rating (used by testimonial cards) */
+      .star-rating .material-symbols-outlined {
+        font-variation-settings: "FILL" 1;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .tilt-card,
         .float-slow,
@@ -787,10 +849,6 @@
           <path
             d="M12 10.4c-4 0-6.5 2.6-6.5 7 0 1.2.7 2 2 2h9c1.3 0 2-.8 2-2 0-4.4-2.5-7-6.5-7Z"
           />
-          <path
-            d="M9.3 6.3c.6-.9 1.6-.9 2.2 0M14.6 6.3c-.6-.9-1.6-.9-2.2 0"
-            opacity="0"
-          />
         </g>
         <g
           id="icon-teen"
@@ -802,7 +860,6 @@
         >
           <circle cx="12" cy="6" r="3" />
           <path d="M5 21v-2.5C5 15 8 13 12 13s7 2 7 5.5V21" />
-          <path d="M9 8.5c0 1.5 1.3 2.3 3 2.3s3-.8 3-2.3" opacity="0" />
         </g>
         <g
           id="icon-shield-check"
@@ -1157,7 +1214,10 @@
       </div>
     </header>
     <!-- Mobile Sidebar Overlay -->
-    <div class="fixed inset-0 z-[110] bg-alabaster lg:hidden" id="mobile-menu">
+    <div
+      class="fixed inset-0 z-[110] bg-alabaster lg:hidden hidden"
+      id="mobile-menu"
+    >
       <div class="flex flex-col h-full">
         <div
           class="flex justify-between items-center h-20 px-margin-mobile border-b border-slate-subtle"
@@ -1221,7 +1281,7 @@
               without giving up your favourite foods.
             </p>
             <ul
-              class="hero-animate grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-4 mb-5 lg:mb-6 max-w-lg"
+              class="hero-animate grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4 mb-5 lg:mb-6 max-w-lg"
               style="animation-delay: 0.6s"
             >
               <li
@@ -1283,7 +1343,7 @@
               <button
                 class="bg-obsidian text-alabaster px-8 py-4 font-label-sm uppercase tracking-widest hover:bg-prestige-gold transition-all duration-300 btn-scale"
               >
-                Book Free Discovery Call
+                Book Free Call
               </button>
               <a
                 href="#programs"
@@ -1321,68 +1381,29 @@
           class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
         >
           <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-gutter text-center divide-on-primary-fixed-variant lg:divide-x"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter text-center divide-on-primary-fixed-variant lg:divide-x"
+            id="trust-metrics"
           >
             <div
               class="metric-animate py-4 lg:py-0"
-              style="animation-delay: 0s"
-            >
-              <div
-                class="font-headline-lg text-headline-md md:text-headline-lg text-prestige-gold mb-1"
-              >
-                6,000+
-              </div>
-              <div
-                class="font-label-sm text-[10px] sm:text-xs uppercase tracking-widest opacity-70"
-              >
-                Clients Guided
-              </div>
-            </div>
+              data-value="6,000+"
+              data-label="Clients Guided"
+            ></div>
             <div
               class="metric-animate py-4 lg:py-0"
-              style="animation-delay: 0.2s"
-            >
-              <div
-                class="font-headline-lg text-headline-md md:text-headline-lg text-prestige-gold mb-1"
-              >
-                8+
-              </div>
-              <div
-                class="font-label-sm text-[10px] sm:text-xs uppercase tracking-widest opacity-70"
-              >
-                Years Experience
-              </div>
-            </div>
+              data-value="8+"
+              data-label="Years Experience"
+            ></div>
             <div
               class="metric-animate py-4 lg:py-0 border-t lg:border-t-0 border-on-primary-fixed-variant"
-              style="animation-delay: 0.4s"
-            >
-              <div
-                class="font-headline-lg text-headline-md md:text-headline-lg text-prestige-gold mb-1"
-              >
-                12+
-              </div>
-              <div
-                class="font-label-sm text-[10px] sm:text-xs uppercase tracking-widest opacity-70"
-              >
-                Countries Served
-              </div>
-            </div>
+              data-value="12+"
+              data-label="Countries Served"
+            ></div>
             <div
               class="metric-animate py-4 lg:py-0 border-t lg:border-t-0 border-on-primary-fixed-variant"
-              style="animation-delay: 0.6s"
-            >
-              <div
-                class="font-headline-lg text-headline-md md:text-headline-lg text-prestige-gold mb-1"
-              >
-                100%
-              </div>
-              <div
-                class="font-label-sm text-[10px] sm:text-xs uppercase tracking-widest opacity-70"
-              >
-                Personalized Plans
-              </div>
-            </div>
+              data-value="100%"
+              data-label="Personalized Plans"
+            ></div>
           </div>
         </div>
       </section>
@@ -1608,253 +1629,12 @@
               plan is built around you, not a template.
             </p>
           </div>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
-            <!-- 3 Month -->
-            <div
-              class="tilt-card tilt-card-dark flex flex-col border border-white/15 p-8 lg:p-10 bg-white/[0.03]"
-              data-tilt-strength="5"
-            >
-              <span class="icon-badge icon-badge-md text-alabaster mb-6"
-                ><svg width="24" height="24"><use href="#icon-leaf" /></svg
-              ></span>
-              <h3 class="font-headline-md text-xl lg:text-2xl mb-2">
-                3-Month Lifestyle Transformation
-              </h3>
-              <p
-                class="font-headline-lg text-3xl lg:text-4xl text-prestige-gold mb-6"
-              >
-                ₹35,000
-              </p>
-              <p
-                class="font-label-sm uppercase tracking-widest text-xs text-alabaster/60 mb-4"
-              >
-                Includes
-              </p>
-              <ul
-                class="space-y-3 font-body-md text-sm text-alabaster/80 mb-8 flex-1"
-              >
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Comprehensive Health
-                  Assessment
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> One-on-One Video
-                  Consultation
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Personalized Diet
-                  Plans
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Weekly Follow-ups
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Daily WhatsApp
-                  Support
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Unlimited Diet
-                  Modifications
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Recipe E-books
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Eating Out &amp;
-                  Travel Nutrition Guides
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Spiritual Fasting
-                  Diet Chart
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Festival Diet
-                  Guidance
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Lifestyle Coaching
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Body Measurements
-                  Tracking
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Blood Sugar
-                  Monitoring Guidance
-                </li>
-              </ul>
-              <button
-                class="w-full border border-prestige-gold text-prestige-gold py-4 font-label-sm uppercase tracking-widest hover:bg-prestige-gold hover:text-obsidian transition-all duration-300 btn-scale"
-              >
-                Book Consultation
-              </button>
-            </div>
-            <!-- 6 Month - Featured -->
-            <div
-              class="tilt-card tilt-card-dark relative flex flex-col border-2 border-prestige-gold p-8 lg:p-10 bg-white/[0.05] lg:-translate-y-4"
-              data-tilt-strength="5"
-            >
-              <span
-                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-prestige-gold text-obsidian px-4 py-1 font-label-sm uppercase tracking-widest text-[10px]"
-                >Most Popular</span
-              >
-              <span class="icon-badge icon-badge-md text-alabaster mb-6"
-                ><svg width="24" height="24"><use href="#icon-chart-up" /></svg
-              ></span>
-              <h3 class="font-headline-md text-xl lg:text-2xl mb-2">
-                6-Month Health Transformation
-              </h3>
-              <p
-                class="font-headline-lg text-3xl lg:text-4xl text-prestige-gold mb-6"
-              >
-                ₹50,000
-              </p>
-              <p
-                class="font-label-sm uppercase tracking-widest text-xs text-alabaster/60 mb-4"
-              >
-                Includes
-              </p>
-              <ul
-                class="space-y-3 font-body-md text-sm text-alabaster/80 mb-8 flex-1"
-              >
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Comprehensive Health
-                  Assessment
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> One-on-One Video
-                  Consultation
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Personalized Diet
-                  Plans (Updated Regularly)
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Weekly Follow-ups +
-                  Monthly Video Consultation
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Daily WhatsApp
-                  Support
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Unlimited Diet
-                  Modifications
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Recipe E-books
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Eating Out &amp;
-                  Travel Nutrition Guides
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Spiritual Fasting
-                  Diet Chart
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Festival Diet
-                  Guidance
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Lifestyle Coaching
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Body Measurements
-                  Tracking
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Blood Sugar
-                  Monitoring Guidance
-                </li>
-              </ul>
-              <button
-                class="w-full bg-prestige-gold text-obsidian py-4 font-label-sm uppercase tracking-widest hover:bg-alabaster transition-all duration-300 btn-scale"
-              >
-                Book Consultation
-              </button>
-            </div>
-            <!-- 12 Month -->
-            <div
-              class="tilt-card tilt-card-dark flex flex-col border border-white/15 p-8 lg:p-10 bg-white/[0.03]"
-              data-tilt-strength="5"
-            >
-              <span class="icon-badge icon-badge-md text-alabaster mb-6"
-                ><svg width="24" height="24"><use href="#icon-infinity" /></svg
-              ></span>
-              <h3 class="font-headline-md text-xl lg:text-2xl mb-2">
-                12-Month Complete Health Transformation
-              </h3>
-              <p
-                class="font-headline-lg text-3xl lg:text-4xl text-prestige-gold mb-6"
-              >
-                ₹75,000
-              </p>
-              <p
-                class="font-label-sm uppercase tracking-widest text-xs text-alabaster/60 mb-4"
-              >
-                Includes
-              </p>
-              <ul
-                class="space-y-3 font-body-md text-sm text-alabaster/80 mb-8 flex-1"
-              >
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Comprehensive Health
-                  Assessment
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> One-on-One Video
-                  Consultation
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Personalized Diet
-                  Plans (Updated Regularly)
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Weekly Follow-ups +
-                  Monthly Video Consultation
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Daily WhatsApp
-                  Support
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Unlimited Diet
-                  Modifications
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Recipe E-books
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Eating Out &amp;
-                  Travel Nutrition Guides
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Spiritual Fasting
-                  Diet Chart
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Festival Diet
-                  Guidance
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Lifestyle Coaching
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Body Measurements
-                  Tracking
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-prestige-gold">✔</span> Blood Sugar
-                  Monitoring Guidance
-                </li>
-              </ul>
-              <button
-                class="w-full border border-prestige-gold text-prestige-gold py-4 font-label-sm uppercase tracking-widest hover:bg-prestige-gold hover:text-obsidian transition-all duration-300 btn-scale"
-              >
-                Book Consultation
-              </button>
-            </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10"
+            id="pricing-grid"
+          >
+            <!-- Pricing cards are rendered by JS from the pricingPlans data below,
+                 since all three tiers share the same feature list. -->
           </div>
         </div>
       </section>
@@ -2189,86 +1969,12 @@
                 Determine your primary wellness objective to see how our
                 clinical methodology aligns with your needs.
               </p>
-              <div class="flex flex-col gap-4" id="goal-selector">
-                <button
-                  class="goal-btn active group flex items-center justify-between p-4 lg:p-6 border border-prestige-gold text-prestige-gold hover:bg-prestige-gold hover:text-alabaster transition-all duration-300 text-left"
-                  data-goal="loss"
-                >
-                  <span
-                    class="font-label-sm text-xs sm:text-sm uppercase tracking-widest"
-                    >Weight Management</span
-                  >
-                  <span class="material-symbols-outlined">chevron_right</span>
-                </button>
-                <button
-                  class="goal-btn group flex items-center justify-between p-4 lg:p-6 border border-slate-subtle hover:border-prestige-gold transition-all duration-300 text-left"
-                  data-goal="muscle"
-                >
-                  <span
-                    class="font-label-sm text-xs sm:text-sm uppercase tracking-widest"
-                    >Metabolic Recovery</span
-                  >
-                  <span class="material-symbols-outlined">chevron_right</span>
-                </button>
-                <button
-                  class="goal-btn group flex items-center justify-between p-4 lg:p-6 border border-slate-subtle hover:border-prestige-gold transition-all duration-300 text-left"
-                  data-goal="health"
-                >
-                  <span
-                    class="font-label-sm text-xs sm:text-sm uppercase tracking-widest"
-                    >Elite Vitality</span
-                  >
-                  <span class="material-symbols-outlined">chevron_right</span>
-                </button>
-              </div>
+              <div class="flex flex-col gap-4" id="goal-selector"></div>
             </div>
             <div
               class="bg-surface-container p-8 lg:p-10 min-h-[250px] lg:min-h-[300px] flex flex-col justify-center transition-opacity duration-500 mt-6 lg:mt-0"
               id="goal-preview"
-            >
-              <div id="content-loss">
-                <span
-                  class="font-label-sm text-prestige-gold block mb-4 uppercase"
-                  >Protocol: Weight Loss</span
-                >
-                <h3 class="font-headline-md text-2xl lg:text-headline-md mb-4">
-                  Precision Fat Loss
-                </h3>
-                <p class="font-body-md text-on-surface-variant">
-                  A 3-phase metabolic reset focused on hormonal balance,
-                  sustainable caloric deficit, and behavior architecture to
-                  ensure the weight stays off permanently.
-                </p>
-              </div>
-              <div class="hidden" id="content-muscle">
-                <span
-                  class="font-label-sm text-prestige-gold block mb-4 uppercase"
-                  >Protocol: Metabolic Care</span
-                >
-                <h3 class="font-headline-md text-2xl lg:text-headline-md mb-4">
-                  Hormonal Synergy
-                </h3>
-                <p class="font-body-md text-on-surface-variant">
-                  Specialized nutrition for PCOD and Diabetes management. We
-                  focus on glycemic load management and nutritional
-                  anti-inflammation to restore systemic health.
-                </p>
-              </div>
-              <div class="hidden" id="content-health">
-                <span
-                  class="font-label-sm text-prestige-gold block mb-4 uppercase"
-                  >Protocol: Performance</span
-                >
-                <h3 class="font-headline-md text-2xl lg:text-headline-md mb-4">
-                  Peak Performance
-                </h3>
-                <p class="font-body-md text-on-surface-variant">
-                  Optimized fueling for high-performance lifestyles. Enhancing
-                  cognitive clarity, sleep quality, and physical endurance
-                  through micro-nutrient density and timing.
-                </p>
-              </div>
-            </div>
+            ></div>
           </div>
           <!-- Subtle background accent -->
           <div
@@ -2311,130 +2017,10 @@
           </div>
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-gutter"
+            id="testimonials-grid"
           >
-            <!-- Quote 1 -->
-            <div
-              class="border-l border-on-primary-fixed-variant pl-6 lg:pl-8 pt-4"
-            >
-              <div class="flex gap-1 mb-6">
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-              </div>
-              <p class="font-body-lg text-body-md lg:text-body-lg mb-8 italic">
-                “Thanks to Gauri’s guidance, I lost 8 kg in 3 months. The plans
-                were practical and never felt restrictive.”
-              </p>
-              <div
-                class="font-label-sm uppercase tracking-widest text-prestige-gold"
-              >
-                Sneha M.
-              </div>
-            </div>
-            <!-- Quote 2 -->
-            <div
-              class="border-l border-on-primary-fixed-variant pl-6 lg:pl-8 pt-4"
-            >
-              <div class="flex gap-1 mb-6">
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-              </div>
-              <p class="font-body-lg text-body-md lg:text-body-lg mb-8 italic">
-                “Managing my diabetes has become much easier with a practical
-                plan that fits my corporate travel schedule.”
-              </p>
-              <div
-                class="font-label-sm uppercase tracking-widest text-prestige-gold"
-              >
-                Pradnya S.
-              </div>
-            </div>
-            <!-- Quote 3 -->
-            <div
-              class="border-l border-on-primary-fixed-variant pl-6 lg:pl-8 pt-4 md:col-span-2 lg:col-span-1"
-            >
-              <div class="flex gap-1 mb-6">
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-                <span
-                  class="material-symbols-outlined text-prestige-gold text-sm lg:text-base"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
-                  >star</span
-                >
-              </div>
-              <p class="font-body-lg text-body-md lg:text-body-lg mb-8 italic">
-                “I finally feel more in control of my PCOD symptoms and energy.
-                This is not just a diet, it's a lifestyle.”
-              </p>
-              <div
-                class="font-label-sm uppercase tracking-widest text-prestige-gold"
-              >
-                Neha K.
-              </div>
-            </div>
+            <!-- Testimonial cards are rendered by JS from the testimonials data below,
+                 since every card shares the same 5-star markup. -->
           </div>
         </div>
       </section>
@@ -2545,206 +2131,10 @@
         </div>
         <div
           class="mx-auto max-w-3xl divide-y divide-slate-subtle border-t border-b border-slate-subtle"
+          id="faq-list"
         >
-          <details class="group py-6" open>
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>Who can benefit from your nutrition programs?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              Our programs are designed for individuals looking to manage
-              diabetes, pre-diabetes, PCOS, thyroid disorders, hormonal
-              imbalance, weight management, and other lifestyle-related health
-              concerns through personalised nutrition.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>Are the diet plans personalised or generic?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              Every plan is customised based on your health goals, medical
-              history, lifestyle, food preferences, culture, work schedule, and
-              current eating habits.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>Do I have to stop eating my favourite foods?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              No. We focus on sustainable changes by creating balanced plans
-              that fit your lifestyle and include your preferred foods in a
-              healthier way.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>Do you provide Indian food-based diet plans?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              Yes. Our plans are Indian food-friendly and designed around
-              traditional meals, regional preferences, and cultural eating
-              habits. We also provide guidance for NRI clients with locally
-              available food options.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>Are consultations available online?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              Yes. We provide online consultations and support clients across
-              India and globally through video calls and WhatsApp follow-ups.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>How often will I have follow-ups?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              Follow-up frequency depends on your selected program. Regular
-              reviews help us monitor progress and make necessary adjustments to
-              your nutrition plan.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>How long does it take to see results?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              Results vary from person to person depending on health condition,
-              consistency, lifestyle, and adherence to the plan. Our focus is on
-              sustainable, long-term improvements rather than quick fixes.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>Do you provide exercise plans?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              We provide lifestyle guidance and recommend appropriate activity
-              patterns. Exercise recommendations are personalised based on your
-              goals and health status.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span
-                >Can I continue the program if I travel or have a busy
-                lifestyle?</span
-              >
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              Yes. Our plans include practical solutions like travel-friendly
-              options, flexible meal choices, and strategies that fit your
-              routine.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>Do you offer refunds if I change my mind?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              No. All program fees are non-refundable once the consultation
-              process or program initiation has started. We invest time in
-              assessment, planning, and personalised support for every client.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span
-                >Is the BMI calculator on this site a medical diagnosis?</span
-              >
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              No. The BMI calculator is a quick screening tool to give you a
-              general sense of your weight category. It is not a medical
-              diagnosis, and your consultation with Gauri will look at a more
-              complete picture of your health.
-            </p>
-          </details>
-          <details class="group py-6">
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md"
-            >
-              <span>How can I start my health journey?</span>
-              <span
-                class="material-symbols-outlined transition-transform group-open:rotate-45"
-                >add</span
-              >
-            </summary>
-            <p class="mt-4 font-body-md text-on-surface-variant">
-              You can book a discovery call with our team to discuss your goals
-              and choose the right nutrition program for your needs — reach out
-              via the booking form, phone, or WhatsApp at +91 79725 21538.
-            </p>
-          </details>
+          <!-- FAQ items are rendered by JS from the faqs data below, reusing the
+               same JSON-LD FAQPage content already declared in <head>. -->
         </div>
       </section>
       <!-- CTA Section -->
@@ -2889,6 +2279,318 @@
       </div>
     </footer>
     <script>
+      // ---------------------------------------------------------------
+      // Data-driven content. Previously each pricing tier, testimonial,
+      // goal-preview panel, and FAQ item was hand-duplicated in the HTML
+      // with only text differing. That markup is generated here instead
+      // to remove the repetition.
+      // ---------------------------------------------------------------
+
+      const PRICING_FEATURES = [
+        "Comprehensive Health Assessment",
+        "One-on-One Video Consultation",
+        "Personalized Diet Plans",
+        "Weekly Follow-ups",
+        "Daily WhatsApp Support",
+        "Unlimited Diet Modifications",
+        "Recipe E-books",
+        "Eating Out &amp; Travel Nutrition Guides",
+        "Spiritual Fasting Diet Chart",
+        "Festival Diet Guidance",
+        "Lifestyle Coaching",
+        "Body Measurements Tracking",
+        "Blood Sugar Monitoring Guidance",
+      ];
+
+      const pricingPlans = [
+        {
+          icon: "icon-leaf",
+          name: "3-Month Lifestyle Transformation",
+          price: "₹35,000",
+          featured: false,
+          features: PRICING_FEATURES,
+        },
+        {
+          icon: "icon-chart-up",
+          name: "6-Month Health Transformation",
+          price: "₹50,000",
+          featured: true,
+          features: [
+            "Comprehensive Health Assessment",
+            "One-on-One Video Consultation",
+            "Personalized Diet Plans (Updated Regularly)",
+            "Weekly Follow-ups + Monthly Video Consultation",
+            "Daily WhatsApp Support",
+            "Unlimited Diet Modifications",
+            "Recipe E-books",
+            "Eating Out &amp; Travel Nutrition Guides",
+            "Spiritual Fasting Diet Chart",
+            "Festival Diet Guidance",
+            "Lifestyle Coaching",
+            "Body Measurements Tracking",
+            "Blood Sugar Monitoring Guidance",
+          ],
+        },
+        {
+          icon: "icon-infinity",
+          name: "12-Month Complete Health Transformation",
+          price: "₹75,000",
+          featured: false,
+          features: [
+            "Comprehensive Health Assessment",
+            "One-on-One Video Consultation",
+            "Personalized Diet Plans (Updated Regularly)",
+            "Weekly Follow-ups + Monthly Video Consultation",
+            "Daily WhatsApp Support",
+            "Unlimited Diet Modifications",
+            "Recipe E-books",
+            "Eating Out &amp; Travel Nutrition Guides",
+            "Spiritual Fasting Diet Chart",
+            "Festival Diet Guidance",
+            "Lifestyle Coaching",
+            "Body Measurements Tracking",
+            "Blood Sugar Monitoring Guidance",
+          ],
+        },
+      ];
+
+      const trustMetrics = [
+        { value: "6,000+", label: "Clients Guided" },
+        { value: "8+", label: "Years Experience" },
+        { value: "12+", label: "Countries Served" },
+        { value: "100%", label: "Personalized Plans" },
+      ];
+
+      const testimonials = [
+        {
+          quote:
+            "Thanks to Gauri’s guidance, I lost 8 kg in 3 months. The plans were practical and never felt restrictive.",
+          author: "Sneha M.",
+        },
+        {
+          quote:
+            "Managing my diabetes has become much easier with a practical plan that fits my corporate travel schedule.",
+          author: "Pradnya S.",
+        },
+        {
+          quote:
+            "I finally feel more in control of my PCOD symptoms and energy. This is not just a diet, it's a lifestyle.",
+          author: "Neha K.",
+        },
+      ];
+
+      const goalOptions = [
+        {
+          id: "loss",
+          label: "Weight Management",
+          protocol: "Protocol: Weight Loss",
+          title: "Precision Fat Loss",
+          description:
+            "A 3-phase metabolic reset focused on hormonal balance, sustainable caloric deficit, and behavior architecture to ensure the weight stays off permanently.",
+        },
+        {
+          id: "muscle",
+          label: "Metabolic Recovery",
+          protocol: "Protocol: Metabolic Care",
+          title: "Hormonal Synergy",
+          description:
+            "Specialized nutrition for PCOD and Diabetes management. We focus on glycemic load management and nutritional anti-inflammation to restore systemic health.",
+        },
+        {
+          id: "health",
+          label: "Elite Vitality",
+          protocol: "Protocol: Performance",
+          title: "Peak Performance",
+          description:
+            "Optimized fueling for high-performance lifestyles. Enhancing cognitive clarity, sleep quality, and physical endurance through micro-nutrient density and timing.",
+        },
+      ];
+
+      const faqs = [
+        {
+          q: "Who can benefit from your nutrition programs?",
+          a: "Our programs are designed for individuals looking to manage diabetes, pre-diabetes, PCOS, thyroid disorders, hormonal imbalance, weight management, and other lifestyle-related health concerns through personalised nutrition.",
+        },
+        {
+          q: "Are the diet plans personalised or generic?",
+          a: "Every plan is customised based on your health goals, medical history, lifestyle, food preferences, culture, work schedule, and current eating habits.",
+        },
+        {
+          q: "Do I have to stop eating my favourite foods?",
+          a: "No. We focus on sustainable changes by creating balanced plans that fit your lifestyle and include your preferred foods in a healthier way.",
+        },
+        {
+          q: "Do you provide Indian food-based diet plans?",
+          a: "Yes. Our plans are Indian food-friendly and designed around traditional meals, regional preferences, and cultural eating habits. We also provide guidance for NRI clients with locally available food options.",
+        },
+        {
+          q: "Are consultations available online?",
+          a: "Yes. We provide online consultations and support clients across India and globally through video calls and WhatsApp follow-ups.",
+        },
+        {
+          q: "How often will I have follow-ups?",
+          a: "Follow-up frequency depends on your selected program. Regular reviews help us monitor progress and make necessary adjustments to your nutrition plan.",
+        },
+        {
+          q: "How long does it take to see results?",
+          a: "Results vary from person to person depending on health condition, consistency, lifestyle, and adherence to the plan. Our focus is on sustainable, long-term improvements rather than quick fixes.",
+        },
+        {
+          q: "Do you provide exercise plans?",
+          a: "We provide lifestyle guidance and recommend appropriate activity patterns. Exercise recommendations are personalised based on your goals and health status.",
+        },
+        {
+          q: "Can I continue the program if I travel or have a busy lifestyle?",
+          a: "Yes. Our plans include practical solutions like travel-friendly options, flexible meal choices, and strategies that fit your routine.",
+        },
+        {
+          q: "Do you offer refunds if I change my mind?",
+          a: "No. All program fees are non-refundable once the consultation process or program initiation has started. We invest time in assessment, planning, and personalised support for every client.",
+        },
+        {
+          q: "Is the BMI calculator on this site a medical diagnosis?",
+          a: "No. The BMI calculator is a quick screening tool to give you a general sense of your weight category. It is not a medical diagnosis, and your consultation with Gauri will look at a more complete picture of your health.",
+        },
+        {
+          q: "How can I start my health journey?",
+          a: "You can book a discovery call with our team to discuss your goals and choose the right nutrition program for your needs — reach out via the booking form, phone, or WhatsApp at +91 79725 21538.",
+        },
+      ];
+
+      function starRatingHtml() {
+        return Array.from({ length: 5 })
+          .map(
+            () =>
+              `<span class="material-symbols-outlined text-prestige-gold text-sm lg:text-base">star</span>`,
+          )
+          .join("");
+      }
+
+      function renderTrustMetrics() {
+        const container = document.getElementById("trust-metrics");
+        container.innerHTML = trustMetrics
+          .map(
+            (m) => `
+              <div class="metric-animate py-4 lg:py-0">
+                <div class="font-headline-lg text-headline-md md:text-headline-lg text-prestige-gold mb-1">${m.value}</div>
+                <div class="font-label-sm text-[10px] sm:text-xs uppercase tracking-widest opacity-70">${m.label}</div>
+              </div>`,
+          )
+          .join("");
+      }
+
+      function renderPricing() {
+        const grid = document.getElementById("pricing-grid");
+        grid.innerHTML = pricingPlans
+          .map((plan) => {
+            const wrapperClass = plan.featured
+              ? "tilt-card tilt-card-dark relative flex flex-col border-2 border-prestige-gold p-8 lg:p-10 bg-white/[0.05] lg:-translate-y-4"
+              : "tilt-card tilt-card-dark flex flex-col border border-white/15 p-8 lg:p-10 bg-white/[0.03]";
+            const badge = plan.featured
+              ? `<span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-prestige-gold text-obsidian px-4 py-1 font-label-sm uppercase tracking-widest text-[10px]">Most Popular</span>`
+              : "";
+            const buttonClass = plan.featured
+              ? "w-full bg-prestige-gold text-obsidian py-4 font-label-sm uppercase tracking-widest hover:bg-alabaster transition-all duration-300 btn-scale"
+              : "w-full border border-prestige-gold text-prestige-gold py-4 font-label-sm uppercase tracking-widest hover:bg-prestige-gold hover:text-obsidian transition-all duration-300 btn-scale";
+            const features = plan.features
+              .map(
+                (f) =>
+                  `<li class="flex gap-2"><span class="text-prestige-gold">✔</span> ${f}</li>`,
+              )
+              .join("");
+            return `
+              <div class="${wrapperClass}" data-tilt-strength="5">
+                ${badge}
+                <span class="icon-badge icon-badge-md text-alabaster mb-6"><svg width="24" height="24"><use href="#${plan.icon}" /></svg></span>
+                <h3 class="font-headline-md text-xl lg:text-2xl mb-2">${plan.name}</h3>
+                <p class="font-headline-lg text-3xl lg:text-4xl text-prestige-gold mb-6">${plan.price}</p>
+                <p class="font-label-sm uppercase tracking-widest text-xs text-alabaster/60 mb-4">Includes</p>
+                <ul class="space-y-3 font-body-md text-sm text-alabaster/80 mb-8 flex-1">${features}</ul>
+                <button class="${buttonClass}">Book Consultation</button>
+              </div>`;
+          })
+          .join("");
+        attachTiltHandlers(grid.querySelectorAll(".tilt-card"));
+        attachBookingHandlers(grid.querySelectorAll("button"));
+      }
+
+      function renderTestimonials() {
+        const grid = document.getElementById("testimonials-grid");
+        grid.innerHTML = testimonials
+          .map(
+            (t, i) => `
+              <div class="border-l border-on-primary-fixed-variant pl-6 lg:pl-8 pt-4${i === testimonials.length - 1 ? " md:col-span-2 lg:col-span-1" : ""}">
+                <div class="star-rating flex gap-1 mb-6">${starRatingHtml()}</div>
+                <p class="font-body-lg text-body-md lg:text-body-lg mb-8 italic">“${t.quote}”</p>
+                <div class="font-label-sm uppercase tracking-widest text-prestige-gold">${t.author}</div>
+              </div>`,
+          )
+          .join("");
+      }
+
+      function renderGoalSelector() {
+        const selector = document.getElementById("goal-selector");
+        const preview = document.getElementById("goal-preview");
+
+        selector.innerHTML = goalOptions
+          .map(
+            (g, i) => `
+              <button
+                class="goal-btn${i === 0 ? " active border-prestige-gold text-prestige-gold" : " border-slate-subtle"} group flex items-center justify-between p-4 lg:p-6 border hover:border-prestige-gold hover:bg-prestige-gold hover:text-alabaster transition-all duration-300 text-left"
+                data-goal="${g.id}"
+              >
+                <span class="font-label-sm text-xs sm:text-sm uppercase tracking-widest">${g.label}</span>
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>`,
+          )
+          .join("");
+
+        function renderPreview(goal) {
+          const g = goalOptions.find((o) => o.id === goal) || goalOptions[0];
+          preview.innerHTML = `
+            <span class="font-label-sm text-prestige-gold block mb-4 uppercase">${g.protocol}</span>
+            <h3 class="font-headline-md text-2xl lg:text-headline-md mb-4">${g.title}</h3>
+            <p class="font-body-md text-on-surface-variant">${g.description}</p>`;
+        }
+        renderPreview(goalOptions[0].id);
+
+        selector.querySelectorAll(".goal-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            selector.querySelectorAll(".goal-btn").forEach((b) => {
+              b.classList.remove(
+                "active",
+                "border-prestige-gold",
+                "text-prestige-gold",
+              );
+              b.classList.add("border-slate-subtle");
+            });
+            btn.classList.add(
+              "active",
+              "border-prestige-gold",
+              "text-prestige-gold",
+            );
+            btn.classList.remove("border-slate-subtle");
+            renderPreview(btn.getAttribute("data-goal"));
+          });
+        });
+      }
+
+      function renderFaqs() {
+        const list = document.getElementById("faq-list");
+        list.innerHTML = faqs
+          .map(
+            (item, i) => `
+              <details class="group py-6"${i === 0 ? " open" : ""}>
+                <summary class="flex cursor-pointer list-none items-center justify-between font-headline-md text-lg md:text-headline-md">
+                  <span>${item.q}</span>
+                  <span class="material-symbols-outlined transition-transform group-open:rotate-45">add</span>
+                </summary>
+                <p class="mt-4 font-body-md text-on-surface-variant">${item.a}</p>
+              </details>`,
+          )
+          .join("");
+      }
+
       document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener("click", (event) => {
           const hash = link.getAttribute("href");
@@ -2916,6 +2618,7 @@
 
       const toggleMenu = () => {
         mobileMenu.classList.toggle("open");
+        mobileMenu.classList.toggle("hidden");
         document.body.classList.toggle("overflow-hidden");
       };
 
@@ -2951,19 +2654,18 @@
         bookingFeedback.textContent = "";
       };
 
-      const bookingTriggers = Array.from(
-        document.querySelectorAll("button, a"),
-      ).filter((el) => {
-        const text = (el.textContent || "").trim();
-        return /Book Consultation|Book a Private Session/i.test(text);
-      });
+      function attachBookingHandlers(elements) {
+        Array.from(elements)
+          .filter((el) => /Book Consultation|Book a Private Session/i.test((el.textContent || "").trim()))
+          .forEach((trigger) => {
+            trigger.addEventListener("click", (event) => {
+              event.preventDefault();
+              openBookingModal();
+            });
+          });
+      }
 
-      bookingTriggers.forEach((trigger) => {
-        trigger.addEventListener("click", (event) => {
-          event.preventDefault();
-          openBookingModal();
-        });
-      });
+      attachBookingHandlers(document.querySelectorAll("button, a"));
 
       closeModalBtn.addEventListener("click", closeBookingModal);
       cancelModalBtn.addEventListener("click", closeBookingModal);
@@ -2994,22 +2696,17 @@
           "No additional message.";
 
         const emailSubject = `New consultation request from ${name}`;
-        const emailBody = [
+        const detailLines = [
           `Name: ${name}`,
           `Phone: ${phone}`,
           `Preferred Date: ${date}`,
           `Preferred Time: ${time}`,
           `Message: ${message}`,
-        ].join("\n");
-
-        const whatsappText = [
-          `New consultation request`,
-          `Name: ${name}`,
-          `Phone: ${phone}`,
-          `Preferred Date: ${date}`,
-          `Preferred Time: ${time}`,
-          `Message: ${message}`,
-        ].join("\n");
+        ];
+        const emailBody = detailLines.join("\n");
+        const whatsappText = ["New consultation request", ...detailLines].join(
+          "\n",
+        );
 
         const mailLink = document.createElement("a");
         mailLink.href = `mailto:${doctorEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
@@ -3085,40 +2782,6 @@
           "This quick screening is not a medical diagnosis, but it helps guide your consultation.";
       });
 
-      // Interactive Goal Selection Logic
-      const goalBtns = document.querySelectorAll(".goal-btn");
-      const previews = {
-        loss: document.getElementById("content-loss"),
-        muscle: document.getElementById("content-muscle"),
-        health: document.getElementById("content-health"),
-      };
-
-      goalBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const goal = btn.getAttribute("data-goal");
-
-          // Update buttons
-          goalBtns.forEach((b) => {
-            b.classList.remove(
-              "active",
-              "border-prestige-gold",
-              "text-prestige-gold",
-            );
-            b.classList.add("border-slate-subtle");
-          });
-          btn.classList.add(
-            "active",
-            "border-prestige-gold",
-            "text-prestige-gold",
-          );
-          btn.classList.remove("border-slate-subtle");
-
-          // Update content
-          Object.values(previews).forEach((p) => p.classList.add("hidden"));
-          previews[goal].classList.remove("hidden");
-        });
-      });
-
       // Intersection Observer for scroll reveal & sequential metric animations
       const observerOptions = {
         threshold: 0.15,
@@ -3145,14 +2808,14 @@
       });
 
       // 3D Tilt Interaction
-      const tiltCards = document.querySelectorAll(".tilt-card");
       const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
 
-      if (!isCoarsePointer && !prefersReducedMotion) {
-        tiltCards.forEach((card) => {
+      function attachTiltHandlers(cards) {
+        if (isCoarsePointer || prefersReducedMotion) return;
+        cards.forEach((card) => {
           const strength = parseFloat(card.dataset.tiltStrength || "10");
           card.addEventListener("mousemove", (e) => {
             const rect = card.getBoundingClientRect();
@@ -3166,6 +2829,14 @@
           });
         });
       }
+
+      // Render dynamic sections, then wire up their interactive behaviour.
+      renderTrustMetrics();
+      renderPricing();
+      renderTestimonials();
+      renderGoalSelector();
+      renderFaqs();
+      attachTiltHandlers(document.querySelectorAll(".tilt-card:not(#pricing-grid .tilt-card)"));
     </script>
   </body>
 </html>

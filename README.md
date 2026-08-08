@@ -1,27 +1,34 @@
-# Website Workspace
+# Website — collection of demo sites and small projects
 
-This repository contains small static website projects, demos, and design notes.
+This repository contains a set of small static websites, demos, and design notes used for client work and portfolio items.
 
-## Projects
+Projects
 
-- `Gauri_Diet_Clinic/` — Clinic landing page and assets.
-- `wsmaisys/` — WSM AI SYS single-page site (Three.js visuals, contact form).
-- `wsm_ai_sys/` — Alternate build of the WSM AI SYS site (includes SEO files).
+- `Gauri_Diet_Clinic/` — Clinic landing page and booking UI (Tailwind CDN).
+- `prime_enterprises/` — Business website with an SEO audit and roadmap.
+- `wsm_ai_sys/` — WSM AI SYS single-page site (Three.js visuals, work, contact).
 
-## Quick local preview
+Live demos
 
-From the workspace root run:
+- Gauri's Diet Clinic: https://wsmaisys.github.io/websites/Gauri_Diet_Clinic/
+- Prime Enterprises: https://wsmaisys.github.io/websites/prime_enterprises/
+- WSM AI SYS: https://wsmaisys.github.io/
+
+Local preview
+
+Serve the repo root and open the site in your browser (recommended so assets load correctly):
 
 ```bash
 python -m http.server 8000
-# then open http://localhost:8000 in your browser
+# open http://localhost:8000 in your browser and navigate to the project folder
 ```
 
-## Notes
+Contributing
 
-- SEO files (`sitemap.xml`, `robots.txt`) may be present in project folders.
-- See each project's `README.md` for project-specific instructions.
+- Edit HTML/CSS in the project folder and preview locally.
+- If you add images/screenshots, keep them under an `assets/` folder and reference them with relative paths.
 
----
+License & contact
 
-Updated by developer assistant on 2026-08-05
+- Contact: wsmaisys@gmail.com
+- License: please add a `LICENSE` file if you want to set repository licensing.

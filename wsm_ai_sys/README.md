@@ -1,31 +1,26 @@
 # WSM AI SYS
 
-WSM AI SYS is a small web project showcasing web development and AI solutions for small businesses. This folder contains a single-page site built with Three.js visuals and a responsive layout.
+Single-page site and demo for WSM AI SYS — web development and practical AI solutions for small businesses.
 
-## Structure
+What’s here
 
-- `index.html` — Main site entry (hero, services, work, contact).
-- `sitemap.xml`, `robots.txt` — SEO files for the site.
-- `DESIGN.md` — Design notes.
+- `index.html` — Main site (hero, services, recent work, contact). Uses Three.js for background visuals.
+- `DESIGN.md` — Notes and design decisions.
+- `sitemap.xml`, `robots.txt` — SEO helpers.
 
-## Local testing
+Live demo: https://wsmaisys.github.io/
 
-Open `index.html` in a modern browser (Chrome/Edge/Firefox). For full Three.js features, serve the folder over HTTP instead of `file://`.
+Local preview
 
-Quick test using Python (from this folder):
+Serve this folder to enable all features (Three.js, AJAX, and relative asset loading):
 
 ```bash
+cd wsm_ai_sys
 python -m http.server 8000
-# then open http://localhost:8000 in your browser
+# open http://localhost:8000
 ```
 
-## Contact
+Notes
 
-Owner: Wasim
-Email: wsmaisys@gmail.com
-Phone: +91 72539 23415
-https://wsmaisys.github.io/websites/wsm_ai_sys/
-
----
-
-Generated README by developer assistant.
+- For quick edits, opening `index.html` directly in the browser works for static markup, but serving is recommended.
+- Contact: wsmaisys@gmail.com
