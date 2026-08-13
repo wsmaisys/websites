@@ -1,0 +1,26 @@
+# Robots.txt for Gauri's Diet Clinic
+# Allow search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+Allow: /gauri_diet_clinic/
+
+# Disallow private admin areas if any
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+
+# Crawl delay to avoid overloading server (in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://gauravmore27.github.io/gauri_diet_clinic/sitemap.xml
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
