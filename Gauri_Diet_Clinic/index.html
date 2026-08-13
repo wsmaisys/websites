@@ -423,11 +423,33 @@
       }
       /* Mobile Menu Animation */
       #mobile-menu {
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(100%);
+        position: fixed;
+        top: 5rem;
+        left: 1rem;
+        right: 1rem;
+        z-index: 110;
+        background: rgba(255, 255, 255, 0.97);
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        border-radius: 1.25rem;
+        box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.24);
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+      #mobile-menu nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0.5rem;
       }
       #mobile-menu.open {
-        transform: translateX(0);
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
       /* New Hover Effects */
       .hover-lift {
@@ -755,6 +777,21 @@
         box-shadow: 0 10px 22px -10px rgba(27, 56, 99, 0.35);
       }
 
+      .booking-modal-panel {
+        width: min(92vw, 42rem);
+        max-height: min(90vh, 50rem);
+        border-radius: 1.5rem;
+        box-shadow: 0 24px 60px -18px rgba(15, 23, 42, 0.28);
+      }
+
+      @media (max-width: 640px) {
+        .booking-modal-panel {
+          width: calc(100vw - 2rem);
+          max-height: calc(100vh - 2rem);
+          border-radius: 1.25rem;
+        }
+      }
+
       /* Depth divider glow line */
       .depth-divider {
         height: 1px;
@@ -1069,24 +1106,31 @@
       </svg>
     </a>
     <div
-      class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/70 px-3 py-4 sm:px-4 md:px-6"
+      class="fixed inset-0 z-[200] hidden items-center justify-center bg-slate-900/50 px-3 py-4 sm:px-4 md:px-6"
       id="booking-modal"
       aria-hidden="true"
+      aria-modal="true"
+      role="dialog"
+      style="
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+      "
     >
       <div
-        class="w-full max-w-xl max-h-[calc(100vh-2rem)] overflow-y-auto rounded-[24px] border border-slate-subtle bg-alabaster p-4 shadow-2xl sm:p-6"
+        class="booking-modal-panel overflow-y-auto border border-slate-subtle bg-alabaster p-4 sm:p-5"
       >
         <div class="flex items-start justify-between gap-4">
           <div>
             <p class="font-label-sm uppercase tracking-[0.2em] text-primary">
               Book Your Consultation
             </p>
-            <h4 class="mt-2 font-headline-md text-headline-md">
-              Please fillup the contact form, we will contact you shortly.
+            <h4 class="mt-2 font-headline-md text-lg sm:text-xl">
+              Please fill out the form and we'll contact you shortly.
             </h4>
           </div>
           <button
-            class="rounded-full border border-slate-subtle p-2"
+            class="rounded-full border border-slate-subtle bg-white p-2 text-lg leading-none text-on-surface transition-colors hover:bg-slate-100 hover:border-slate-300"
             id="close-modal"
             type="button"
             aria-label="Close booking modal"
@@ -1094,11 +1138,11 @@
             ✕
           </button>
         </div>
-        <form class="mt-6 grid gap-4" id="booking-form">
+        <form class="mt-5 grid gap-3" id="booking-form">
           <label class="grid gap-2 text-sm font-medium text-on-surface">
             <span>Full Name</span>
             <input
-              class="rounded-lg border border-slate-subtle px-4 py-3"
+              class="h-11 rounded-lg border border-slate-subtle px-4 py-2.5"
               name="name"
               required
               placeholder="Your full name"
@@ -1107,17 +1151,17 @@
           <label class="grid gap-2 text-sm font-medium text-on-surface">
             <span>Phone Number</span>
             <input
-              class="rounded-lg border border-slate-subtle px-4 py-3"
+              class="h-11 rounded-lg border border-slate-subtle px-4 py-2.5"
               name="phone"
               required
               placeholder="+91 98765 43210"
             />
           </label>
-          <div class="grid gap-4 sm:grid-cols-2">
+          <div class="grid gap-3 sm:grid-cols-2">
             <label class="grid gap-2 text-sm font-medium text-on-surface">
               <span>Preferred Date</span>
               <input
-                class="rounded-lg border border-slate-subtle px-4 py-3"
+                class="h-11 rounded-lg border border-slate-subtle px-4 py-2.5"
                 name="date"
                 type="date"
                 required
@@ -1126,7 +1170,7 @@
             <label class="grid gap-2 text-sm font-medium text-on-surface">
               <span>Preferred Time</span>
               <input
-                class="rounded-lg border border-slate-subtle px-4 py-3"
+                class="h-11 rounded-lg border border-slate-subtle px-4 py-2.5"
                 name="time"
                 type="time"
                 required
@@ -1136,7 +1180,7 @@
           <label class="grid gap-2 text-sm font-medium text-on-surface">
             <span>Optional Message</span>
             <textarea
-              class="min-h-[100px] rounded-lg border border-slate-subtle px-4 py-3"
+              class="min-h-[96px] rounded-lg border border-slate-subtle px-4 py-2.5"
               name="message"
               placeholder="Tell us about your goals or concerns"
             ></textarea>
@@ -1145,7 +1189,7 @@
             class="hidden rounded-lg border border-[#FFBC2D]/40 bg-surface-container p-4 text-sm text-on-surface-variant"
             id="booking-feedback"
           ></div>
-          <div class="flex justify-end gap-3">
+          <div class="flex justify-end gap-3 pt-1">
             <button
               class="rounded-full border border-slate-subtle px-5 py-3 text-sm font-semibold text-on-surface"
               id="cancel-modal"
@@ -1236,14 +1280,11 @@
         </div>
       </div>
     </header>
-    <!-- Mobile Sidebar Overlay -->
-    <div
-      class="fixed inset-0 z-[110] bg-alabaster lg:hidden hidden"
-      id="mobile-menu"
-    >
-      <div class="flex flex-col h-full">
+    <!-- Mobile Menu Dropdown -->
+    <div class="lg:hidden hidden" id="mobile-menu">
+      <div class="flex max-h-[calc(100vh-6rem)] flex-col overflow-y-auto">
         <div
-          class="flex justify-between items-center h-20 px-margin-mobile border-b border-slate-subtle"
+          class="flex justify-between items-center h-16 px-4 border-b border-slate-subtle"
         >
           <a
             class="h-8 flex items-center"
@@ -1264,7 +1305,7 @@
             <span class="material-symbols-outlined text-3xl">close</span>
           </button>
         </div>
-        <nav class="flex flex-col p-8 gap-6 text-xl font-headline-md">
+        <nav class="flex flex-col p-5 gap-4 text-lg font-headline-md">
           <a class="mobile-nav-link" href="#programs">Programs</a>
           <a class="mobile-nav-link" href="#pricing">Pricing</a>
           <a class="mobile-nav-link" href="#about">About</a>
@@ -1272,7 +1313,7 @@
           <a class="mobile-nav-link" href="#calculator">BMI Calculator</a>
           <a class="mobile-nav-link" href="#faq">FAQ</a>
         </nav>
-        <div class="mt-auto p-8 border-t border-slate-subtle">
+        <div class="p-5 border-t border-slate-subtle">
           <button
             class="w-full bg-primary text-alabaster py-4 font-label-sm uppercase tracking-widest"
           >
@@ -1726,7 +1767,7 @@
             <div
               class="hidden lg:block absolute top-7 left-[10%] right-[10%] depth-divider"
             ></div>
-            <div class="relative flex flex-col items-start">
+            <div class="relative flex flex-col items-center text-center">
               <div
                 class="step-ring relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-obsidian mb-6"
               >
@@ -1742,7 +1783,7 @@
                 understand your needs.
               </p>
             </div>
-            <div class="relative flex flex-col items-start">
+            <div class="relative flex flex-col items-center text-center">
               <div
                 class="step-ring relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-obsidian mb-6"
               >
@@ -1758,7 +1799,7 @@
                 our assessment form.
               </p>
             </div>
-            <div class="relative flex flex-col items-start">
+            <div class="relative flex flex-col items-center text-center">
               <div
                 class="step-ring relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-obsidian mb-6"
               >
@@ -1774,7 +1815,7 @@
                 journey with Dt. Gauri More.
               </p>
             </div>
-            <div class="relative flex flex-col items-start">
+            <div class="relative flex flex-col items-center text-center">
               <div
                 class="step-ring relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-obsidian mb-6"
               >
@@ -1790,7 +1831,7 @@
                 adjustments.
               </p>
             </div>
-            <div class="relative flex flex-col items-start">
+            <div class="relative flex flex-col items-center text-center">
               <div
                 class="step-ring relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-obsidian mb-6"
               >
@@ -2510,7 +2551,7 @@
               <div class="border-l border-on-primary-fixed-variant pl-6 lg:pl-8 pt-4${i === testimonials.length - 1 ? " md:col-span-2 lg:col-span-1" : ""}">
                 <div class="star-rating flex gap-1 mb-6">${starRatingHtml()}</div>
                 <p class="font-body-lg text-body-md lg:text-body-lg mb-8 italic">“${t.quote}”</p>
-                <div class="font-label-sm uppercase tracking-widest text-primary">${t.author}</div>
+                <div class="font-label-sm uppercase tracking-widest text-[#FFBC2D]">${t.author}</div>
               </div>`,
           )
           .join("");
@@ -2560,7 +2601,6 @@
       const toggleMenu = () => {
         mobileMenu.classList.toggle("open");
         mobileMenu.classList.toggle("hidden");
-        document.body.classList.toggle("overflow-hidden");
       };
 
       menuToggle.addEventListener("click", toggleMenu);
@@ -2598,6 +2638,7 @@
       document.addEventListener("click", (event) => {
         const trigger = event.target.closest("button, a");
         if (!trigger) return;
+        if (trigger.closest("#close-modal, #cancel-modal")) return;
 
         const label =
           `${trigger.textContent || ""} ${trigger.getAttribute("aria-label") || ""}`.trim();
