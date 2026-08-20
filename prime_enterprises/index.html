@@ -525,39 +525,32 @@
         margin-top: -2px;
       }
 
-      /* Logo backdrop glow for nav & footer */
+      /* Logo backdrop glow for nav & footer — small whitish plate that hugs just the icon */
       .logo-backdrop-glow {
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 160%;
-        height: 160%;
+        width: 138%;
+        height: 138%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
         background: radial-gradient(
           circle at center,
-          rgba(255, 255, 255, 0.15) 0%,
-          rgba(47, 125, 224, 0.08) 40%,
-          rgba(242, 184, 75, 0.04) 65%,
-          transparent 90%
+          rgba(255, 255, 255, 0.6) 0%,
+          rgba(255, 255, 255, 0.34) 35%,
+          rgba(255, 255, 255, 0.12) 60%,
+          transparent 80%
         );
         pointer-events: none;
         z-index: -1;
-        filter: blur(8px);
-        opacity: 0.7;
+        filter: blur(3px);
+        opacity: 0.9;
       }
       .logo {
         position: relative;
       }
-      .logo .logo-backdrop-glow {
-        width: 180%;
-        height: 180%;
-        opacity: 0.5;
-      }
-      footer .logo .logo-backdrop-glow {
-        width: 200%;
-        height: 200%;
-        opacity: 0.35;
+      footer .logo-backdrop-glow {
+        opacity: 0.8;
       }
 
       nav.links {
@@ -708,11 +701,6 @@
         overflow: hidden;
         background:
           radial-gradient(
-            ellipse 46% 46% at 78% 46%,
-            rgba(255, 253, 245, 0.14),
-            transparent 68%
-          ),
-          radial-gradient(
             ellipse 60% 50% at 78% 30%,
             rgba(47, 125, 224, 0.16),
             transparent 65%
@@ -735,8 +723,10 @@
       }
       .hero-visual {
         position: relative;
-        height: 480px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 460px;
+        aspect-ratio: 1 / 1;
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -753,7 +743,7 @@
         }
         .hero-visual {
           order: -1;
-          height: 320px;
+          max-width: 300px;
           margin: 0 auto;
           transform: none;
         }
@@ -770,7 +760,7 @@
           gap: 20px;
         }
         .hero-visual {
-          height: 220px;
+          max-width: 220px;
           margin: 0 auto 10px;
         }
         .hero h1 {
@@ -817,7 +807,7 @@
           margin-bottom: 18px;
         }
         .hero-visual {
-          height: 180px;
+          max-width: 170px;
         }
         .stat-row {
           gap: 14px;
@@ -867,17 +857,22 @@
         border-top: 1px solid var(--line);
         align-items: center;
       }
+      .stat {
+        flex: 0 0 auto;
+      }
       .stat b {
         font-family: "Space Grotesk", sans-serif;
         font-size: 28px;
         display: block;
         color: var(--text);
+        white-space: nowrap;
       }
       .stat span {
         font-size: 12.5px;
         color: var(--muted);
         text-transform: uppercase;
         letter-spacing: 0.06em;
+        white-space: nowrap;
       }
       @media (min-width: 769px) and (max-width: 1024px) {
         .stat-row {
@@ -887,43 +882,52 @@
           font-size: 24px;
         }
       }
+      @media (min-width: 1025px) {
+        .stat-row {
+          flex-wrap: nowrap;
+          gap: clamp(18px, 2.6vw, 40px);
+        }
+        .stat b {
+          font-size: clamp(20px, 1.7vw, 28px);
+        }
+      }
 
       .logo-3d-stage {
         position: relative;
-        width: min(480px, 92%);
-        aspect-ratio: 1 / 1;
+        width: 92%;
+        height: 92%;
         display: flex;
         align-items: center;
         justify-content: center;
         perspective: 1100px;
       }
-      /* Hero backdrop with radial gradient that fades naturally */
+      /* Hero backdrop: whitish glow directly behind the logo for contrast, fading outward into the page background */
       .hero-logo-backdrop {
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 85%;
-        height: 85%;
-        max-width: 440px;
-        max-height: 440px;
+        width: 90%;
+        height: 90%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
         background: radial-gradient(
-          circle at 45% 40%,
-          rgba(255, 255, 255, 0.25) 0%,
-          rgba(245, 250, 255, 0.15) 15%,
-          rgba(220, 240, 255, 0.08) 30%,
-          rgba(180, 210, 245, 0.04) 50%,
-          rgba(120, 150, 200, 0.01) 70%,
-          transparent 100%
+          circle at center,
+          rgba(255, 255, 255, 0.55) 0%,
+          rgba(255, 255, 255, 0.34) 22%,
+          rgba(255, 255, 255, 0.16) 42%,
+          rgba(111, 179, 245, 0.08) 60%,
+          rgba(47, 125, 224, 0.03) 74%,
+          transparent 88%
         );
-        box-shadow:
-          inset 0 0 40px rgba(255, 255, 255, 0.08),
-          0 0 60px rgba(200, 220, 255, 0.04);
         z-index: 0;
         pointer-events: none;
-        filter: blur(1px);
-        opacity: 0.9;
+        filter: blur(14px);
+        opacity: 0.95;
+      }
+      @media (max-width: 768px) {
+        .hero-logo-backdrop {
+          filter: blur(9px);
+        }
       }
       .logo-3d-hero-img {
         width: 78%;
@@ -994,31 +998,10 @@
           transform: rotate(360deg);
         }
       }
-      @media (max-width: 1024px) {
-        .logo-3d-stage {
-          width: min(380px, 80%);
-        }
-        .hero-logo-backdrop {
-          width: 90%;
-          height: 90%;
-        }
-      }
       @media (max-width: 768px) {
-        .logo-3d-stage {
-          width: min(280px, 78%);
-        }
-        .hero-logo-backdrop {
-          width: 95%;
-          height: 95%;
-        }
         .sun-pulse {
           width: 30%;
           height: 30%;
-        }
-      }
-      @media (max-width: 480px) {
-        .logo-3d-stage {
-          width: min(220px, 74%);
         }
       }
       @keyframes driftGlow {
@@ -1528,8 +1511,8 @@
     <header>
       <div class="wrap nav-inner">
         <a href="#top" class="logo">
-          <span class="logo-backdrop-glow" aria-hidden="true"></span>
           <span class="logo-mark logo-mark-3d"
+            ><span class="logo-backdrop-glow" aria-hidden="true"></span
             ><img
               class="logo-3d-img"
               width="40"
@@ -1593,7 +1576,10 @@
             </div>
             <div class="stat-row">
               <div class="stat"><b>2016</b><span>Company founded</span></div>
-              <div class="stat"><b>120+</b><span>Happy clients</span></div>
+              <div class="stat">
+                <b class="count-up" data-count-to="120" data-suffix="+">0+</b
+                ><span>Happy clients</span>
+              </div>
               <div class="stat"><b>ISO 9001</b><span>2015 certified</span></div>
               <div class="stat"><b>All MH</b><span>Cities served</span></div>
             </div>
@@ -2091,8 +2077,8 @@
         <div class="foot-grid">
           <div>
             <a href="#top" class="logo" style="margin-bottom: 16px">
-              <span class="logo-backdrop-glow" aria-hidden="true"></span>
               <span class="logo-mark logo-mark-3d"
+                ><span class="logo-backdrop-glow" aria-hidden="true"></span
                 ><img
                   class="logo-3d-img"
                   width="40"
@@ -2383,6 +2369,47 @@
         { threshold: 0.15 },
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      /* ===================== COUNT-UP STAT ===================== */
+      (function () {
+        const els = document.querySelectorAll(".count-up");
+        if (!els.length) return;
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        function runCount(el) {
+          const target = parseInt(el.dataset.countTo, 10) || 0;
+          const suffix = el.dataset.suffix || "";
+          if (prefersReducedMotion) {
+            el.textContent = target + suffix;
+            return;
+          }
+          const duration = 4000;
+          const start = performance.now();
+          function tick(now) {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            const value = Math.round(eased * target);
+            el.textContent = value + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+
+        const countIo = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                runCount(entry.target);
+                countIo.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.4 },
+        );
+        els.forEach((el) => countIo.observe(el));
+      })();
 
       /* ===================== FAQ ACCORDION ===================== */
       document.querySelectorAll(".faq-item").forEach((item) => {
