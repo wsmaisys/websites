@@ -1,4 +1,49 @@
+# WSM AI SYS Robots.txt
+# Comprehensive Crawl Directives for Standard Search Engines and Leading AI Agents
+
 User-agent: *
 Allow: /
+Disallow: /scratch/
+Disallow: /drafts/
 
+# AI Search & LLM Crawlers (Explicitly Welcome)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemaps and AI Discovery Manifests
 Sitemap: https://wsmaisys.github.io/sitemap.xml
+# LLM manifest: https://wsmaisys.github.io/llms.txt
+# LLM full documentation: https://wsmaisys.github.io/llms-full.txt

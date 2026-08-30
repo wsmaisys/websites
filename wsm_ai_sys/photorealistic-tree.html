@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photorealistic Tree — Three.js</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0b1a12; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+  #scene-container { position: relative; width: 100vw; height: 100vh; }
+  #c { display: block; width: 100%; height: 100%; }
+  #hud {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(20,20,18,0.55); backdrop-filter: blur(6px);
+    border-radius: 10px; padding: 10px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+  }
+  #hud button {
+    font-size: 12px; padding: 6px 10px; border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08);
+    color: #fff; cursor: pointer; white-space: nowrap; transition: background 0.15s, border-color 0.15s;
+  }
+  #hud button:hover { background: rgba(255,255,255,0.2); }
+  #hint {
+    position: absolute; bottom: 12px; left: 14px; color: rgba(255,255,255,0.65);
+    font-size: 12px; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div id="scene-container">
+  <canvas id="c"></canvas>
+  <div id="hud"></div>
+  <div id="hint">Drag to orbit &middot; Scroll to zoom</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var container = document.getElementById('scene-container');
+var canvas = document.getElementById('c');
+var w = container.clientWidth, h = container.clientHeight;
+
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(45, w/h, 0.1, 150);
+var renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true});
+renderer.setSize(w, h);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+var hemi = new THREE.HemisphereLight(0xbfe0ff, 0x3a2a1a, 0.75);
+scene.add(hemi);
+var sun = new THREE.DirectionalLight(0xfff3d6, 1.35);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+sun.shadow.camera.left = -18; sun.shadow.camera.right = 18;
+sun.shadow.camera.top = 18; sun.shadow.camera.bottom = -18;
+sun.shadow.camera.far = 80;
+sun.shadow.bias = -0.0006;
+scene.add(sun);
+scene.add(sun.target);
+
+var SKY_R = 45;
+function dirFromAngle(elevDeg, azimDeg){
+  var e = elevDeg*Math.PI/180, a = azimDeg*Math.PI/180;
+  return new THREE.Vector3(Math.cos(e)*Math.sin(a), Math.sin(e), Math.cos(e)*Math.cos(a));
+}
+
+var sunSprite = new THREE.Mesh(new THREE.SphereGeometry(1.6,16,16), new THREE.MeshBasicMaterial({color:0xfff2c0}));
+var sunGlow = new THREE.Mesh(new THREE.SphereGeometry(2.6,16,16), new THREE.MeshBasicMaterial({color:0xfff2c0, transparent:true, opacity:0.25}));
+sunSprite.add(sunGlow);
+scene.add(sunSprite);
+var moonSprite = new THREE.Mesh(new THREE.SphereGeometry(1.3,16,16), new THREE.MeshBasicMaterial({color:0xdfe6f5}));
+var moonGlow = new THREE.Mesh(new THREE.SphereGeometry(2.0,16,16), new THREE.MeshBasicMaterial({color:0xaebbe0, transparent:true, opacity:0.2}));
+moonSprite.add(moonGlow);
+scene.add(moonSprite);
+
+var starsGeo = new THREE.BufferGeometry();
+var starPos = [];
+for(var i=0;i<400;i++){
+  var theta = Math.random()*Math.PI*2, phi = Math.random()*Math.PI*0.5;
+  var r = SKY_R*0.98;
+  starPos.push(r*Math.cos(phi)*Math.sin(theta), r*Math.sin(phi)+2, r*Math.cos(phi)*Math.cos(theta));
+}
+starsGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPos, 3));
+var starsMat = new THREE.PointsMaterial({color:0xffffff, size:0.18, transparent:true, opacity:0});
+var stars = new THREE.Points(starsGeo, starsMat);
+scene.add(stars);
+
+function noise2(x, z){
+  return Math.sin(x*0.35)*Math.cos(z*0.3) + Math.sin(x*0.12+2.1)*Math.cos(z*0.17-1.3)*1.6 + Math.sin(x*0.6+z*0.4)*0.35;
+}
+var terrainSize = 90, segs = 90;
+var terrainGeo = new THREE.PlaneGeometry(terrainSize, terrainSize, segs, segs);
+terrainGeo.rotateX(-Math.PI/2);
+var pos = terrainGeo.attributes.position;
+var heights = [];
+for(var i=0;i<pos.count;i++){
+  var x = pos.getX(i), z = pos.getZ(i);
+  var distFromCenter = Math.sqrt(x*x+z*z);
+  var falloff = Math.max(0, (distFromCenter-6)/40);
+  var y = noise2(x*0.5, z*0.5) * 3.2 * falloff * falloff;
+  if(distFromCenter < 9) y *= (distFromCenter/9);
+  pos.setY(i, y);
+  heights.push(y);
+}
+terrainGeo.setAttribute('color', new THREE.Float32BufferAttribute(new Array(pos.count*3).fill(1), 3));
+terrainGeo.computeVertexNormals();
+var terrainMat = new THREE.MeshStandardMaterial({vertexColors: true, roughness: 1, flatShading: true});
+var terrain = new THREE.Mesh(terrainGeo, terrainMat);
+terrain.receiveShadow = true; terrain.castShadow = true;
+scene.add(terrain);
+
+var lastGrass, lastRock, lastSnow, lastSnowLine;
+function paintTerrain(grassHex, rockHex, snowHex, snowLine, accum){
+  accum = accum || 0;
+  lastGrass=grassHex; lastRock=rockHex; lastSnow=snowHex; lastSnowLine=snowLine;
+  var grassCol = new THREE.Color(grassHex), rockCol = new THREE.Color(rockHex), snowCol = new THREE.Color(snowHex);
+  var effSnowLine = snowLine - accum*3.5;
+  var colAttr = terrainGeo.attributes.color;
+  for(var i=0;i<heights.length;i++){
+    var y = heights[i];
+    var c = new THREE.Color();
+    if(y < 1.2) c.copy(grassCol);
+    else if(y < effSnowLine) c.copy(grassCol).lerp(rockCol, Math.min(1,(y-1.2)/3.3));
+    else if(y < effSnowLine+2) c.copy(rockCol).lerp(snowCol, (y-effSnowLine)/2);
+    else c.copy(snowCol);
+    if(accum > 0) c.lerp(snowCol, accum*0.85);
+    colAttr.setXYZ(i, c.r, c.g, c.b);
+  }
+  colAttr.needsUpdate = true;
+}
+
+var barkMatSummer = new THREE.MeshStandardMaterial({color: 0x4a3524, roughness: 0.95});
+var barkMatSnowy = new THREE.MeshStandardMaterial({color: 0x2e2318, roughness: 0.95});
+var barkMesh = [];
+
+var leafShape = new THREE.Shape();
+leafShape.moveTo(0, 0);
+leafShape.bezierCurveTo(0.06, 0.02, 0.11, 0.09, 0.1, 0.19);
+leafShape.bezierCurveTo(0.095, 0.27, 0.05, 0.34, 0, 0.4);
+leafShape.bezierCurveTo(-0.05, 0.34, -0.095, 0.27, -0.1, 0.19);
+leafShape.bezierCurveTo(-0.11, 0.09, -0.06, 0.02, 0, 0);
+var leafGeoBase = new THREE.ExtrudeGeometry(leafShape, {depth:0.012, bevelEnabled:true, bevelThickness:0.006, bevelSize:0.006, bevelSegments:1, curveSegments:6});
+leafGeoBase.center();
+
+var leafInstances = [];
+var treeGroup = new THREE.Group();
+scene.add(treeGroup);
+var snowCapMeshes = [];
+var snowCapGeo = new THREE.SphereGeometry(0.08, 4, 3);
+var snowCapMat = new THREE.MeshStandardMaterial({color: 0xf5f5f0, roughness: 0.9});
+
+function addLeafCluster(center, count, spread){
+  for(var i=0;i<count;i++){
+    var leaf = new THREE.Mesh(leafGeoBase, null);
+    var offset = new THREE.Vector3((Math.random()-0.5)*spread,(Math.random()-0.35)*spread*0.85,(Math.random()-0.5)*spread);
+    leaf.position.copy(center).add(offset);
+    var s = 1.6 + Math.random()*2.2;
+    leaf.scale.set(s,s,s);
+    leaf.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, Math.random()*Math.PI);
+    leaf.castShadow = true;
+    leaf.userData.baseY = leaf.position.y;
+    leaf.userData.phase = Math.random()*Math.PI*2;
+    treeGroup.add(leaf);
+    leafInstances.push(leaf);
+
+    var cap = new THREE.Mesh(snowCapGeo, snowCapMat);
+    cap.position.copy(leaf.position).add(new THREE.Vector3(0, 0.05*s*0.3, 0));
+    cap.scale.set(s*0.3,s*0.2,s*0.3);
+    cap.visible = false;
+    treeGroup.add(cap);
+    snowCapMeshes.push(cap);
+  }
+}
+
+var branchTips = [];
+function branch(origin, dir, length, radius, depth, group){
+  var end = origin.clone().add(dir.clone().multiplyScalar(length));
+  var mid = origin.clone().lerp(end, 0.5);
+  var cyl = new THREE.CylinderGeometry(radius*0.7, radius, length, 7, 1);
+  var mesh = new THREE.Mesh(cyl, barkMatSummer);
+  mesh.position.copy(mid);
+  var quat = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,1,0), dir.clone().normalize());
+  mesh.quaternion.copy(quat);
+  mesh.castShadow = true; mesh.receiveShadow = true;
+  group.add(mesh);
+  barkMesh.push(mesh);
+  if(depth <= 0){
+    addLeafCluster(end, 34+Math.floor(Math.random()*16), 1.5);
+    branchTips.push(end.clone());
+    return;
+  }
+  var branches = depth > 3 ? 2 : (2+Math.floor(Math.random()*2));
+  for(var b=0;b<branches;b++){
+    var spreadAng = 0.35+Math.random()*0.35;
+    var newDir = dir.clone();
+    var axis = new THREE.Vector3(Math.random()-0.5, Math.random()*0.3, Math.random()-0.5).normalize();
+    newDir.applyAxisAngle(axis, spreadAng*(b%2===0?1:-1)+(Math.random()-0.5)*0.2);
+    newDir.y += 0.15; newDir.normalize();
+    branch(end, newDir, length*0.72, radius*0.68, depth-1, group);
+  }
+}
+branch(new THREE.Vector3(0,0,0), new THREE.Vector3(0,1,0), 2.2, 0.35, 6, treeGroup);
+
+var bladeMat = new THREE.MeshStandardMaterial({color: 0x5a8f3a, roughness: 1, side: THREE.DoubleSide});
+var grassGeo = new THREE.PlaneGeometry(0.08, 0.5);
+var grassMesh = new THREE.InstancedMesh(grassGeo, bladeMat, 300);
+var dummy = new THREE.Object3D();
+var grassPositions = [];
+for(var i=0;i<300;i++){
+  var r = 2+Math.random()*7, ang = Math.random()*Math.PI*2;
+  var gx = Math.cos(ang)*r, gz = Math.sin(ang)*r;
+  grassPositions.push([gx,gz]);
+  dummy.position.set(gx, 0.25, gz);
+  dummy.rotation.y = Math.random()*Math.PI;
+  dummy.rotation.z = (Math.random()-0.5)*0.3;
+  dummy.updateMatrix();
+  grassMesh.setMatrixAt(i, dummy.matrix);
+}
+scene.add(grassMesh);
+
+var snowFlakeGeo = new THREE.SphereGeometry(0.05, 4, 3);
+var snowFlakeMat = new THREE.MeshStandardMaterial({color: 0xffffff, roughness: 1});
+var snowGroundSpheres = [];
+for(var i=0;i<grassPositions.length;i++){
+  var p = grassPositions[i];
+  var s = new THREE.Mesh(snowFlakeGeo, snowFlakeMat);
+  var scl = 0.6+Math.random()*0.8;
+  s.userData.targetScale = scl;
+  s.scale.set(0.001, 0.001, 0.001);
+  s.position.set(p[0], 0.02, p[1]);
+  s.visible = false;
+  scene.add(s);
+  snowGroundSpheres.push(s);
+}
+
+var fallenLeafGeo = new THREE.PlaneGeometry(0.18, 0.18);
+var fallenLeafMats = [0xc9722a,0xd9973a,0xa8501f,0xe0b03f].map(function(c){return new THREE.MeshStandardMaterial({color:c, roughness:0.85, side:THREE.DoubleSide});});
+var groundLeaves = [];
+for(var i=0;i<180;i++){
+  var r = 1.5+Math.random()*6.5, ang = Math.random()*Math.PI*2;
+  var fl = new THREE.Mesh(fallenLeafGeo, fallenLeafMats[Math.floor(Math.random()*fallenLeafMats.length)]);
+  fl.position.set(Math.cos(ang)*r, 0.03, Math.sin(ang)*r);
+  fl.rotation.set(-Math.PI/2 + (Math.random()-0.5)*0.4, 0, Math.random()*Math.PI);
+  fl.visible = false;
+  scene.add(fl);
+  groundLeaves.push(fl);
+}
+
+var FALL_LEAF_COUNT = 90;
+var fallingLeaves = [];
+var fallLeafGeo = new THREE.PlaneGeometry(0.16, 0.16);
+for(var i=0;i<FALL_LEAF_COUNT;i++){
+  var m = new THREE.Mesh(fallLeafGeo, fallenLeafMats[Math.floor(Math.random()*fallenLeafMats.length)]);
+  m.visible = false;
+  m.userData.speed = 0.4 + Math.random()*0.5;
+  m.userData.drift = (Math.random()-0.5)*0.6;
+  m.userData.spin = (Math.random()-0.5)*2;
+  m.userData.sway = Math.random()*Math.PI*2;
+  scene.add(m);
+  fallingLeaves.push(m);
+}
+function resetFallingLeaf(m){
+  var tip = branchTips[Math.floor(Math.random()*branchTips.length)];
+  m.position.set(tip.x + (Math.random()-0.5)*1.5, tip.y + Math.random()*1.5, tip.z + (Math.random()-0.5)*1.5);
+  m.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, Math.random()*Math.PI);
+}
+fallingLeaves.forEach(resetFallingLeaf);
+
+var SNOW_COUNT = 260;
+var snowGeo = new THREE.BufferGeometry();
+var snowPositions = new Float32Array(SNOW_COUNT*3);
+var snowSpeeds = [];
+for(var i=0;i<SNOW_COUNT;i++){
+  var r = Math.random()*14;
+  var ang = Math.random()*Math.PI*2;
+  snowPositions[i*3] = Math.cos(ang)*r;
+  snowPositions[i*3+1] = Math.random()*14;
+  snowPositions[i*3+2] = Math.sin(ang)*r;
+  snowSpeeds.push(0.6+Math.random()*0.8);
+}
+snowGeo.setAttribute('position', new THREE.Float32BufferAttribute(snowPositions, 3));
+var snowMat = new THREE.PointsMaterial({color:0xffffff, size:0.12, transparent:true, opacity:0});
+var snowParticles = new THREE.Points(snowGeo, snowMat);
+scene.add(snowParticles);
+
+var isDragging=false, prevX=0, prevY=0, rotY=0.5, rotX=0.35, dist=16;
+canvas.addEventListener('pointerdown', function(e){isDragging=true;prevX=e.clientX;prevY=e.clientY;});
+window.addEventListener('pointerup', function(){isDragging=false;});
+window.addEventListener('pointermove', function(e){
+  if(!isDragging) return;
+  rotY += (e.clientX-prevX)*0.008;
+  rotX += (e.clientY-prevY)*0.006;
+  rotX = Math.max(0.05, Math.min(1.3, rotX));
+  prevX=e.clientX; prevY=e.clientY;
+});
+canvas.addEventListener('wheel', function(e){
+  e.preventDefault();
+  dist += e.deltaY*0.01;
+  dist = Math.max(6, Math.min(35, dist));
+}, {passive:false});
+
+var PRESETS = {
+  'summer-day': {sky:0xaed4ef, fog:0xaed4ef, fogNear:18, fogFar:55, sunColor:0xfff3d6, sunInt:1.35, hemiSky:0xbfe0ff, hemiGround:0x3a2a1a, hemiInt:0.75, leafColors:[0x3f7d33,0x5a9a3f,0x2f6626,0x6bab4a,0x386b2c], grass:0x4a6b2f, rock:0x8a7d6b, snow:0xf3f3ee, snowLine:4.5, bark:'summer', snowCaps:false, grassVisible:true, snowGroundVisible:false, season:'summer', isDay:true, elev:55, azim:35},
+  'summer-night': {sky:0x0b1030, fog:0x0b1030, fogNear:10, fogFar:40, sunColor:0x8fa8ff, sunInt:0.22, hemiSky:0x1a2550, hemiGround:0x0a0a12, hemiInt:0.3, leafColors:[0x1f3f1a,0x2a4a20,0x173312,0x335a28,0x1c3a16], grass:0x1f2e18, rock:0x2c2a28, snow:0x8f95a8, snowLine:4.5, bark:'summer', snowCaps:false, grassVisible:true, snowGroundVisible:false, season:'summer', isDay:false, elev:45, azim:35},
+  'autumn-day': {sky:0xe8c98a, fog:0xe8c98a, fogNear:16, fogFar:52, sunColor:0xffddaa, sunInt:1.2, hemiSky:0xf0d9a8, hemiGround:0x3a2a1a, hemiInt:0.7, leafColors:[0xc9722a,0xd9973a,0xa8501f,0xe0b03f,0x8f3d18], grass:0x9a7a3a, rock:0x8a7d6b, snow:0xf3f3ee, snowLine:4.5, bark:'summer', snowCaps:false, grassVisible:true, snowGroundVisible:false, season:'autumn', isDay:true, elev:35, azim:50},
+  'autumn-night': {sky:0x1a1020, fog:0x1a1020, fogNear:10, fogFar:38, sunColor:0xaa7755, sunInt:0.2, hemiSky:0x2a1830, hemiGround:0x0a0a12, hemiInt:0.28, leafColors:[0x5a3312,0x62401a,0x40200c,0x6a4a1c,0x33180a], grass:0x362a15, rock:0x2c2622, snow:0x8f95a8, snowLine:4.5, bark:'summer', snowCaps:false, grassVisible:true, snowGroundVisible:false, season:'autumn', isDay:false, elev:35, azim:50},
+  'winter-day': {sky:0xd8e8f0, fog:0xd8e8f0, fogNear:14, fogFar:48, sunColor:0xeaf2ff, sunInt:1.05, hemiSky:0xe0eefc, hemiGround:0x555560, hemiInt:0.8, leafColors:[0xffffff,0xf0f0f5,0xe8eef5], grass:0xe8ecef, rock:0x9a9a9a, snow:0xffffff, snowLine:1.5, bark:'snowy', snowCaps:true, grassVisible:false, snowGroundVisible:true, season:'winter', isDay:true, elev:25, azim:60},
+  'winter-night': {sky:0x0a1220, fog:0x0a1220, fogNear:8, fogFar:34, sunColor:0x6a80c0, sunInt:0.28, hemiSky:0x141c30, hemiGround:0x0a0a12, hemiInt:0.4, leafColors:[0xc8d4e8,0xb8c4dc,0xa8b8d4], grass:0x1a2230, rock:0x2a3040, snow:0xd8e0f0, snowLine:1.5, bark:'snowy', snowCaps:true, grassVisible:false, snowGroundVisible:true, season:'winter', isDay:false, elev:25, azim:60},
+  'spring-day': {sky:0xbfe3f0, fog:0xbfe3f0, fogNear:18, fogFar:55, sunColor:0xfff8e0, sunInt:1.3, hemiSky:0xc8ecff, hemiGround:0x3a2a1a, hemiInt:0.75, leafColors:[0x8fd15a,0xe8a8c8,0x6bc242,0xf0c0da,0x7ed64f], grass:0x6bab3f, rock:0x8a7d6b, snow:0xf3f3ee, snowLine:4.5, bark:'summer', snowCaps:false, grassVisible:true, snowGroundVisible:false, season:'spring', isDay:true, elev:50, azim:20},
+  'spring-night': {sky:0x101a35, fog:0x101a35, fogNear:10, fogFar:40, sunColor:0x9fb0ff, sunInt:0.25, hemiSky:0x1c2a55, hemiGround:0x0a0a12, hemiInt:0.32, leafColors:[0x2a4a1c,0x4a2c3a,0x1f3a15,0x452a38,0x223f18], grass:0x1c2c14, rock:0x2c2a28, snow:0x8f95a8, snowLine:4.5, bark:'summer', snowCaps:false, grassVisible:true, snowGroundVisible:false, season:'spring', isDay:false, elev:50, azim:20}
+};
+
+var leafMatCache = {};
+function getLeafMats(colorArr){
+  var key = colorArr.join(',');
+  if(leafMatCache[key]) return leafMatCache[key];
+  var mats = colorArr.map(function(c){ return new THREE.MeshStandardMaterial({color:c, roughness:0.55, metalness:0.05, flatShading:false, side:THREE.DoubleSide}); });
+  leafMatCache[key] = mats;
+  return mats;
+}
+
+var activeSeason = 'summer';
+var snowAccum = 0;
+function applyPreset(key){
+  var p = PRESETS[key];
+  activeSeason = p.season;
+  if(p.season !== 'winter') snowAccum = 0;
+  scene.background = new THREE.Color(p.sky);
+  scene.fog = new THREE.Fog(p.fog, p.fogNear, p.fogFar);
+  sun.color.setHex(p.sunColor);
+  sun.intensity = p.sunInt;
+  hemi.color.setHex(p.hemiSky);
+  hemi.groundColor.setHex(p.hemiGround);
+  hemi.intensity = p.hemiInt;
+  paintTerrain(p.grass, p.rock, p.snow, p.snowLine, p.season==='winter' ? snowAccum : 0);
+
+  var celestialDir = dirFromAngle(p.elev, p.azim);
+  sun.position.copy(celestialDir).multiplyScalar(30);
+  sun.target.position.set(0,2,0);
+  sunSprite.position.copy(celestialDir).multiplyScalar(SKY_R);
+  moonSprite.position.copy(celestialDir).multiplyScalar(-SKY_R);
+  sunSprite.visible = p.isDay;
+  moonSprite.visible = !p.isDay;
+  starsMat.opacity = p.isDay ? 0 : 0.85;
+
+  var mats = getLeafMats(p.leafColors);
+  var thinning = p.season === 'autumn';
+  leafInstances.forEach(function(lf, idx){
+    lf.material = mats[idx % mats.length];
+    lf.visible = thinning ? (idx % 3 !== 0) : true;
+  });
+  snowCapMeshes.forEach(function(cap){ cap.visible = p.snowCaps; });
+
+  var newBark = p.bark === 'snowy' ? barkMatSnowy : barkMatSummer;
+  barkMesh.forEach(function(m){ m.material = newBark; });
+
+  grassMesh.visible = p.grassVisible;
+  snowGroundSpheres.forEach(function(s){
+    s.visible = p.snowGroundVisible;
+    if(p.season !== 'winter') s.scale.set(0.001,0.001,0.001);
+  });
+  groundLeaves.forEach(function(gl){ gl.visible = p.season === 'autumn'; });
+
+  fallingLeaves.forEach(function(m){ m.visible = p.season === 'autumn'; });
+  snowMat.opacity = p.season === 'winter' ? 0.9 : 0;
+}
+
+var hud = document.getElementById('hud');
+var seasons = ['summer','autumn','winter','spring'];
+var times = ['day','night'];
+seasons.forEach(function(season){
+  times.forEach(function(time){
+    var key = season+'-'+time;
+    var btn = document.createElement('button');
+    btn.textContent = season.charAt(0).toUpperCase()+season.slice(1)+' '+(time==='day'?'\u2600':'\u263D');
+    btn.onclick = function(k, b){
+      return function(){
+        applyPreset(k);
+        Array.prototype.forEach.call(hud.children, function(c){ c.style.background='rgba(255,255,255,0.08)'; c.style.borderColor='rgba(255,255,255,0.25)'; });
+        b.style.background = 'rgba(255,255,255,0.35)';
+        b.style.borderColor = 'rgba(255,255,255,0.6)';
+      };
+    }(key, btn);
+    hud.appendChild(btn);
+  });
+});
+applyPreset('summer-day');
+hud.children[0].style.background='rgba(255,255,255,0.35)';
+hud.children[0].style.borderColor='rgba(255,255,255,0.6)';
+
+var clock = new THREE.Clock();
+var lastT = 0;
+var terrainRepaintTimer = 0;
+function animate(){
+  requestAnimationFrame(animate);
+  var t = clock.getElapsedTime();
+  var dt = Math.min(0.05, t - lastT);
+  lastT = t;
+
+  for(var i=0;i<leafInstances.length;i++){
+    var lf = leafInstances[i];
+    if(lf.visible) lf.position.y = lf.userData.baseY + Math.sin(t*1.5+lf.userData.phase)*0.02;
+  }
+
+  if(activeSeason === 'autumn'){
+    for(var i=0;i<fallingLeaves.length;i++){
+      var m = fallingLeaves[i];
+      m.position.y -= m.userData.speed*dt;
+      m.userData.sway += dt*1.5;
+      m.position.x += Math.sin(m.userData.sway)*0.01;
+      m.position.z += m.userData.drift*dt*0.3;
+      m.rotation.z += m.userData.spin*dt;
+      m.rotation.x += m.userData.spin*0.5*dt;
+      if(m.position.y < 0.05){ resetFallingLeaf(m); }
+    }
+  }
+
+  if(activeSeason === 'winter'){
+    var arr = snowGeo.attributes.position.array;
+    for(var i=0;i<SNOW_COUNT;i++){
+      arr[i*3+1] -= snowSpeeds[i]*dt*0.7;
+      arr[i*3] += Math.sin(t+i)*0.003;
+      if(arr[i*3+1] < 0){ arr[i*3+1] = 13 + Math.random()*2; }
+    }
+    snowGeo.attributes.position.needsUpdate = true;
+
+    if(snowAccum < 1){
+      snowAccum = Math.min(1, snowAccum + dt*0.035);
+      for(var i=0;i<snowGroundSpheres.length;i++){
+        var s = snowGroundSpheres[i];
+        var sc = Math.min(s.userData.targetScale, snowAccum*1.3*s.userData.targetScale);
+        s.scale.set(sc, sc*0.5, sc);
+      }
+      terrainRepaintTimer += dt;
+      if(terrainRepaintTimer > 0.15){
+        terrainRepaintTimer = 0;
+        paintTerrain(lastGrass, lastRock, lastSnow, lastSnowLine, snowAccum);
+      }
+    }
+  }
+
+  camera.position.x = Math.sin(rotY)*Math.cos(rotX)*dist;
+  camera.position.z = Math.cos(rotY)*Math.cos(rotX)*dist;
+  camera.position.y = Math.sin(rotX)*dist+3;
+  camera.lookAt(0,4,0);
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', function(){
+  var nw = container.clientWidth, nh = container.clientHeight;
+  camera.aspect = nw/nh;
+  camera.updateProjectionMatrix();
+  renderer.setSize(nw, nh);
+});
+})();
+</script>
+</body>
+</html>

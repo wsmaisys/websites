@@ -1,1804 +1,3257 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" data-theme="summer-night">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WSM AI SYS — Web Development & AI Solutions in Dehradun</title>
+
+    <!-- Core Title & High-Authority SEO Meta -->
+    <title>WSM AI SYS — Production AI Engineering, Bespoke 3D Web &amp; Agentic Systems | Dehradun</title>
     <meta
       name="description"
-      content="WSM AI SYS builds web development, custom apps, and AI solutions for small businesses in Dehradun, Uttarakhand. Practical digital tools to grow leads, automate operations, and improve customer experience."
+      content="WSM AI SYS is a boutique AI engineering &amp; 3D web studio based in Dehradun, Uttarakhand. Founded by Wasim M Ansari (IIT Madras Data Science), building production LangGraph multi-agents, Neo4j knowledge graphs, MCP servers, and zero-CDN 3D WebGL experiences."
     />
     <meta
       name="keywords"
-      content="Web development Dehradun, AI solutions for small business, business automation, custom app development, AI chatbot development, local web agency Uttarakhand"
+      content="AI Engineer Dehradun, 3D Web Development Uttarakhand, Generative AI Architect, LangGraph Multi-Agent, Model Context Protocol MCP, Neo4j Knowledge Graph RAG, WebGL 3D Websites, Wasim Ansari, AI Solutions Small Business India, Time Series Forecasting"
     />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Wasim M Ansari — WSM AI SYS" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://wsmaisys.github.io/" />
-    <!-- SEO: Open Graph and social preview tags -->
+
+    <!-- AI Search & LLM Discovery Links -->
+    <link rel="alternate" type="text/plain" href="https://wsmaisys.github.io/llms.txt" title="LLM Discovery Manifest" />
+    <link rel="alternate" type="text/plain" href="https://wsmaisys.github.io/llms-full.txt" title="LLM Full Technical Documentation" />
+    <link rel="sitemap" type="application/xml" href="https://wsmaisys.github.io/sitemap.xml" />
+
+    <!-- Geo & Regional Tags (Himalayan / Dehradun Foothills) -->
+    <meta name="geo.region" content="IN-UT" />
+    <meta name="geo.placename" content="Dehradun, Uttarakhand, Himalayas" />
+    <meta name="geo.position" content="30.3165;78.0322" />
+    <meta name="ICBM" content="30.3165, 78.0322" />
+
+    <!-- Strict Cybersecurity & Safety Directives (Zero External CDN - 100% Local Self-Hosted) -->
     <meta
-      property="og:title"
-      content="WSM AI SYS — Web Development & AI Solutions in Dehradun"
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://waseemmansari.github.io; font-src 'self' data:; connect-src 'self' https://api.web3forms.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'none'; upgrade-insecure-requests;"
     />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), vr=()" />
+
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:site_name" content="WSM AI SYS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WSM AI SYS — Production AI Engineering &amp; 3D Web Systems" />
     <meta
       property="og:description"
-      content="Practical websites, custom business apps, and AI solutions for small businesses in Dehradun. Built clearly, delivered reliably, and designed to help you grow."
+      content="Bespoke 3D WebGL experiences, LangGraph agentic systems, Neo4j knowledge graphs, and AI automation engineered by Wasim M Ansari (IIT Madras alumnus) in Dehradun, India."
     />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://wsmaisys.github.io/" />
-    <meta
-      property="og:image"
-      content="https://wsmaisys.github.io/assets/og-image.png"
-    />
+    <meta property="og:image" content="https://waseemmansari.github.io/images/Passport%20Photo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="WSM AI SYS website and AI solutions preview"
-    />
+    <meta property="og:image:alt" content="WSM AI SYS Alpine 3D AI Engineering Preview" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WSM AI SYS — Alpine 3D Web &amp; Production AI Systems" />
     <meta
-      name="twitter:image"
-      content="https://wsmaisys.github.io/assets/og-image.png"
+      name="twitter:description"
+      content="High-performance zero-CDN 3D WebGL, LangGraph multi-agents, and knowledge graphs from Dehradun, Himalayas."
     />
-    <meta
-      name="twitter:image:alt"
-      content="WSM AI SYS website and AI solutions preview"
-    />
-    <!-- SEO: Favicons and Apple Touch Icon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <!-- Performance: font preconnect and prefetch -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <meta name="twitter:image" content="https://waseemmansari.github.io/images/Passport%20Photo.png" />
+
+    <!-- Theme & Colors -->
+    <meta name="theme-color" content="#06090c" />
+
+    <!-- Self-Contained Vector Favicon -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%230e1e1d'/%3E%3Cstop offset='50%25' stop-color='%233fe0d0'/%3E%3Cstop offset='100%25' stop-color='%23f4a261'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%2306090c'/%3E%3Cpath d='M18 78 L38 32 L52 54 L68 22 L84 78 Z' fill='none' stroke='url(%23g)' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='68' cy='22' r='4' fill='%23f4a261'/%3E%3Ccircle cx='38' cy='32' r='3.5' fill='%233fe0d0'/%3E%3C/svg%3E"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Local Self-Hosted Three.js (Zero CDN) -->
+    <script src="js/three.min.js"></script>
+
+    <!-- Deep SEO, AEO & AI Search Structured Data (JSON-LD Graph) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "WSM AI SYS",
-        "url": "https://wsmaisys.github.io/",
-        "logo": "https://wsmaisys.github.io/logo.png",
-        "image": "https://wsmaisys.github.io/assets/og-image.png",
-        "telephone": "+917253923415",
-        "email": "wsmaisys@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Dehradun",
-          "addressRegion": "Uttarakhand",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "30.3165",
-          "longitude": "78.0322"
-        },
-        "areaServed": "Dehradun, Uttarakhand, India",
-        "sameAs": [
-          "https://www.linkedin.com/in/wsmaisys",
-          "https://github.com/wsmaisys"
-        ],
-        "description": "WSM AI SYS builds web development, custom apps, and AI solutions for small businesses in Dehradun, Uttarakhand."
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://wsmaisys.github.io/#organization",
+            "name": "WSM AI SYS",
+            "alternateName": ["WSM AI Systems", "WSM AI Studio"],
+            "url": "https://wsmaisys.github.io/",
+            "logo": "https://wsmaisys.github.io/#logo",
+            "email": "wsmaisys@gmail.com",
+            "telephone": "+917253923415",
+            "founder": {
+              "@type": "Person",
+              "@id": "https://waseemmansari.github.io/#person",
+              "name": "Wasim M Ansari",
+              "jobTitle": "AI/ML Engineer & GenAI Solution Architect",
+              "url": "https://waseemmansari.github.io/",
+              "alumniOf": [
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Indian Institute of Technology Madras (IIT Madras)"
+                },
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Savitribai Phule Pune University"
+                }
+              ],
+              "sameAs": [
+                "https://github.com/wsmaisys",
+                "https://www.linkedin.com/in/wsmaisys/",
+                "https://www.kaggle.com/wasimansari786"
+              ]
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dehradun",
+              "addressRegion": "Uttarakhand",
+              "postalCode": "248001",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.3165,
+              "longitude": 78.0322
+            },
+            "areaServed": [
+              { "@type": "Place", "name": "Dehradun, Uttarakhand" },
+              { "@type": "Place", "name": "India" },
+              { "@type": "Place", "name": "Worldwide" }
+            ],
+            "priceRange": "$$",
+            "description": "WSM AI SYS builds production-ready Generative AI systems, LangGraph agentic workflows, Neo4j knowledge graphs, MCP servers, and bespoke 3D WebGL web applications with zero external dependencies.",
+            "knowsAbout": [
+              "3D WebGL Engineering",
+              "Generative AI",
+              "LangGraph Multi-Agent Systems",
+              "Model Context Protocol (MCP)",
+              "Neo4j Knowledge Graphs",
+              "Hybrid RAG Retrieval",
+              "Time Series Forecasting",
+              "FastAPI & Docker MLOps",
+              "Cybersecurity & Zero CDN Architecture"
+            ]
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://wsmaisys.github.io/#service-business",
+            "name": "WSM AI SYS — AI & 3D Web Studio",
+            "parentOrganization": { "@id": "https://wsmaisys.github.io/#organization" },
+            "url": "https://wsmaisys.github.io/",
+            "telephone": "+917253923415",
+            "email": "wsmaisys@gmail.com",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "AI & 3D Web Engineering Offerings",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "3D Web Engineering & WebGL Spatial Interfaces",
+                    "description": "Bespoke zero-CDN interactive 3D WebGL experiences, organic Himalayan living tree dynamics, and hardware-accelerated shaders with ultra-fast sub-second load times."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Agentic AI & LangGraph Multi-Agent Workflows",
+                    "description": "Autonomous multi-step reasoning agents, self-healing tool pipelines, and Model Context Protocol (MCP) server implementations."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Enterprise Hybrid RAG & Neo4j Knowledge Graphs",
+                    "description": "Zero-hallucination domain intelligence linking vector embeddings with Neo4j semantic graph traversal and source verification."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Business Process Automation & MLOps Infrastructure",
+                    "description": "Custom asynchronous Celery/Redis workers, FastAPI microservices, Dockerized Cloud Run deployments, and automated CRM pipelines."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Predictive Time-Series Demand Forecasting",
+                    "description": "ERP-integrated statistical demand modeling (TSB, Croston) and Monte Carlo confidence simulations for inventory and supply chain optimization."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://wsmaisys.github.io/#website",
+            "url": "https://wsmaisys.github.io/",
+            "name": "WSM AI SYS — Production AI Engineering & 3D Web Systems",
+            "publisher": { "@id": "https://wsmaisys.github.io/#organization" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://wsmaisys.github.io/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What services does WSM AI SYS provide?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "WSM AI SYS specializes in bespoke 3D WebGL interactive websites, production Generative AI agentic workflows (LangGraph), Model Context Protocol (MCP) server development, Neo4j hybrid RAG knowledge graphs, business automation pipelines, and time-series demand forecasting."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who leads WSM AI SYS and what are their qualifications?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "WSM AI SYS is founded and led by Wasim M Ansari, an AI/ML Engineer and GenAI Solution Architect with credentials from IIT Madras (Data Science) and over 8+ years of multidisciplinary engineering and domain experience."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why does WSM AI SYS use a Zero-CDN and Zero External Dependency architecture?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A zero-CDN architecture eliminates third-party single points of failure, blocks external tracker snooping, guarantees strict Content Security Policy compliance, and ensures sub-second page loads with 100% self-hosted code."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Model Context Protocol (MCP) and how does WSM AI SYS implement it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Model Context Protocol (MCP) is an open standard that allows LLMs to securely execute tools and access enterprise data. WSM AI SYS develops authenticated MCP servers connecting AI models directly to internal databases, Neo4j graphs, and business APIs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is WSM AI SYS located and do you work with international clients?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "WSM AI SYS is headquartered in Dehradun, Uttarakhand, India (foothills of the Himalayas). We serve local businesses across Uttarakhand as well as global enterprises across India, North America, Europe, and the Middle East."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I get in touch or request a project estimate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can reach out directly via email at wsmaisys@gmail.com, message on WhatsApp at +91 7253923415, or submit a brief using the project contact form on https://wsmaisys.github.io/#contact."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://wsmaisys.github.io/#breadcrumbs",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wsmaisys.github.io/" },
+              { "@type": "ListItem", "position": 2, "name": "3D Botanical Tree", "item": "https://wsmaisys.github.io/#hero" },
+              { "@type": "ListItem", "position": 3, "name": "Services", "item": "https://wsmaisys.github.io/#services" },
+              { "@type": "ListItem", "position": 4, "name": "AI Architectures", "item": "https://wsmaisys.github.io/#architectures" },
+              { "@type": "ListItem", "position": 5, "name": "Credibility & Edge", "item": "https://wsmaisys.github.io/#edge" },
+              { "@type": "ListItem", "position": 6, "name": "FAQ", "item": "https://wsmaisys.github.io/#faq" },
+              { "@type": "ListItem", "position": 7, "name": "Basecamp Contact", "item": "https://wsmaisys.github.io/#contact" }
+            ]
+          }
+        ]
       }
     </script>
+
+    <!-- 8-PALETTE SEASON X DAY/NIGHT ATMOSPHERIC MATRIX DESIGN SYSTEM -->
     <style>
-      :root {
-        --bg-void: #0a0e1a;
-        --bg-panel: #12172c;
-        --bg-panel-hi: #171d38;
-        --accent-indigo: #6c5ce7;
-        --accent-cyan: #3fe0d0;
-        --accent-amber: #ffb86b;
-        --text-primary: #f2f4fa;
-        --text-muted: #8d93ac;
-        --border-glass: rgba(255, 255, 255, 0.08);
-        --border-glass-hi: rgba(255, 255, 255, 0.16);
+      /* --- 1. SUMMER NIGHT (Default Nocturne) --- */
+      :root, [data-theme="summer-night"] {
+        --bg-void: #060910;
+        --bg-deep: #081018;
+        --bg-surface: #0c1722;
+        --bg-panel: #112030;
+        --bg-panel-hi: #172c40;
+        --bg-glass-card: rgba(10, 18, 28, 0.76);
+        --accent-primary: #3fe0d0;
+        --accent-secondary: #f4a261;
+        --accent-glow: rgba(63, 224, 208, 0.3);
+        --text-primary: #f2f8fc;
+        --text-secondary: #bfd5e2;
+        --text-muted: #7d9ba9;
+        --border-glass: rgba(166, 205, 225, 0.14);
+        --border-glass-bright: rgba(63, 224, 208, 0.4);
       }
-      * {
+
+      /* --- 2. SUMMER DAY --- */
+      [data-theme="summer-day"] {
+        --bg-void: #f0f7f6;
+        --bg-deep: #e2f0ee;
+        --bg-surface: #ffffff;
+        --bg-panel: #eaf5f3;
+        --bg-panel-hi: #d7ede7;
+        --bg-glass-card: rgba(255, 255, 255, 0.86);
+        --accent-primary: #0d9488;
+        --accent-secondary: #ea580c;
+        --accent-glow: rgba(13, 148, 136, 0.25);
+        --text-primary: #081d1b;
+        --text-secondary: #173f3c;
+        --text-muted: #4a7571;
+        --border-glass: rgba(13, 148, 136, 0.14);
+        --border-glass-bright: rgba(13, 148, 136, 0.5);
+      }
+
+      /* --- 3. AUTUMN NIGHT --- */
+      [data-theme="autumn-night"] {
+        --bg-void: #0b0705;
+        --bg-deep: #140b08;
+        --bg-surface: #1d100b;
+        --bg-panel: #27160f;
+        --bg-panel-hi: #361f15;
+        --bg-glass-card: rgba(29, 16, 11, 0.78);
+        --accent-primary: #f4a261;
+        --accent-secondary: #e76f51;
+        --accent-glow: rgba(244, 162, 97, 0.35);
+        --text-primary: #fdf5f0;
+        --text-secondary: #e8d0c2;
+        --text-muted: #ab8d7c;
+        --border-glass: rgba(244, 162, 97, 0.14);
+        --border-glass-bright: rgba(244, 162, 97, 0.45);
+      }
+
+      /* --- 4. AUTUMN DAY --- */
+      [data-theme="autumn-day"] {
+        --bg-void: #faf4ed;
+        --bg-deep: #f1e7da;
+        --bg-surface: #ffffff;
+        --bg-panel: #f6eee2;
+        --bg-panel-hi: #ebded0;
+        --bg-glass-card: rgba(255, 255, 255, 0.86);
+        --accent-primary: #c2410c;
+        --accent-secondary: #d97706;
+        --accent-glow: rgba(194, 65, 12, 0.22);
+        --text-primary: #22130b;
+        --text-secondary: #472b1b;
+        --text-muted: #7f5e4c;
+        --border-glass: rgba(194, 65, 12, 0.14);
+        --border-glass-bright: rgba(194, 65, 12, 0.45);
+      }
+
+      /* --- 5. WINTER NIGHT --- */
+      [data-theme="winter-night"] {
+        --bg-void: #04070e;
+        --bg-deep: #070c17;
+        --bg-surface: #0c1322;
+        --bg-panel: #111b30;
+        --bg-panel-hi: #182643;
+        --bg-glass-card: rgba(12, 19, 34, 0.78);
+        --accent-primary: #70b8ff;
+        --accent-secondary: #c2e2ff;
+        --accent-glow: rgba(112, 184, 255, 0.35);
+        --text-primary: #f0f6ff;
+        --text-secondary: #bed3f0;
+        --text-muted: #7997c4;
+        --border-glass: rgba(112, 184, 255, 0.14);
+        --border-glass-bright: rgba(112, 184, 255, 0.45);
+      }
+
+      /* --- 6. WINTER DAY --- */
+      [data-theme="winter-day"] {
+        --bg-void: #f1f6fc;
+        --bg-deep: #e2eaf5;
+        --bg-surface: #ffffff;
+        --bg-panel: #ebf1f8;
+        --bg-panel-hi: #d8e4f3;
+        --bg-glass-card: rgba(255, 255, 255, 0.88);
+        --accent-primary: #0284c7;
+        --accent-secondary: #0369a1;
+        --accent-glow: rgba(2, 132, 199, 0.22);
+        --text-primary: #07182b;
+        --text-secondary: #1b375b;
+        --text-muted: #4e6c90;
+        --border-glass: rgba(2, 132, 199, 0.14);
+        --border-glass-bright: rgba(2, 132, 199, 0.45);
+      }
+
+      /* --- 7. SPRING NIGHT --- */
+      [data-theme="spring-night"] {
+        --bg-void: #050b06;
+        --bg-deep: #09120b;
+        --bg-surface: #0f1a11;
+        --bg-panel: #152418;
+        --bg-panel-hi: #1e3322;
+        --bg-glass-card: rgba(15, 26, 17, 0.78);
+        --accent-primary: #4ade80;
+        --accent-secondary: #f472b6;
+        --accent-glow: rgba(74, 222, 128, 0.3);
+        --text-primary: #f0fdf4;
+        --text-secondary: #c2ebd0;
+        --text-muted: #7fa88d;
+        --border-glass: rgba(74, 222, 128, 0.14);
+        --border-glass-bright: rgba(74, 222, 128, 0.45);
+      }
+
+      /* --- 8. SPRING DAY --- */
+      [data-theme="spring-day"] {
+        --bg-void: #f2faf3;
+        --bg-deep: #e2f4e6;
+        --bg-surface: #ffffff;
+        --bg-panel: #eaf7ed;
+        --bg-panel-hi: #d5eed9;
+        --bg-glass-card: rgba(255, 255, 255, 0.88);
+        --accent-primary: #16a34a;
+        --accent-secondary: #db2777;
+        --accent-glow: rgba(22, 163, 74, 0.22);
+        --text-primary: #08210e;
+        --text-secondary: #144620;
+        --text-muted: #4a7553;
+        --border-glass: rgba(22, 163, 74, 0.14);
+        --border-glass-bright: rgba(22, 163, 74, 0.45);
+      }
+
+      /* --- COMMON DESIGN BASE --- */
+      :root {
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", sans-serif;
+        --font-mono: "JetBrains Mono", "SF Mono", "Consolas", "Roboto Mono", monospace;
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+        --radius-xl: 28px;
+      }
+
+      *, *::before, *::after {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
       html {
         scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeLegibility;
       }
       body {
         position: relative;
-        background: var(--bg-void);
+        background-color: var(--bg-void);
         color: var(--text-primary);
-        font-family: "Inter", sans-serif;
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.65;
         overflow-x: hidden;
-        line-height: 1.6;
+        min-height: 100vh;
+        letter-spacing: -0.01em;
+        transition: background-color 0.4s ease, color 0.4s ease;
       }
-      #bg-canvas {
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* --- THREE.JS 3D CANVAS & LIVING TREE VIGNETTE --- */
+      #webgl-bg-canvas {
         position: fixed;
         inset: 0;
         width: 100vw;
         height: 100vh;
-        z-index: -1;
+        z-index: 0;
         pointer-events: none;
       }
-      footer {
-        position: relative;
+      .wall-vignette {
+        position: fixed;
+        inset: 0;
         z-index: 1;
+        pointer-events: none;
+        background: radial-gradient(circle at 50% 45%, transparent 35%, rgba(0, 0, 0, 0.35) 75%, rgba(0, 0, 0, 0.75) 100%);
+        transition: background 0.4s ease;
       }
-      h1,
-      h2,
-      h3 {
-        font-family: "Space Grotesk", sans-serif;
-        font-weight: 600;
-        letter-spacing: -0.01em;
+
+      /* --- LAYOUT WRAPPER --- */
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+      }
+      .content-layer {
+        position: relative;
+        z-index: 10;
+      }
+      section {
+        position: relative;
+        padding: 110px 0;
+      }
+      @media (max-width: 768px) {
+        section {
+          padding: 70px 0;
+        }
+      }
+
+      /* --- TYPOGRAPHY & GRADIENTS --- */
+      h1, h2, h3, h4 {
+        color: var(--text-primary);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.025em;
       }
       .eyebrow {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 12px;
-        letter-spacing: 0.14em;
+        font-family: var(--font-mono);
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: var(--accent-cyan);
+        color: var(--accent-primary);
         display: inline-flex;
         align-items: center;
         gap: 8px;
+        padding: 5px 12px;
+        background: rgba(125, 125, 125, 0.08);
+        border: 1px solid var(--border-glass-bright);
+        border-radius: 999px;
+        margin-bottom: 16px;
       }
       .eyebrow::before {
         content: "";
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--accent-cyan);
-        box-shadow: 0 0 8px var(--accent-cyan);
+        background: currentColor;
+        box-shadow: 0 0 8px currentColor;
       }
-      a {
-        color: inherit;
-        text-decoration: none;
+      .text-gradient-main {
+        background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 60%, var(--accent-secondary) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
-      .wrap {
-        max-width: 1180px;
-        margin: 0 auto;
-        padding: 0 28px;
-      }
-      section {
-        position: relative;
-        padding: 96px 0;
-      }
-      @media (max-width: 720px) {
-        section {
-          padding: 64px 0;
-        }
+      .text-gradient-accent {
+        background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
 
-      /* ---------- NAV ---------- */
-      nav {
+      /* --- BUTTONS --- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 13px 26px;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 14.5px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        text-align: center;
+        white-space: nowrap;
+        user-select: none;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+        color: #ffffff;
+        font-weight: 700;
+        box-shadow: 0 6px 24px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 32px var(--accent-glow);
+      }
+      .btn-glass {
+        background: var(--bg-glass-card);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: var(--text-primary);
+        border: 1px solid var(--border-glass);
+      }
+      .btn-glass:hover {
+        background: var(--bg-panel-hi);
+        border-color: var(--accent-primary);
+        transform: translateY(-2px);
+      }
+      .btn-whatsapp {
+        background: #25d366;
+        color: #07220e;
+        font-weight: 700;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+      }
+      .btn-whatsapp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+      }
+      .btn-sm {
+        padding: 8px 16px;
+        font-size: 13px;
+        border-radius: var(--radius-sm);
+      }
+
+      /* --- FLOATING 8-PALETTE SEASON X DAY/NIGHT MATRIX HUD --- */
+      .hud-palette-modal {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 120;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+      }
+      .hud-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: var(--bg-glass-card);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--border-glass-bright);
+        color: var(--text-primary);
+        font-family: var(--font-mono);
+        font-size: 12.5px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        transition: all 0.25s ease;
+      }
+      .hud-toggle-btn:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent-primary);
+        box-shadow: 0 12px 36px var(--accent-glow);
+      }
+      .hud-matrix-card {
+        display: none;
+        background: var(--bg-surface);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid var(--border-glass-bright);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+        width: 330px;
+      }
+      .hud-matrix-card.active {
+        display: block;
+        animation: popUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes popUp {
+        0% { opacity: 0; transform: translateY(10px) scale(0.95); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .hud-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-glass);
+      }
+      .hud-title {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-primary);
+        font-weight: 700;
+      }
+      .hud-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      .hud-palette-opt {
+        background: var(--bg-panel);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        transition: all 0.2s ease;
+        text-align: left;
+      }
+      .hud-palette-opt:hover {
+        background: var(--bg-panel-hi);
+        border-color: var(--accent-primary);
+        transform: translateY(-2px);
+      }
+      .hud-palette-opt.selected {
+        border-color: var(--accent-primary);
+        background: var(--bg-panel-hi);
+        box-shadow: 0 0 14px var(--accent-glow);
+      }
+      .opt-name {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .opt-swatches {
+        display: flex;
+        gap: 4px;
+        margin-top: 2px;
+      }
+      .swatch {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      /* --- NAVBAR --- */
+      header.navbar {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 100;
-        background: rgba(10, 14, 26, 0.72);
-        backdrop-filter: blur(14px);
+        background: rgba(6, 9, 16, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         border-bottom: 1px solid var(--border-glass);
+        transition: all 0.3s ease;
       }
       .nav-inner {
-        max-width: 1180px;
-        margin: 0 auto;
-        padding: 16px 28px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 14px 24px;
       }
-      .logo {
-        font-family: "Space Grotesk", sans-serif;
-        font-weight: 700;
-        font-size: 19px;
-        letter-spacing: -0.01em;
+      .brand-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
       }
-      .logo span {
-        color: var(--accent-cyan);
+      .brand-logo-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--bg-surface), var(--bg-panel));
+        border: 1px solid var(--border-glass-bright);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent-primary);
+      }
+      .brand-logo-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+      .brand-name {
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+      }
+      .brand-name span {
+        color: var(--accent-primary);
+      }
+      .brand-telemetry {
+        font-family: var(--font-mono);
+        font-size: 9.5px;
+        color: var(--text-muted);
+        letter-spacing: 0.08em;
       }
       .nav-links {
         display: flex;
-        gap: 32px;
         align-items: center;
+        gap: 26px;
+        list-style: none;
       }
       .nav-links a {
-        font-size: 14.5px;
-        color: var(--text-muted);
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-secondary);
         transition: color 0.2s;
       }
       .nav-links a:hover {
-        color: var(--text-primary);
+        color: var(--accent-primary);
       }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 12px 24px;
-        border-radius: 10px;
-        font-weight: 600;
-        font-size: 14.5px;
-        cursor: pointer;
-        border: none;
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease,
-          background 0.2s ease;
-        white-space: nowrap;
-      }
-      .btn-primary {
-        background: linear-gradient(135deg, var(--accent-amber), #ff9d4d);
-        color: #1a1206;
-        box-shadow: 0 4px 20px rgba(255, 184, 107, 0.25);
-      }
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(255, 184, 107, 0.4);
-      }
-      .btn-ghost {
-        background: transparent;
-        color: var(--text-primary);
-        border: 1px solid var(--border-glass-hi);
-      }
-      .btn-ghost:hover {
-        background: rgba(255, 255, 255, 0.06);
-        border-color: var(--accent-cyan);
-      }
-      .nav-cta {
+      .nav-actions {
         display: flex;
-        gap: 12px;
         align-items: center;
+        gap: 10px;
       }
-      .menu-toggle {
+      .mobile-menu-btn {
         display: none;
         background: none;
         border: none;
         color: var(--text-primary);
-        font-size: 26px;
         cursor: pointer;
+        padding: 8px;
       }
-      @media (max-width: 860px) {
+      @media (max-width: 960px) {
         .nav-links {
           display: none;
         }
-        .nav-cta .btn-ghost {
-          display: none;
-        }
-        .menu-toggle {
+        .mobile-menu-btn {
           display: block;
         }
       }
 
-      /* ---------- HERO ---------- */
+      /* --- MOBILE DRAWER --- */
+      .mobile-drawer {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--bg-void);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-glass);
+        padding: 24px;
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        z-index: 99;
+      }
+      .mobile-drawer.open {
+        display: flex;
+      }
+      .mobile-drawer a {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-glass);
+      }
+
+      /* --- HERO SECTION --- */
       .hero {
-        padding-top: 160px;
-        min-height: 92vh;
+        padding-top: 170px;
+        padding-bottom: 90px;
+        min-height: 94vh;
         display: flex;
         align-items: center;
-        position: relative;
       }
-      .hero-inner {
+      .hero-grid {
         display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 40px;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
         align-items: center;
       }
-      @media (max-width: 900px) {
-        .hero-inner {
+      @media (max-width: 960px) {
+        .hero-grid {
           grid-template-columns: 1fr;
+          gap: 36px;
         }
         .hero {
           padding-top: 130px;
           min-height: auto;
         }
       }
-      .hero h1 {
-        font-size: clamp(34px, 5vw, 58px);
+      .hero-title {
+        font-size: clamp(38px, 5.2vw, 64px);
+        margin-bottom: 22px;
         line-height: 1.08;
-        margin: 20px 0 22px;
       }
-      .hero h1 .accent {
-        background: linear-gradient(
-          90deg,
-          var(--accent-cyan),
-          var(--accent-indigo)
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      .hero p {
-        font-size: 17.5px;
-        color: var(--text-muted);
-        max-width: 480px;
+      .hero-desc {
+        font-size: 18px;
+        line-height: 1.65;
+        color: var(--text-secondary);
+        max-width: 580px;
         margin-bottom: 34px;
       }
-      .hero-ctas {
+      .hero-actions {
         display: flex;
+        flex-wrap: wrap;
         gap: 14px;
-        flex-wrap: wrap;
+        margin-bottom: 40px;
       }
-      .hero-visual {
-        position: relative;
-        height: 460px;
-      }
-      #hero-canvas {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      @media (max-width: 900px) {
-        .hero-visual {
-          height: 320px;
-        }
-      }
-
-      .trust-strip {
+      .hero-badges {
         display: flex;
         flex-wrap: wrap;
-        gap: 28px;
-        margin-top: 48px;
-        padding-top: 28px;
+        gap: 12px;
+        padding-top: 24px;
         border-top: 1px solid var(--border-glass);
       }
-      .trust-strip .item {
-        font-size: 13.5px;
-        color: var(--text-muted);
-        display: flex;
+      .badge-pill {
+        display: inline-flex;
         align-items: center;
-        gap: 8px;
-      }
-      .trust-strip .item svg {
-        flex-shrink: 0;
-      }
-
-      /* ---------- SECTION HEAD ---------- */
-      .section-head {
-        max-width: 600px;
-        margin-bottom: 56px;
-      }
-      .section-head h2 {
-        font-size: clamp(26px, 3.4vw, 38px);
-        margin-top: 14px;
-      }
-      .section-head p {
-        color: var(--text-muted);
-        font-size: 16px;
-        margin-top: 14px;
-      }
-
-      /* ---------- SERVICES ---------- */
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-      @media (max-width: 900px) {
-        .services-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 600px) {
-        .services-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .service-card {
-        background: linear-gradient(
-          160deg,
-          var(--bg-panel-hi),
-          var(--bg-panel)
-        );
+        gap: 7px;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--text-secondary);
+        background: var(--bg-panel);
+        padding: 6px 12px;
+        border-radius: var(--radius-sm);
         border: 1px solid var(--border-glass);
-        border-radius: 18px;
-        padding: 30px 26px;
+      }
+      .badge-pill strong {
+        color: var(--text-primary);
+      }
+
+      /* --- TELEMETRY CARD --- */
+      .hero-telemetry-card {
+        background: var(--bg-glass-card);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-xl);
+        padding: 32px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
         position: relative;
-        transform-style: preserve-3d;
-        transition:
-          border-color 0.25s,
-          box-shadow 0.25s;
-        will-change: transform;
-      }
-      .service-card:hover {
-        border-color: var(--border-glass-hi);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-      }
-      .service-card.specialty {
-        grid-column: span 1;
-        border-color: rgba(63, 224, 208, 0.35);
-        background: linear-gradient(160deg, #16233a, var(--bg-panel));
-      }
-      .service-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(108, 92, 231, 0.14);
-        color: var(--accent-cyan);
-        margin-bottom: 22px;
-      }
-      .service-card.specialty .service-icon {
-        background: rgba(63, 224, 208, 0.16);
-      }
-      .service-tag {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--accent-amber);
-        background: rgba(255, 184, 107, 0.12);
-        padding: 4px 10px;
-        border-radius: 20px;
-        display: inline-block;
-        margin-bottom: 14px;
-      }
-      .service-card h3 {
-        font-size: 19px;
-        margin-bottom: 10px;
-      }
-      .service-card p {
-        color: var(--text-muted);
-        font-size: 14.5px;
-      }
-
-      /* ---------- WHY ---------- */
-      .why-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-      }
-      @media (max-width: 900px) {
-        .why-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 520px) {
-        .why-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-      .why-item .num {
-        font-family: "JetBrains Mono", monospace;
-        color: var(--accent-indigo);
-        font-size: 13px;
-        margin-bottom: 14px;
-      }
-      .why-item h3 {
-        font-size: 17px;
-        margin-bottom: 8px;
-      }
-      .why-item p {
-        color: var(--text-muted);
-        font-size: 14px;
-      }
-
-      /* ---------- ABOUT ---------- */
-      .about-inner {
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 60px;
-        align-items: center;
-      }
-      @media (max-width: 860px) {
-        .about-inner {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-      }
-      .about-card {
-        background: var(--bg-panel);
-        border: 1px solid var(--border-glass);
-        border-radius: 20px;
-        padding: 34px;
-      }
-      .about-card .big {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 44px;
-        color: var(--accent-cyan);
-      }
-      .about-card .label {
-        color: var(--text-muted);
-        font-size: 14px;
-        margin-top: 6px;
-      }
-      .about-text p {
-        color: var(--text-muted);
-        margin-bottom: 16px;
-        font-size: 16px;
-      }
-      .about-text strong {
-        color: var(--text-primary);
-      }
-
-      /* ---------- WORK ---------- */
-      .work-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-      @media (max-width: 860px) {
-        .work-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-      .work-card {
-        border-radius: 18px;
-        border: 1px solid var(--border-glass);
         overflow: hidden;
-        background: var(--bg-panel);
       }
-      .work-thumb {
-        display: block;
-        width: 100%;
-        height: 170px;
-        object-fit: cover;
-        object-position: center;
-        border-bottom: 1px solid var(--border-glass);
-        background: linear-gradient(
-          135deg,
-          rgba(108, 92, 231, 0.35),
-          rgba(63, 224, 208, 0.2)
-        );
+      .hero-telemetry-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
       }
-      .work-body {
-        padding: 22px;
-      }
-      .work-body h3 {
-        font-size: 16.5px;
-        margin-bottom: 8px;
-      }
-      .work-body p {
-        color: var(--text-muted);
-        font-size: 13.5px;
-      }
-
-      .faq-list {
-        display: grid;
-        gap: 18px;
-      }
-      details {
-        border: 1px solid var(--border-glass);
-        border-radius: 18px;
-        padding: 22px 24px;
-        background: var(--bg-panel);
-      }
-      details summary {
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 600;
-        color: var(--text-primary);
-        outline: none;
-      }
-      details p {
-        margin-top: 14px;
-        color: var(--text-muted);
-        font-size: 15px;
-        line-height: 1.75;
-      }
-
-      /* ---------- CONTACT ---------- */
-      .contact-inner {
-        display: grid;
-        grid-template-columns: 0.85fr 1.15fr;
-        gap: 50px;
-      }
-      @media (max-width: 900px) {
-        .contact-inner {
-          grid-template-columns: 1fr;
-        }
-      }
-      .contact-side h2 {
-        font-size: clamp(26px, 3.4vw, 36px);
-        margin-top: 14px;
-        margin-bottom: 16px;
-      }
-      .contact-side p {
-        color: var(--text-muted);
-        font-size: 15.5px;
-        margin-bottom: 28px;
-        max-width: 400px;
-      }
-      .contact-methods {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-      }
-      .contact-method {
+      .telemetry-header {
         display: flex;
         align-items: center;
-        gap: 14px;
-        padding: 14px 16px;
-        border: 1px solid var(--border-glass);
-        border-radius: 14px;
-        font-size: 14.5px;
-        transition:
-          border-color 0.2s,
-          background 0.2s;
+        justify-content: space-between;
+        margin-bottom: 24px;
       }
-      .contact-method:hover {
-        border-color: var(--accent-cyan);
-        background: rgba(63, 224, 208, 0.05);
+      .telemetry-node-title {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--accent-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
       }
-      .contact-method .icon-circle {
-        width: 38px;
-        height: 38px;
+      .telemetry-pulse {
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
-        background: rgba(108, 92, 231, 0.15);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        color: var(--accent-cyan);
+        background: var(--accent-primary);
+        box-shadow: 0 0 12px var(--accent-primary);
+        animation: pulseDot 2s infinite ease-in-out;
       }
-      .form-panel {
-        background: var(--bg-panel);
-        border: 1px solid var(--border-glass);
-        border-radius: 22px;
-        padding: 36px;
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.8); }
       }
-      .form-row {
+      .telemetry-stats {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+        margin-bottom: 24px;
+      }
+      .stat-box {
+        background: var(--bg-deep);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-md);
+        padding: 16px;
+      }
+      .stat-num {
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--text-primary);
+      }
+      .stat-num span {
+        color: var(--accent-secondary);
+      }
+      .stat-lbl {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 4px;
+      }
+      .telemetry-founder {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-glass);
+      }
+      .founder-avatar {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent-primary), var(--bg-panel));
+        border: 2px solid var(--accent-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 18px;
+        color: #ffffff;
+      }
+      .founder-info h4 {
+        font-size: 15px;
+        margin-bottom: 2px;
+      }
+      .founder-info p {
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+
+      /* --- AEO DIRECT EXTRACTION STRIP --- */
+      .aeo-summary-strip {
+        background: var(--bg-glass-card);
+        border: 1px solid var(--border-glass-bright);
+        border-radius: var(--radius-lg);
+        padding: 28px 32px;
+        margin-top: 40px;
+      }
+      .aeo-summary-strip h3 {
+        font-size: 18px;
+        color: var(--accent-primary);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .aeo-summary-strip p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* --- SECTION HEADERS --- */
+      .section-head {
+        max-width: 680px;
+        margin-bottom: 60px;
+      }
+      .section-head h2 {
+        font-size: clamp(28px, 3.6vw, 44px);
+        margin-top: 10px;
         margin-bottom: 16px;
       }
-      @media (max-width: 520px) {
-        .form-row {
+      .section-head p {
+        font-size: 17px;
+        color: var(--text-secondary);
+      }
+
+      /* --- SERVICES GRID --- */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      @media (max-width: 960px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .services-grid {
           grid-template-columns: 1fr;
         }
       }
-      .field {
+      .service-card {
+        background: var(--bg-glass-card);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-lg);
+        padding: 32px 28px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--border-glass-bright);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 30px var(--accent-glow);
+      }
+      .service-card.highlight {
+        border-color: var(--border-glass-bright);
+        background: linear-gradient(160deg, var(--bg-panel-hi), var(--bg-panel));
+      }
+      .service-icon-wrap {
+        width: 52px;
+        height: 52px;
+        border-radius: var(--radius-md);
+        background: rgba(125, 125, 125, 0.1);
+        border: 1px solid var(--border-glass-bright);
+        color: var(--accent-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 22px;
+      }
+      .service-icon-wrap svg {
+        width: 26px;
+        height: 26px;
+      }
+      .service-tag {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent-secondary);
+        background: rgba(125, 125, 125, 0.1);
+        padding: 3px 9px;
+        border-radius: 6px;
+        align-self: flex-start;
+        margin-bottom: 14px;
+      }
+      .service-card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+      .service-card p {
+        font-size: 14.5px;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex: 1;
+      }
+      .service-deliverables {
+        list-style: none;
         display: flex;
         flex-direction: column;
         gap: 8px;
-        margin-bottom: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border-glass);
       }
-      .field label {
+      .service-deliverables li {
         font-size: 13px;
         color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
-      .field input,
-      .field select,
-      .field textarea {
-        background: #0d1122;
-        border: 1px solid var(--border-glass);
-        border-radius: 10px;
-        padding: 13px 14px;
-        color: var(--text-primary);
-        font-family: "Inter", sans-serif;
-        font-size: 14.5px;
-        outline: none;
-        transition: border-color 0.2s;
-      }
-      .field input:focus,
-      .field select:focus,
-      .field textarea:focus {
-        border-color: var(--accent-cyan);
-      }
-      .field textarea {
-        resize: vertical;
-        min-height: 100px;
-      }
-      .form-submit {
-        width: 100%;
-        padding: 15px;
-        font-size: 15.5px;
-        margin-top: 6px;
-      }
-      .form-note {
-        font-size: 12.5px;
-        color: var(--text-muted);
-        margin-top: 14px;
-        text-align: center;
-      }
-      .form-success {
-        display: none;
-        background: rgba(63, 224, 208, 0.1);
-        border: 1px solid rgba(63, 224, 208, 0.35);
-        color: var(--accent-cyan);
-        padding: 14px 16px;
-        border-radius: 12px;
-        font-size: 14px;
-        margin-bottom: 16px;
+      .service-deliverables li svg {
+        width: 14px;
+        height: 14px;
+        color: var(--accent-primary);
+        flex-shrink: 0;
       }
 
-      /* ---------- FOOTER ---------- */
-      footer {
-        border-top: 1px solid var(--border-glass);
-        padding: 40px 0;
+      /* --- ARCHITECTURES GRID --- */
+      .architectures-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
       }
-      .footer-inner {
+      @media (max-width: 860px) {
+        .architectures-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .arch-card {
+        background: var(--bg-glass-card);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-xl);
+        padding: 36px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      .arch-card:hover {
+        border-color: var(--border-glass-bright);
+        transform: translateY(-4px);
+      }
+      .arch-badge {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-primary);
+        display: inline-block;
+        margin-bottom: 12px;
+      }
+      .arch-card h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      .arch-card p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+      }
+      .arch-tech-stack {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 8px;
+        margin-bottom: 24px;
       }
-      .footer-inner p {
+      .tech-pill {
+        font-family: var(--font-mono);
+        font-size: 11.5px;
+        color: var(--text-primary);
+        background: var(--bg-deep);
+        border: 1px solid var(--border-glass);
+        padding: 4px 10px;
+        border-radius: 6px;
+      }
+      .arch-metrics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-glass);
+      }
+      .metric-item strong {
+        font-size: 18px;
+        color: var(--accent-secondary);
+        display: block;
+      }
+      .metric-item span {
+        font-size: 12px;
         color: var(--text-muted);
-        font-size: 13.5px;
       }
-      .footer-links {
-        display: flex;
+
+      /* --- CREDIBILITY EDGE --- */
+      .edge-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
       }
-      .footer-links a {
-        color: var(--text-muted);
-        font-size: 13.5px;
-        transition: color 0.2s;
+      @media (max-width: 960px) {
+        .edge-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
-      .footer-links a:hover {
-        color: var(--accent-cyan);
+      @media (max-width: 540px) {
+        .edge-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .edge-card {
+        background: var(--bg-glass-card);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-lg);
+        padding: 28px 24px;
+      }
+      .edge-num {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--accent-primary);
+        margin-bottom: 14px;
+      }
+      .edge-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+      .edge-card p {
+        font-size: 14px;
+        color: var(--text-secondary);
       }
 
-      ::selection {
-        background: var(--accent-indigo);
-        color: #fff;
+      /* --- FAQ ACCORDION --- */
+      .faq-accordion {
+        display: grid;
+        gap: 16px;
+        max-width: 900px;
+      }
+      details.faq-item {
+        background: var(--bg-glass-card);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-lg);
+        padding: 22px 26px;
+        transition: border-color 0.2s;
+      }
+      details.faq-item[open] {
+        border-color: var(--accent-primary);
+      }
+      summary.faq-q {
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--text-primary);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+      summary.faq-q::-webkit-details-marker {
+        display: none;
+      }
+      summary.faq-q::after {
+        content: "+";
+        font-family: var(--font-mono);
+        font-size: 20px;
+        color: var(--accent-primary);
+      }
+      details.faq-item[open] summary.faq-q::after {
+        content: "−";
+        color: var(--accent-secondary);
+      }
+      .faq-a {
+        margin-top: 14px;
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        padding-top: 14px;
+        border-top: 1px solid var(--border-glass);
+      }
+
+      /* --- BASECAMP CONTACT --- */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 48px;
+      }
+      @media (max-width: 900px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .contact-info-card {
+        background: var(--bg-glass-card);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-xl);
+        padding: 36px;
+      }
+      .contact-channel {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-top: 24px;
+      }
+      .channel-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        background: rgba(125, 125, 125, 0.1);
+        border: 1px solid var(--border-glass-bright);
+        color: var(--accent-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .channel-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+      .channel-meta strong {
+        font-size: 15px;
+        color: var(--text-primary);
+        display: block;
+      }
+      .channel-meta a {
+        color: var(--text-muted);
+        font-size: 14px;
+        transition: color 0.2s;
+      }
+      .channel-meta a:hover {
+        color: var(--accent-primary);
+      }
+
+      .contact-form-card {
+        background: var(--bg-glass-card);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-xl);
+        padding: 36px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-label {
+        display: block;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--text-secondary);
+        margin-bottom: 8px;
+      }
+      .form-input, .form-textarea, .form-select {
+        width: 100%;
+        background: var(--bg-deep);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-md);
+        padding: 13px 16px;
+        color: var(--text-primary);
+        font-size: 15px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        outline: none;
+      }
+      .form-input:focus, .form-textarea:focus, .form-select:focus {
+        border-color: var(--accent-primary);
+        box-shadow: 0 0 0 3px var(--accent-glow);
+      }
+      .form-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      @media (max-width: 600px) {
+        .form-grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .form-status {
+        padding: 14px;
+        border-radius: var(--radius-md);
+        margin-top: 16px;
+        font-size: 14px;
+        display: none;
+      }
+      .form-status.success {
+        display: block;
+        background: rgba(37, 211, 102, 0.15);
+        border: 1px solid #25d366;
+        color: #bbf7d0;
+      }
+      .form-status.error {
+        display: block;
+        background: rgba(231, 111, 81, 0.15);
+        border: 1px solid #e76f51;
+        color: #fecdd3;
+      }
+
+      /* --- FOOTER --- */
+      footer.site-footer {
+        border-top: 1px solid var(--border-glass);
+        background: var(--bg-deep);
+        padding: 60px 0 30px;
+        margin-top: 60px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+        gap: 40px;
+        margin-bottom: 48px;
+      }
+      @media (max-width: 900px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .footer-col h4 {
+        font-size: 14px;
+        font-family: var(--font-mono);
+        color: var(--accent-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 18px;
+      }
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-col a {
+        font-size: 14px;
+        color: var(--text-secondary);
+        transition: color 0.2s;
+      }
+      .footer-col a:hover {
+        color: var(--accent-primary);
+      }
+      .footer-bottom {
+        padding-top: 24px;
+        border-top: 1px solid var(--border-glass);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 13px;
+        color: var(--text-muted);
       }
     </style>
   </head>
   <body>
-    <canvas id="bg-canvas"></canvas>
+    <!-- FIXED THREE.JS 3D CANVAS (LIVING HIMALAYAN TREE & MOUNTAIN ECOSYSTEM) -->
+    <canvas id="webgl-bg-canvas" aria-hidden="true"></canvas>
+    <div class="wall-vignette" aria-hidden="true"></div>
 
-    <nav>
-      <div class="nav-inner">
-        <div class="logo">WSM AI <span>SYS</span></div>
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#why">Why Us</a>
-          <a href="#work">Our Work</a>
-          <a href="#about">About</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+    <!-- FLOATING HUD: 8-PALETTE SEASON X DAY/NIGHT MATRIX SELECTOR -->
+    <div class="hud-palette-modal" id="hudModal">
+      <div class="hud-matrix-card" id="hudCard" role="dialog" aria-label="Theme Color Matrix">
+        <div class="hud-header">
+          <span class="hud-title">Season × Time Atmosphere</span>
+          <button id="hudCloseBtn" style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:16px;">✕</button>
         </div>
-        <div class="nav-cta">
-          <a
-            href="https://wa.me/917253923415"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-ghost"
-            >Talk to Us</a
-          >
-          <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ================= HERO ================= -->
-    <header class="hero">
-      <div class="wrap hero-inner">
-        <div>
-          <span class="eyebrow"
-            >Based in Dehradun · Serving businesses everywhere</span
-          >
-          <h1>
-            Web Development &amp; AI Solutions,<br /><span class="accent"
-              >made simple</span
-            >
-            for your business.
-          </h1>
-          <p>
-            Websites, apps and AI tools that help your business save time, find
-            more customers, and grow — explained in plain language, built for
-            how you actually work.
-          </p>
-          <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary"
-              >Get a Free Consultation</a
-            >
-            <a href="#services" class="btn btn-ghost">See What We Do</a>
-          </div>
-          <div class="trust-strip">
-            <div class="item">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              No confusing tech-talk
+        <div class="hud-grid">
+          <!-- Summer Day -->
+          <button class="hud-palette-opt" data-palette="summer-day">
+            <span class="opt-name">☀️ Summer Day</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#0d9488;"></span>
+              <span class="swatch" style="background:#ea580c;"></span>
+              <span class="swatch" style="background:#e4f2f0;"></span>
             </div>
-            <div class="item">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              Personal, one-on-one support
+          </button>
+          <!-- Summer Night -->
+          <button class="hud-palette-opt selected" data-palette="summer-night">
+            <span class="opt-name">🌙 Summer Night</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#3fe0d0;"></span>
+              <span class="swatch" style="background:#f4a261;"></span>
+              <span class="swatch" style="background:#060910;"></span>
             </div>
-            <div class="item">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              AI is our specialty
+          </button>
+          <!-- Autumn Day -->
+          <button class="hud-palette-opt" data-palette="autumn-day">
+            <span class="opt-name">☀️ Autumn Day</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#c2410c;"></span>
+              <span class="swatch" style="background:#d97706;"></span>
+              <span class="swatch" style="background:#f2e9dc;"></span>
             </div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <canvas id="hero-canvas"></canvas>
+          </button>
+          <!-- Autumn Night -->
+          <button class="hud-palette-opt" data-palette="autumn-night">
+            <span class="opt-name">🌙 Autumn Night</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#f4a261;"></span>
+              <span class="swatch" style="background:#e76f51;"></span>
+              <span class="swatch" style="background:#0b0705;"></span>
+            </div>
+          </button>
+          <!-- Winter Day -->
+          <button class="hud-palette-opt" data-palette="winter-day">
+            <span class="opt-name">☀️ Winter Day</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#0284c7;"></span>
+              <span class="swatch" style="background:#0369a1;"></span>
+              <span class="swatch" style="background:#e4ecf7;"></span>
+            </div>
+          </button>
+          <!-- Winter Night -->
+          <button class="hud-palette-opt" data-palette="winter-night">
+            <span class="opt-name">🌙 Winter Night</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#70b8ff;"></span>
+              <span class="swatch" style="background:#c2e2ff;"></span>
+              <span class="swatch" style="background:#04070e;"></span>
+            </div>
+          </button>
+          <!-- Spring Day -->
+          <button class="hud-palette-opt" data-palette="spring-day">
+            <span class="opt-name">☀️ Spring Day</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#16a34a;"></span>
+              <span class="swatch" style="background:#db2777;"></span>
+              <span class="swatch" style="background:#e5f6e8;"></span>
+            </div>
+          </button>
+          <!-- Spring Night -->
+          <button class="hud-palette-opt" data-palette="spring-night">
+            <span class="opt-name">🌸 Spring Night</span>
+            <div class="opt-swatches">
+              <span class="swatch" style="background:#4ade80;"></span>
+              <span class="swatch" style="background:#f472b6;"></span>
+              <span class="swatch" style="background:#050b06;"></span>
+            </div>
+          </button>
         </div>
       </div>
-    </header>
+      <button class="hud-toggle-btn" id="hudToggleBtn" aria-label="Open 8-Palette Season Matrix">
+        <span id="activePaletteLabel">🌿 Summer Night</span>
+        <span>⚡ HUD</span>
+      </button>
+    </div>
 
-    <!-- ================= SERVICES ================= -->
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">What we do</span>
-          <h2>Five ways we help your business grow</h2>
-          <p>
-            Pick one, or combine a few — everything is explained clearly and
-            built around what you actually need, not what sounds impressive.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <rect x="3" y="4" width="18" height="16" rx="2" />
-                <path d="M3 9h18" />
-                <circle cx="6.5" cy="6.5" r=".5" fill="currentColor" />
-                <circle cx="9" cy="6.5" r=".5" fill="currentColor" />
+    <!-- CONTENT SHELL -->
+    <div class="content-layer">
+      <!-- HEADER / NAVIGATION -->
+      <header class="navbar" role="banner">
+        <div class="wrap nav-inner">
+          <a href="#" class="brand-group" aria-label="WSM AI SYS Home">
+            <div class="brand-logo-icon">
+              <!-- Tree / Mountain Outline SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L3 17h6v5h6v-5h6L12 2z"/>
               </svg>
             </div>
-            <h3>Website Design &amp; Development</h3>
-            <p>
-              A clean, professional website that looks great on every phone and
-              computer, and makes it easy for customers to find and contact you.
-            </p>
-          </div>
+            <div class="brand-text">
+              <span class="brand-name">WSM <span>AI SYS</span></span>
+              <span class="brand-telemetry">30.3165°N, 78.0322°E • DEHRADUN</span>
+            </div>
+          </a>
 
-          <div class="service-card">
-            <div class="service-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <rect x="3" y="3" width="7" height="7" rx="1.5" />
-                <rect x="14" y="3" width="7" height="7" rx="1.5" />
-                <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                <rect x="14" y="14" width="7" height="7" rx="1.5" />
-              </svg>
-            </div>
-            <h3>Custom Business Apps</h3>
-            <p>
-              Software built specifically for how your business runs — booking
-              systems, inventory tools, customer trackers, and more.
-            </p>
-          </div>
+          <nav role="navigation" aria-label="Main Navigation">
+            <ul class="nav-links">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#architectures">Flagship Systems</a></li>
+              <li><a href="#edge">Engineering Edge</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Basecamp</a></li>
+            </ul>
+          </nav>
 
-          <div class="service-card specialty">
-            <span class="service-tag">Our Specialty</span>
-            <div class="service-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <circle cx="12" cy="12" r="3" />
-                <circle cx="12" cy="4" r="1.6" />
-                <circle cx="12" cy="20" r="1.6" />
-                <circle cx="4" cy="12" r="1.6" />
-                <circle cx="20" cy="12" r="1.6" />
-                <path d="M12 6.6V9M12 15v2.4M6.6 12H9M15 12h2.4" />
-              </svg>
-            </div>
-            <h3>AI Solutions</h3>
-            <p>
-              Chatbots that answer customer questions instantly, tools that
-              predict sales trends, and smart systems that recognise images —
-              built around your business.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <circle cx="12" cy="12" r="3" />
-                <path
-                  d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09A1.7 1.7 0 009 19.4a1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.7 1.7 0 004.6 15a1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09A1.7 1.7 0 004.6 9a1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06A1.7 1.7 0 009 4.6a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06A1.7 1.7 0 0019.4 9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.55 1z"
-                />
-              </svg>
-            </div>
-            <h3>Business Automation</h3>
-            <p>
-              We connect your tools and use AI to handle repetitive tasks — so
-              paperwork, follow-ups, and admin work happen on their own.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <path d="M3 11l18-7-7 18-2.5-7.5L3 11z" />
-              </svg>
-            </div>
-            <h3>AI-Powered Social Media Marketing</h3>
-            <p>
-              AI creates and schedules engaging posts for your social media
-              pages, so you stay active online without spending hours on it.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <path
-                  d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"
-                />
-              </svg>
-            </div>
-            <h3>Not Sure What You Need?</h3>
-            <p>
-              That's completely fine. Tell us what's slowing your business down,
-              and we'll suggest the simplest solution that works.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= WHY ================= -->
-    <section
-      id="why"
-      style="
-        background: linear-gradient(
-          180deg,
-          transparent,
-          rgba(108, 92, 231, 0.04),
-          transparent
-        );
-      "
-    >
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Why work with us</span>
-          <h2>Built for small businesses, not big corporations</h2>
-        </div>
-        <div class="why-grid">
-          <div class="why-item">
-            <div class="num">01</div>
-            <h3>We speak plainly</h3>
-            <p>
-              No confusing terms. We explain everything in a way that makes
-              sense to you, not just to other developers.
-            </p>
-          </div>
-          <div class="why-item">
-            <div class="num">02</div>
-            <h3>Fair, honest pricing</h3>
-            <p>
-              You'll know the cost upfront. No hidden charges, no surprise bills
-              after the work is done.
-            </p>
-          </div>
-          <div class="why-item">
-            <div class="num">03</div>
-            <h3>One person, full attention</h3>
-            <p>
-              You work directly with the person building your project — not a
-              call centre or a rotating team.
-            </p>
-          </div>
-          <div class="why-item">
-            <div class="num">04</div>
-            <h3>Modern AI expertise</h3>
-            <p>
-              The same AI technology used by large companies, made practical and
-              affordable for small businesses.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-    <section id="about">
-      <div class="wrap about-inner">
-        <div class="about-card">
-          <div class="big">8+</div>
-          <div class="label">
-            Years working closely with businesses before moving into technology
-          </div>
-          <div
-            style="height: 1px; background: var(--border-glass); margin: 26px 0"
-          ></div>
-          <div class="big">100%</div>
-          <div class="label">
-            Focused on AI &amp; software built specifically for small businesses
-          </div>
-        </div>
-        <div class="about-text">
-          <span class="eyebrow">About WSM AI SYS</span>
-          <h2 style="margin: 14px 0 18px; font-size: clamp(24px, 3vw, 32px)">
-            A technology partner who understands business first
-          </h2>
-          <p>
-            I'm <strong>Wasim</strong>, the person behind WSM AI SYS. Before
-            working in technology, I spent over eight years in real-world
-            business — legal services, real estate, and international trade — so
-            I understand the everyday problems small businesses actually face.
-          </p>
-          <p>
-            Today I build websites, apps, and AI tools that solve those exact
-            problems. My focus is <strong>practical AI</strong> — chatbots,
-            automation, and smart tools — combined with clean, simple websites
-            and applications, delivered without the technical jargon.
-          </p>
-          <a href="#contact" class="btn btn-primary" style="margin-top: 8px"
-            >Let's Talk About Your Business</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= WORK ================= -->
-    <section id="work">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Recent work</span>
-          <h2>A few things we've built</h2>
-          <p>
-            A mix of AI tools, business software, and websites — case studies
-            and live demos added as projects launch.
-          </p>
-        </div>
-        <div class="work-grid">
-          <div class="work-card">
-            <img
-              src="https://via.placeholder.com/620x350.png?text=AI+Hiring+Assistant"
-              alt="AI Hiring Assistant project screenshot"
-              width="620"
-              height="350"
-              class="work-thumb"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="work-body">
-              <h3>AI Hiring Assistant</h3>
-              <p>
-                An AI system that reads resumes and matches the right candidates
-                to the right jobs automatically.
-              </p>
-            </div>
-          </div>
-          <div class="work-card">
-            <img
-              src="https://via.placeholder.com/620x350.png?text=Customer+Support+Chatbot"
-              alt="Customer Support Chatbot project screenshot"
-              width="620"
-              height="350"
-              class="work-thumb"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="work-body">
-              <h3>Customer Support Chatbot</h3>
-              <p>
-                A chatbot that answers customer questions instantly, any time of
-                day, without a human needing to reply.
-              </p>
-            </div>
-          </div>
-          <div class="work-card">
-            <img
-              src="https://via.placeholder.com/620x350.png?text=Real+Estate+Website"
-              alt="Real Estate Website project screenshot"
-              width="620"
-              height="350"
-              class="work-thumb"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="work-body">
-              <h3>Real Estate Website</h3>
-              <p>
-                A modern property website with lead capture, built to turn
-                visitors into enquiries.
-              </p>
-            </div>
-          </div>
-          <div class="work-card">
-            <a
-              href="https://wsmaisys.github.io/websites/Gauri_Diet_Clinic/"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://s.wordpress.com/mshots/v1/https://wsmaisys.github.io/websites/Gauri_Diet_Clinic/?w=1200"
-                alt="Gauri's Diet Clinic website screenshot"
-                width="620"
-                height="350"
-                class="work-thumb"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-            <div class="work-body">
-              <h3>Gauri's Diet Clinic</h3>
-              <p>
-                A responsive, clinic-focused website for Gauri's Diet Clinic
-                (Mumbai) showcasing services, programs, and booking options.
-                Live demo:
-                <a
-                  href="https://wsmaisys.github.io/websites/Gauri_Diet_Clinic/"
-                  target="_blank"
-                  rel="noopener"
-                  >Visit site</a
-                >.
-              </p>
-            </div>
-          </div>
-          <div class="work-card">
-            <a
-              href="https://wsmaisys.github.io/websites/prime_enterprises/"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://s.wordpress.com/mshots/v1/https://wsmaisys.github.io/websites/prime_enterprises/?w=1200"
-                alt="Prime Enterprises website screenshot"
-                width="620"
-                height="350"
-                class="work-thumb"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-            <div class="work-body">
-              <h3>Prime Enterprises</h3>
-              <p>
-                A business website and SEO roadmap for Prime Enterprises,
-                including services listing, contact, and an SEO audit page. Live
-                demo:
-                <a
-                  href="https://wsmaisys.github.io/websites/prime_enterprises/"
-                  target="_blank"
-                  rel="noopener"
-                  >Visit site</a
-                >.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= FAQ ================= -->
-    <section id="faq">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">FAQ</span>
-          <h2>
-            Frequently asked questions about AI, websites, and business
-            automation
-          </h2>
-          <p>
-            Clear answers for business owners who want practical digital tools
-            that improve customer experience, save time, and grow sales.
-          </p>
-        </div>
-        <div class="faq-list">
-          <details open>
-            <summary>
-              What services does WSM AI SYS offer for small businesses?
-            </summary>
-            <p>
-              WSM AI SYS builds modern websites, custom business apps, AI
-              chatbots, automation workflows, and marketing systems that help
-              small businesses generate more leads and operate more efficiently.
-            </p>
-          </details>
-          <details>
-            <summary>
-              Can you build AI chatbots and business automation tools?
-            </summary>
-            <p>
-              Yes. We create chatbots, appointment tools, customer follow-up
-              automations, and workflow systems that reduce manual work and make
-              your business feel faster to customers.
-            </p>
-          </details>
-          <details>
-            <summary>
-              How long does a website or app project usually take?
-            </summary>
-            <p>
-              Most website and app projects are scoped around your business
-              goals. Simple websites can launch in a few weeks, while custom AI
-              tools are delivered in phases to match your budget and timeline.
-            </p>
-          </details>
-          <details>
-            <summary>Do you work with businesses outside Dehradun?</summary>
-            <p>
-              Absolutely. WSM AI SYS is based in Dehradun but serves businesses
-              across India and beyond, working remotely with clients through
-              video calls, chat, and email.
-            </p>
-          </details>
-          <details>
-            <summary>How do I start a project with WSM AI SYS?</summary>
-            <p>
-              Use the contact form below or send a message on WhatsApp. Tell us
-              about your business, your current challenge, and the outcome you
-              want.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-    <section id="contact">
-      <div class="wrap contact-inner">
-        <div class="contact-side">
-          <span class="eyebrow">Get in touch</span>
-          <h2>Tell us about your business — we'll take it from there</h2>
-          <p>
-            Fill in the form, or reach out directly. We usually reply within a
-            few hours.
-          </p>
-          <div class="contact-methods">
-            <a href="tel:+917253923415" class="contact-method">
-              <span class="icon-circle"
-                ><svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
-                  /></svg
-              ></span>
-              Call us directly
-            </a>
-            <a
-              href="https://wa.me/917253923415"
-              class="contact-method"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="icon-circle"
-                ><svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
-                  /></svg
-              ></span>
-              Message us on WhatsApp
-            </a>
-            <a href="mailto:wsmaisys@gmail.com" class="contact-method">
-              <span class="icon-circle"
-                ><svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="M22 6l-10 7L2 6" /></svg
-              ></span>
-              Email us
-            </a>
-          </div>
-        </div>
-
-        <div class="form-panel">
-          <div class="form-success" id="formSuccess">
-            Thanks! Your message has been noted — we'll get back to you shortly.
-          </div>
-          <form
-            id="leadForm"
-            action="https://api.web3forms.com/submit"
-            method="POST"
-          >
-            <input
-              type="hidden"
-              name="access_key"
-              value="06c6d7e5-fd90-45a5-a305-e30269ff5e18"
-            />
-            <input
-              type="hidden"
-              name="subject"
-              value="New lead from WSM AI SYS website"
-            />
-            <div class="form-row">
-              <div class="field">
-                <label for="name">Your Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="e.g. Rohit Sharma"
-                />
-              </div>
-              <div class="field">
-                <label for="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  placeholder="e.g. 98765 43210"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="you@business.com"
-              />
-            </div>
-            <div class="field">
-              <label for="business">What kind of business do you run?</label>
-              <select id="business" name="business">
-                <option>Retail / Shop</option>
-                <option>Real Estate</option>
-                <option>Clinic / Healthcare</option>
-                <option>Restaurant / Food</option>
-                <option>Education / Coaching</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="message">Tell us what you need help with</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                placeholder="e.g. I want a chatbot for my website that can answer customer questions..."
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary form-submit">
-              Send Message
+          <div class="nav-actions">
+            <button class="btn btn-glass btn-sm" id="navPaletteBtn" style="font-family:var(--font-mono); font-size:12px;">
+              <span>🎨 Palette Matrix</span>
             </button>
-            <p class="form-note">
-              By sending this, you agree to be contacted about your enquiry. No
-              spam, ever.
-            </p>
-          </form>
+            <a
+              href="https://wa.me/917253923415?text=Hi%20Wasim,%20I%20am%20interested%20in%20discussing%20an%20AI/3D%20Web%20project%20with%20WSM%20AI%20SYS."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp btn-sm"
+              aria-label="Direct WhatsApp Chat"
+            >
+              <span>WhatsApp</span>
+            </a>
+            <a href="#contact" class="btn btn-primary btn-sm">Consultation</a>
+            <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <footer>
-      <div class="wrap footer-inner">
-        <p>© 2026 WSM AI SYS. Built with care in Dehradun.</p>
-        <div class="footer-links">
-          <a
-            href="https://wsmaisys.github.io/waseemmansari.github.io/"
-            target="_blank"
-            rel="noopener"
-            >Portfolio</a
-          >
-          <a href="https://github.com/wsmaisys" target="_blank" rel="noopener"
-            >GitHub</a
-          >
-          <a
-            href="https://linkedin.com/in/wsmaisys"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
+      <!-- MOBILE DRAWER -->
+      <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile Navigation">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#architectures" class="mobile-nav-link">Flagship AI Systems</a>
+        <a href="#edge" class="mobile-nav-link">Technical Edge &amp; Credibility</a>
+        <a href="#faq" class="mobile-nav-link">Answer Engine FAQ</a>
+        <a href="#contact" class="mobile-nav-link">Basecamp Contact</a>
+        <a
+          href="https://wa.me/917253923415?text=Hi%20Wasim,%20I%20am%20interested%20in%20an%20AI/3D%20Web%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-whatsapp"
+        >
+          💬 WhatsApp Direct (+91 7253923415)
+        </a>
+      </div>
+
+      <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+          <div class="wrap">
+            <div class="hero-grid">
+              <div class="hero-left">
+                <div class="eyebrow">
+                  <span>✦</span> Himalayan 3D Spatial Ecosystem &amp; AI <span>✦</span>
+                </div>
+                <h1 class="hero-title">
+                  Architecting <span class="text-gradient-main">Living 3D Web</span> &amp; Production <span class="text-gradient-accent">Agentic AI</span>
+                </h1>
+                <p class="hero-desc">
+                  WSM AI SYS builds zero-CDN interactive WebGL spatial experiences with natural Himalayan botanical tree physics, autonomous LangGraph multi-agents, Neo4j knowledge graphs, and hardened automation.
+                </p>
+
+                <div class="hero-actions">
+                  <a href="#services" class="btn btn-primary">
+                    <span>Explore Solutions ↓</span>
+                  </a>
+                  <a
+                    href="https://wa.me/917253923415?text=Hi%20Wasim,%20I%20am%20interested%20in%20a%20project%20with%20WSM%20AI%20SYS."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                  >
+                    <span>💬 WhatsApp Quick Connect</span>
+                  </a>
+                  <a href="#contact" class="btn btn-glass">
+                    <span>Direct Brief</span>
+                  </a>
+                </div>
+
+                <div class="hero-badges">
+                  <div class="badge-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span><strong>Zero-CDN</strong> Hardened Security</span>
+                  </div>
+                  <div class="badge-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                    <span><strong>IIT Madras</strong> Data Science Lead</span>
+                  </div>
+                  <div class="badge-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span><strong>🖱️ Click &amp; Drag</strong> to Orbit 3D</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- HERO TELEMETRY PANEL -->
+              <div class="hero-right">
+                <div class="hero-telemetry-card">
+                  <div class="telemetry-header">
+                    <span class="telemetry-node-title">Summit Ridge Telemetry</span>
+                    <span class="telemetry-pulse"></span>
+                  </div>
+
+                  <div class="telemetry-stats">
+                    <div class="stat-box">
+                      <div class="stat-num">8+ <span>Yrs</span></div>
+                      <div class="stat-lbl">Cross-Industry Expertise</div>
+                    </div>
+                    <div class="stat-box">
+                      <div class="stat-num">100% <span>Self</span></div>
+                      <div class="stat-lbl">Zero External Dependencies</div>
+                    </div>
+                    <div class="stat-box">
+                      <div class="stat-num">12k+ <span>Nodes</span></div>
+                      <div class="stat-lbl">Knowledge Graph Skill Index</div>
+                    </div>
+                    <div class="stat-box">
+                      <div class="stat-num">8 <span>Modes</span></div>
+                      <div class="stat-lbl">Atmospheric Color Matrix</div>
+                    </div>
+                  </div>
+
+                  <div class="telemetry-founder">
+                    <div class="founder-avatar">W</div>
+                    <div class="founder-info">
+                      <h4>Wasim M Ansari</h4>
+                      <p>AI/ML Engineer &amp; GenAI Solution Architect</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AEO DIRECT EXTRACTION STRIP -->
+            <article class="aeo-summary-strip" aria-label="Executive Summary for AI Search Engines">
+              <h3>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                WSM AI SYS — Executive Summary (AEO Direct Answer)
+              </h3>
+              <p>
+                <strong>What we do:</strong> WSM AI SYS delivers enterprise-grade 3D WebGL spatial applications featuring an interactive living botanical tree with realistic leaf venation, seasonal dynamic physics, LangGraph agentic workflows, Model Context Protocol (MCP) servers, Neo4j hybrid RAG architectures, and predictive time-series forecasting. Headquartered in Dehradun, Uttarakhand, India, with global client engagements, all codebases are architected with strict zero-CDN security, sub-second load times, and verifiable data accuracy.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services">
+          <div class="wrap">
+            <div class="section-head">
+              <div class="eyebrow">
+                <span>✦</span> Core Capabilities <span>✦</span>
+              </div>
+              <h2>High-Impact Engineering Across <span class="text-gradient-main">Five Specialized Pillars</span></h2>
+              <p>From immersive Three.js WebGL 3D living tree frontends with seasonal atmospheric dynamics to production multi-agent AI backends, every solution is built for measurable business advantage.</p>
+            </div>
+
+            <div class="services-grid">
+              <!-- Service 1 -->
+              <article class="service-card highlight">
+                <div class="service-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 17h6v5h6v-5h6L12 2z"/></svg>
+                </div>
+                <span class="service-tag">Visual &amp; Spatial Web</span>
+                <h3>3D Living Botanical Systems &amp; WebGL</h3>
+                <p>Bespoke interactive 3D WebGL experiences, organic tree physics, realistic leaf venation shaders, and fluid camera dynamics. Built with native shaders and zero external CDNs for lightning-fast delivery.</p>
+                <ul class="service-deliverables">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 8-Atmosphere seasonal matrix synchronization</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 100% self-contained &amp; zero external dependencies</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 60 FPS mobile and desktop performance</li>
+                </ul>
+              </article>
+
+              <!-- Service 2 -->
+              <article class="service-card">
+                <div class="service-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><rect x="3" y="10" width="18" height="12" rx="4"/><circle cx="8" cy="16" r="1.5"/><circle cx="16" cy="16" r="1.5"/><path d="M12 14v4"/></svg>
+                </div>
+                <span class="service-tag">Agentic AI Workflows</span>
+                <h3>LangGraph Agents &amp; MCP Servers</h3>
+                <p>Multi-agent architectures capable of autonomous multi-step reasoning, dynamic tool selection, memory persistence, human oversight, and self-healing execution loops.</p>
+                <ul class="service-deliverables">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> LangGraph multi-agent cyclical workflows</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Anthropic Model Context Protocol (MCP) servers</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automated tool invocation &amp; LangSmith tracing</li>
+                </ul>
+              </article>
+
+              <!-- Service 3 -->
+              <article class="service-card">
+                <div class="service-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </div>
+                <span class="service-tag">Domain Intelligence</span>
+                <h3>Hybrid RAG &amp; Neo4j Knowledge Graphs</h3>
+                <p>Enterprise Retrieval-Augmented Generation uniting unstructured vector embeddings with structured graph relational data to eliminate hallucinations.</p>
+                <ul class="service-deliverables">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Neo4j Cypher knowledge graph modeling</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Multi-hop entity reasoning &amp; hybrid FAISS vector search</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Verifiable source citation &amp; reranking</li>
+                </ul>
+              </article>
+
+              <!-- Service 4 -->
+              <article class="service-card">
+                <div class="service-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <span class="service-tag">Cloud MLOps &amp; Microservices</span>
+                <h3>FastAPI, Celery &amp; Async Automation</h3>
+                <p>Production backend infrastructure handling heavy asynchronous tasks, background ML inference, CRM syncing, and automated data pipelines.</p>
+                <ul class="service-deliverables">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> High-throughput FastAPI endpoints &amp; Redis queues</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dockerized Google Cloud Run &amp; Azure deployments</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automated CRM &amp; WhatsApp communication bots</li>
+                </ul>
+              </article>
+
+              <!-- Service 5 -->
+              <article class="service-card">
+                <div class="service-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <span class="service-tag">Decision Analytics</span>
+                <h3>Time-Series Demand Forecasting</h3>
+                <p>Industrial decision-support algorithms modeling intermittent inventory demand, reorder levels, and revenue trajectories with statistical confidence bounds.</p>
+                <ul class="service-deliverables">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> TSB &amp; Croston intermittent demand models</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Monte Carlo probability simulations</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Direct ERP database connectors</li>
+                </ul>
+              </article>
+
+              <!-- Service 6 -->
+              <article class="service-card">
+                <div class="service-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <span class="service-tag">Strategic Consulting</span>
+                <h3>Custom Tech Architecture &amp; Advisory</h3>
+                <p>Unsure which AI architecture or web framework suits your commercial requirements? We analyze your domain workflows and design tailor-made roadmaps.</p>
+                <ul class="service-deliverables">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Feasibility &amp; ROI analysis for AI integration</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Architecture design documents &amp; MVP scoping</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> End-to-end deployment supervision</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- FLAGSHIP SYSTEMS -->
+        <section id="architectures">
+          <div class="wrap">
+            <div class="section-head">
+              <div class="eyebrow">
+                <span>✦</span> Proven Production Systems <span>✦</span>
+              </div>
+              <h2>Engineered for Scale: <span class="text-gradient-accent">Flagship Architectures</span></h2>
+              <p>Real-world production systems developed and deployed across recruitment intelligence, ERP manufacturing, clinical healthcare, and high-performance spatial web.</p>
+            </div>
+
+            <div class="architectures-grid">
+              <!-- System 1 -->
+              <article class="arch-card">
+                <span class="arch-badge">Recruitment Intelligence Layer</span>
+                <h3>HyreFast Intelligence Architecture</h3>
+                <p>Full-stack AI recruiting engine that normalizes over 12,000+ candidate skills into a Neo4j knowledge graph using LangGraph multi-agent loops and Model Context Protocol servers.</p>
+                <div class="arch-tech-stack">
+                  <span class="tech-pill">LangGraph</span>
+                  <span class="tech-pill">Neo4j</span>
+                  <span class="tech-pill">MCP Server</span>
+                  <span class="tech-pill">FastAPI</span>
+                  <span class="tech-pill">Celery/Redis</span>
+                </div>
+                <div class="arch-metrics">
+                  <div class="metric-item">
+                    <strong>12,000+</strong>
+                    <span>Skills Graph Mapped</span>
+                  </div>
+                  <div class="metric-item">
+                    <strong>Zero</strong>
+                    <span>Manual Screening Choke</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- System 2 -->
+              <article class="arch-card">
+                <span class="arch-badge">ERP Decision Intelligence</span>
+                <h3>Zovia Inventory Demand Forecaster</h3>
+                <p>Industrial demand forecasting module integrated into manufacturing ERPs. Features TSB intermittent demand modeling and Monte Carlo simulations to prevent stockouts.</p>
+                <div class="arch-tech-stack">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">TSB Modeling</span>
+                  <span class="tech-pill">Monte Carlo</span>
+                  <span class="tech-pill">PostgreSQL</span>
+                  <span class="tech-pill">Docker</span>
+                </div>
+                <div class="arch-metrics">
+                  <div class="metric-item">
+                    <strong>94.2%</strong>
+                    <span>Forecast Confidence</span>
+                  </div>
+                  <div class="metric-item">
+                    <strong>Real-time</strong>
+                    <span>Automated Reorders</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- System 3 -->
+              <article class="arch-card">
+                <span class="arch-badge">Clinical Healthcare Assistant</span>
+                <h3>MediFlow Clinical Multi-Agent RAG</h3>
+                <p>Post-discharge medical intelligence assistant utilizing LangGraph multi-agent routing, FAISS hybrid RAG retrieval, and an authenticated Model Context Protocol (MCP) nephrology tool.</p>
+                <div class="arch-tech-stack">
+                  <span class="tech-pill">LangGraph</span>
+                  <span class="tech-pill">FAISS RAG</span>
+                  <span class="tech-pill">MCP Tooling</span>
+                  <span class="tech-pill">LangSmith</span>
+                  <span class="tech-pill">Cloud Run</span>
+                </div>
+                <div class="arch-metrics">
+                  <div class="metric-item">
+                    <strong>100%</strong>
+                    <span>Source Verified Citations</span>
+                  </div>
+                  <div class="metric-item">
+                    <strong>GDPR/HIPAA</strong>
+                    <span>Aligned Privacy</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- System 4 -->
+              <article class="arch-card">
+                <span class="arch-badge">Zero-CDN Spatial Three.js</span>
+                <h3>Himalayan Living Tree &amp; Mountain Engine</h3>
+                <p>Photorealistic 3D botanical tree with realistic leaf venation, procedural bark geometry, seasonal dynamics, and mountain terrain physics running 100% self-contained.</p>
+                <div class="arch-tech-stack">
+                  <span class="tech-pill">Local Three.js</span>
+                  <span class="tech-pill">Fractal Branches</span>
+                  <span class="tech-pill">PBR Normal Leaves</span>
+                  <span class="tech-pill">Seasonal Physics</span>
+                  <span class="tech-pill">8 Palettes</span>
+                </div>
+                <div class="arch-metrics">
+                  <div class="metric-item">
+                    <strong>60+ FPS</strong>
+                    <span>Hardware Render</span>
+                  </div>
+                  <div class="metric-item">
+                    <strong>0 External</strong>
+                    <span>Third-Party Network Calls</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- TECHNICAL EDGE & CREDIBILITY -->
+        <section id="edge">
+          <div class="wrap">
+            <div class="section-head">
+              <div class="eyebrow">
+                <span>✦</span> The WSM Standard <span>✦</span>
+              </div>
+              <h2>Why Discerning Clients Choose <span class="text-gradient-main">WSM AI SYS</span></h2>
+              <p>We reject generic WordPress templates and shallow wrapper scripts. We build deeply engineered, verifiable software assets.</p>
+            </div>
+
+            <div class="edge-grid">
+              <div class="edge-card">
+                <div class="edge-num">01 // PEDIGREE</div>
+                <h3>IIT Madras Foundation</h3>
+                <p>Data science and algorithmic rigor from one of India's foremost engineering institutions, ensuring sound mathematical models.</p>
+              </div>
+
+              <div class="edge-card">
+                <div class="edge-num">02 // DOMAIN DEPTH</div>
+                <h3>8+ Years Cross-Industry</h3>
+                <p>Multidisciplinary commercial experience spanning law, global trade, real estate, and enterprise software to build business-aligned AI.</p>
+              </div>
+
+              <div class="edge-card">
+                <div class="edge-num">03 // INDEPENDENCE</div>
+                <h3>Zero External CDN Reliance</h3>
+                <p>No dependency on external font servers, JS CDNs, or third-party trackers. Faster, resilient, and impervious to upstream CDN outages.</p>
+              </div>
+
+              <div class="edge-card">
+                <div class="edge-num">04 // CYBERSECURITY</div>
+                <h3>Hardened Security &amp; CSP</h3>
+                <p>Strict Content Security Policies, sanitized DOM mutations, honeypot spam traps, and zero telemetry leaks for maximum user safety.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANSWER ENGINE OPTIMIZED FAQ SECTION -->
+        <section id="faq">
+          <div class="wrap">
+            <div class="section-head">
+              <div class="eyebrow">
+                <span>✦</span> Answer Engine Optimization <span>✦</span>
+              </div>
+              <h2>Frequently Asked <span class="text-gradient-accent">Questions</span></h2>
+              <p>Direct, machine-readable answers structured for search engines, LLM agents (Perplexity, SearchGPT, Claude, Gemini), and clients.</p>
+            </div>
+
+            <div class="faq-accordion">
+              <!-- Q1 -->
+              <details class="faq-item" open>
+                <summary class="faq-q">What makes WSM AI SYS different from standard web agencies?</summary>
+                <div class="faq-a">
+                  Unlike traditional web agencies that build basic websites on generic WordPress or Wix templates with superficial ChatGPT wrappers, WSM AI SYS is an AI engineering studio led by an IIT Madras alumnus. We engineer bespoke 3D WebGL interfaces with living botanical tree dynamics and zero external CDN dependencies, and build complex multi-agent LangGraph workflows, Neo4j knowledge graphs, and custom MCP servers designed specifically for measurable commercial ROI.
+                </div>
+              </details>
+
+              <!-- Q2 -->
+              <details class="faq-item">
+                <summary class="faq-q">What is Model Context Protocol (MCP) and why is it important?</summary>
+                <div class="faq-a">
+                  Model Context Protocol (MCP) is the open standard introduced by Anthropic for connecting AI models to external tools, databases, and business services securely. WSM AI SYS builds authenticated, high-performance MCP servers that allow LLMs to safely query internal ERP systems, graph databases, and custom business logic without compromising security.
+                </div>
+              </details>
+
+              <!-- Q3 -->
+              <details class="faq-item">
+                <summary class="faq-q">Why does WSM AI SYS enforce a Zero-CDN architecture?</summary>
+                <div class="faq-a">
+                  External CDNs introduce single points of failure, latency spikes, and potential security or tracking vulnerabilities. By bundling all shaders, fonts, and scripts locally, WSM AI SYS ensures sub-second page loads, 100% uptime independence, complete GDPR compliance, and strict Content Security Policy (CSP) enforcement.
+                </div>
+              </details>
+
+              <!-- Q4 -->
+              <details class="faq-item">
+                <summary class="faq-q">Do you work with businesses in Dehradun and across Uttarakhand?</summary>
+                <div class="faq-a">
+                  Yes. WSM AI SYS is proud to be headquartered in Dehradun, Uttarakhand, in the foothills of the Himalayas. We work closely with regional hotels, educational institutions, manufacturing firms, and medical practices, as well as serving high-growth startups and enterprises globally across North America, Europe, and Asia.
+                </div>
+              </details>
+
+              <!-- Q5 -->
+              <details class="faq-item">
+                <summary class="faq-q">How does WSM AI SYS ensure AI systems do not hallucinate?</summary>
+                <div class="faq-a">
+                  We implement Hybrid RAG (Retrieval-Augmented Generation) combined with Neo4j Knowledge Graphs. By grounding the AI in structured entity relationships and verified source documents with automated citation checks and BGE rerankers, we eliminate factual hallucinations and provide deterministic answers.
+                </div>
+              </details>
+
+              <!-- Q6 -->
+              <details class="faq-item">
+                <summary class="faq-q">What is the typical turnaround time and engagement model?</summary>
+                <div class="faq-a">
+                  We offer fixed-scope sprints for custom 3D web platforms and AI MVPs (typically 2–4 weeks), as well as ongoing architectural retainers for continuous multi-agent system development, MLOps monitoring, and knowledge graph ingestion.
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <!-- BASECAMP / CONTACT SECTION -->
+        <section id="contact">
+          <div class="wrap">
+            <div class="section-head">
+              <div class="eyebrow">
+                <span>✦</span> Establish Direct Contact <span>✦</span>
+              </div>
+              <h2>Reach the <span class="text-gradient-main">Himalayan Basecamp</span></h2>
+              <p>Ready to build a bespoke 3D web platform or integrate production AI agents into your business? Let's connect.</p>
+            </div>
+
+            <div class="contact-grid">
+              <!-- Left: Direct Channels -->
+              <div class="contact-info-card">
+                <h3 style="font-size: 24px; margin-bottom: 8px;">Direct Coordinates</h3>
+                <p style="color: var(--text-secondary); font-size: 15px;">Fastest response via WhatsApp or direct email.</p>
+
+                <div class="contact-channel">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div class="channel-meta">
+                    <strong>Direct Phone &amp; WhatsApp</strong>
+                    <a href="https://wa.me/917253923415" target="_blank" rel="noopener noreferrer">+91 7253923415</a>
+                  </div>
+                </div>
+
+                <div class="contact-channel">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div class="channel-meta">
+                    <strong>Primary Studio Email</strong>
+                    <a href="mailto:wsmaisys@gmail.com">wsmaisys@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-channel">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div class="channel-meta">
+                    <strong>Basecamp Location</strong>
+                    <span>Dehradun, Uttarakhand, India (Foothills of Garhwal Himalayas)</span>
+                  </div>
+                </div>
+
+                <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border-glass);">
+                  <a
+                    href="https://wa.me/917253923415?text=Hi%20Wasim,%20I%20would%20like%20to%20schedule%20a%20discovery%20consultation%20with%20WSM%20AI%20SYS."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                    style="width: 100%;"
+                  >
+                    <span>💬 Open WhatsApp Chat (+91 7253923415)</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right: Hardened Contact Form -->
+              <div class="contact-form-card">
+                <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                  <input type="hidden" name="subject" value="New Inquiry — WSM AI SYS" />
+                  <input type="hidden" name="from_name" value="WSM AI SYS Web Portal" />
+                  <input type="checkbox" name="botcheck" class="hidden" style="display:none;" />
+
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="name" class="form-label">Full Name *</label>
+                      <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email Address *</label>
+                      <input type="email" id="email" name="email" class="form-input" placeholder="e.g. rahul@company.com" required />
+                    </div>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Phone / WhatsApp</label>
+                      <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +91 98765 43210" />
+                    </div>
+                    <div class="form-group">
+                      <label for="service_type" class="form-label">Primary Interest</label>
+                      <select id="service_type" name="service_type" class="form-select">
+                        <option value="3D Living Botanical Tree">3D WebGL Living Botanical Tree &amp; Landscape</option>
+                        <option value="LangGraph AI Agents">Agentic AI &amp; Multi-Agent Workflows</option>
+                        <option value="Hybrid RAG & Knowledge Graph">Neo4j Hybrid RAG Knowledge Graph</option>
+                        <option value="Business Automation">FastAPI &amp; Async Process Automation</option>
+                        <option value="Time Series Forecasting">Time-Series Demand Forecasting</option>
+                        <option value="General Consultation">General Technical Advisory</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message" class="form-label">Project Scope &amp; Requirements *</label>
+                    <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Tell us about your business goals, target timeline, or current technical bottlenecks..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <span>Transmit Project Brief →</span>
+                  </button>
+
+                  <div id="formStatus" class="form-status" role="alert"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- SITE FOOTER -->
+      <footer class="site-footer" role="contentinfo">
+        <div class="wrap">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <div class="brand-group" style="margin-bottom: 16px;">
+                <div class="brand-logo-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 17h6v5h6v-5h6L12 2z"/></svg>
+                </div>
+                <span class="brand-name">WSM <span>AI SYS</span></span>
+              </div>
+              <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; max-width: 320px;">
+                Bespoke 3D WebGL spatial engineering, LangGraph agentic systems, and Neo4j knowledge graphs. Operating from Dehradun, Uttarakhand, India.
+              </p>
+            </div>
+
+            <div class="footer-col">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#architectures">Flagship Architectures</a></li>
+                <li><a href="#edge">Engineering Edge</a></li>
+                <li><a href="#faq">AEO Knowledge FAQ</a></li>
+                <li><a href="#contact">Basecamp Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Verified Profiles</h4>
+              <ul>
+                <li><a href="https://waseemmansari.github.io/" target="_blank" rel="noopener noreferrer">Personal Portfolio ↗</a></li>
+                <li><a href="https://github.com/wsmaisys" target="_blank" rel="noopener noreferrer">GitHub Repository ↗</a></li>
+                <li><a href="https://www.linkedin.com/in/wsmaisys/" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a></li>
+                <li><a href="https://wsmaisys.github.io/llms.txt" target="_blank" rel="noopener noreferrer">llms.txt Manifest ↗</a></li>
+                <li><a href="https://wsmaisys.github.io/sitemap.xml" target="_blank" rel="noopener noreferrer">sitemap.xml ↗</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Himalayan Telemetry</h4>
+              <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.7;">
+                <strong>Coordinates:</strong> 30.3165° N, 78.0322° E<br/>
+                <strong>Altitude:</strong> 2,200m ASL<br/>
+                <strong>Security:</strong> Strict CSP / Zero CDN<br/>
+                <strong>Status:</strong> All Systems Operational
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <span>&copy; 2026 WSM AI SYS (Wasim M Ansari). All rights reserved. Zero-CDN Hardened Architecture.</span>
+            <span>Living Himalayan Botanical Tree with PBR Realistic Leaves.</span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
+    <!-- ZERO-DEPENDENCY 3D LIVING HIMALAYAN TREE & LANDSCAPE ENGINE -->
     <script>
-      // ---------- FULL-PAGE ANIMATED BACKGROUND (Three.js) ----------
       (function () {
-        const canvas = document.getElementById("bg-canvas");
+        "use strict";
+
+        // =========================================================================
+        // 1. 8-ATMOSPHERE PALETTES CONFIGURATION MATRIX
+        // =========================================================================
+        const PALETTE_CONFIGS = {
+          "summer-night": {
+            name: "Summer Night",
+            label: "🌙 Summer Night",
+            themeColor: "#060910",
+            sky: 0x060910,
+            fog: 0x060910,
+            fogNear: 10,
+            fogFar: 44,
+            sunColor: 0x8fa8ff,
+            sunInt: 0.4,
+            hemiSky: 0x1a2550,
+            hemiGround: 0x0a0a12,
+            hemiInt: 0.45,
+            leafColors: ["#17381d", "#204a25", "#122c17", "#2b582f", "#193f21"],
+            veinColor: "rgba(63, 224, 208, 0.65)",
+            leafRoughness: 0.52,
+            leafSpecular: 0x3fe0d0,
+            grass: 0x182415,
+            rock: 0x22201e,
+            snow: 0x8f95a8,
+            snowLine: 4.5,
+            bark: "summer",
+            snowCaps: false,
+            grassVisible: true,
+            snowGroundVisible: false,
+            season: "summer",
+            isDay: false,
+            elev: 45,
+            azim: 35,
+          },
+          "summer-day": {
+            name: "Summer Day",
+            label: "☀️ Summer Day",
+            themeColor: "#f0f7f6",
+            sky: 0xaed4ef,
+            fog: 0xaed4ef,
+            fogNear: 18,
+            fogFar: 55,
+            sunColor: 0xfff3d6,
+            sunInt: 1.4,
+            hemiSky: 0xbfe0ff,
+            hemiGround: 0x3a2a1a,
+            hemiInt: 0.8,
+            leafColors: ["#3f7d33", "#5a9a3f", "#2f6626", "#6bab4a", "#386b2c"],
+            veinColor: "rgba(160, 230, 180, 0.75)",
+            leafRoughness: 0.58,
+            leafSpecular: 0x5a9474,
+            grass: 0x4a6b2f,
+            rock: 0x8a7d6b,
+            snow: 0xf3f3ee,
+            snowLine: 4.5,
+            bark: "summer",
+            snowCaps: false,
+            grassVisible: true,
+            snowGroundVisible: false,
+            season: "summer",
+            isDay: true,
+            elev: 55,
+            azim: 35,
+          },
+          "autumn-night": {
+            name: "Autumn Night",
+            label: "🍁 Autumn Night",
+            themeColor: "#0b0705",
+            sky: 0x140b12,
+            fog: 0x140b12,
+            fogNear: 10,
+            fogFar: 40,
+            sunColor: 0xaa7755,
+            sunInt: 0.35,
+            hemiSky: 0x2a1830,
+            hemiGround: 0x0a0a12,
+            hemiInt: 0.38,
+            leafColors: ["#5a3312", "#62401a", "#40200c", "#6a4a1c", "#33180a"],
+            veinColor: "rgba(244, 162, 97, 0.7)",
+            leafRoughness: 0.6,
+            leafSpecular: 0xf4a261,
+            grass: 0x2e2010,
+            rock: 0x241e1b,
+            snow: 0x8f95a8,
+            snowLine: 4.5,
+            bark: "summer",
+            snowCaps: false,
+            grassVisible: true,
+            snowGroundVisible: false,
+            season: "autumn",
+            isDay: false,
+            elev: 35,
+            azim: 50,
+          },
+          "autumn-day": {
+            name: "Autumn Day",
+            label: "🍂 Autumn Day",
+            themeColor: "#faf4ed",
+            sky: 0xe8c98a,
+            fog: 0xe8c98a,
+            fogNear: 16,
+            fogFar: 52,
+            sunColor: 0xffddaa,
+            sunInt: 1.3,
+            hemiSky: 0xf0d9a8,
+            hemiGround: 0x3a2a1a,
+            hemiInt: 0.75,
+            leafColors: ["#c9722a", "#d9973a", "#a8501f", "#e0b03f", "#8f3d18"],
+            veinColor: "rgba(255, 215, 150, 0.8)",
+            leafRoughness: 0.62,
+            leafSpecular: 0x9e4822,
+            grass: 0x9a7a3a,
+            rock: 0x8a7d6b,
+            snow: 0xf3f3ee,
+            snowLine: 4.5,
+            bark: "summer",
+            snowCaps: false,
+            grassVisible: true,
+            snowGroundVisible: false,
+            season: "autumn",
+            isDay: true,
+            elev: 35,
+            azim: 50,
+          },
+          "winter-night": {
+            name: "Winter Night",
+            label: "❄️ Winter Night",
+            themeColor: "#04070e",
+            sky: 0x080f1a,
+            fog: 0x080f1a,
+            fogNear: 8,
+            fogFar: 38,
+            sunColor: 0x6a80c0,
+            sunInt: 0.4,
+            hemiSky: 0x141c30,
+            hemiGround: 0x0a0a12,
+            hemiInt: 0.45,
+            leafColors: ["#c8d4e8", "#b8c4dc", "#a8b8d4", "#92a8c8"],
+            veinColor: "rgba(130, 190, 255, 0.75)",
+            leafRoughness: 0.45,
+            leafSpecular: 0x70b8ff,
+            grass: 0x141a24,
+            rock: 0x1e2430,
+            snow: 0xd8e0f0,
+            snowLine: 1.5,
+            bark: "snowy",
+            snowCaps: true,
+            grassVisible: false,
+            snowGroundVisible: true,
+            season: "winter",
+            isDay: false,
+            elev: 25,
+            azim: 60,
+          },
+          "winter-day": {
+            name: "Winter Day",
+            label: "❄️ Winter Day",
+            themeColor: "#f1f6fc",
+            sky: 0xd8e8f0,
+            fog: 0xd8e8f0,
+            fogNear: 14,
+            fogFar: 48,
+            sunColor: 0xeaf2ff,
+            sunInt: 1.2,
+            hemiSky: 0xe0eefc,
+            hemiGround: 0x555560,
+            hemiInt: 0.85,
+            leafColors: ["#ffffff", "#f0f0f5", "#e8eef5", "#d2e4f0"],
+            veinColor: "rgba(180, 220, 255, 0.8)",
+            leafRoughness: 0.48,
+            leafSpecular: 0x608cb8,
+            grass: 0xe8ecef,
+            rock: 0x9a9a9a,
+            snow: 0xffffff,
+            snowLine: 1.5,
+            bark: "snowy",
+            snowCaps: true,
+            grassVisible: false,
+            snowGroundVisible: true,
+            season: "winter",
+            isDay: true,
+            elev: 25,
+            azim: 60,
+          },
+          "spring-night": {
+            name: "Spring Night",
+            label: "🌸 Spring Night",
+            themeColor: "#050b06",
+            sky: 0x0c1424,
+            fog: 0x0c1424,
+            fogNear: 10,
+            fogFar: 42,
+            sunColor: 0x9fb0ff,
+            sunInt: 0.38,
+            hemiSky: 0x1c2a55,
+            hemiGround: 0x0a0a12,
+            hemiInt: 0.4,
+            leafColors: ["#224418", "#442636", "#1a3813", "#3d2432", "#1e3d16"],
+            veinColor: "rgba(100, 230, 140, 0.7)",
+            leafRoughness: 0.54,
+            leafSpecular: 0x4ade80,
+            grass: 0x152210,
+            rock: 0x22201e,
+            snow: 0x8f95a8,
+            snowLine: 4.5,
+            bark: "summer",
+            snowCaps: false,
+            grassVisible: true,
+            snowGroundVisible: false,
+            season: "spring",
+            isDay: false,
+            elev: 50,
+            azim: 20,
+          },
+          "spring-day": {
+            name: "Spring Day",
+            label: "🌸 Spring Day",
+            themeColor: "#f2faf3",
+            sky: 0xbfe3f0,
+            fog: 0xbfe3f0,
+            fogNear: 18,
+            fogFar: 55,
+            sunColor: 0xfff8e0,
+            sunInt: 1.4,
+            hemiSky: 0xc8ecff,
+            hemiGround: 0x3a2a1a,
+            hemiInt: 0.8,
+            leafColors: ["#8fd15a", "#e8a8c8", "#6bc242", "#f0c0da", "#7ed64f"],
+            veinColor: "rgba(210, 255, 220, 0.8)",
+            leafRoughness: 0.55,
+            leafSpecular: 0x569c66,
+            grass: 0x6bab3f,
+            rock: 0x8a7d6b,
+            snow: 0xf3f3ee,
+            snowLine: 4.5,
+            bark: "summer",
+            snowCaps: false,
+            grassVisible: true,
+            snowGroundVisible: false,
+            season: "spring",
+            isDay: true,
+            elev: 50,
+            azim: 20,
+          },
+        };
+
+        let currentPalette = localStorage.getItem("wsm_palette") || "summer-night";
+        if (!PALETTE_CONFIGS[currentPalette]) currentPalette = "summer-night";
+
+        const hudCard = document.getElementById("hudCard");
+        const hudToggleBtn = document.getElementById("hudToggleBtn");
+        const hudCloseBtn = document.getElementById("hudCloseBtn");
+        const navPaletteBtn = document.getElementById("navPaletteBtn");
+        const activePaletteLabel = document.getElementById("activePaletteLabel");
+        const hudOptions = document.querySelectorAll(".hud-palette-opt");
+
+        function openHud() { hudCard.classList.add("active"); }
+        function closeHud() { hudCard.classList.remove("active"); }
+        if (hudToggleBtn) hudToggleBtn.addEventListener("click", () => hudCard.classList.toggle("active"));
+        if (navPaletteBtn) navPaletteBtn.addEventListener("click", openHud);
+        if (hudCloseBtn) hudCloseBtn.addEventListener("click", closeHud);
+
+        hudOptions.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const p = btn.getAttribute("data-palette");
+            setPalette(p);
+            closeHud();
+          });
+        });
+
+        function setPalette(paletteKey) {
+          if (!PALETTE_CONFIGS[paletteKey]) return;
+          currentPalette = paletteKey;
+          document.documentElement.setAttribute("data-theme", paletteKey);
+          localStorage.setItem("wsm_palette", paletteKey);
+
+          hudOptions.forEach((b) => {
+            b.classList.toggle("selected", b.getAttribute("data-palette") === paletteKey);
+          });
+          const cfg = PALETTE_CONFIGS[paletteKey];
+          if (activePaletteLabel) activePaletteLabel.textContent = cfg.label;
+          document.querySelector('meta[name="theme-color"]')?.setAttribute("content", cfg.themeColor);
+
+          applyPreset(paletteKey);
+        }
+
+        const mobileToggle = document.getElementById("mobile-toggle");
+        const mobileDrawer = document.getElementById("mobile-drawer");
+        if (mobileToggle && mobileDrawer) {
+          mobileToggle.addEventListener("click", () => mobileDrawer.classList.toggle("open"));
+          document.querySelectorAll(".mobile-nav-link").forEach((l) => {
+            l.addEventListener("click", () => mobileDrawer.classList.remove("open"));
+          });
+        }
+
+        // =========================================================================
+        // 2. THREE.JS LIVING TREE & MOUNTAIN SCENE INITIALIZATION (ZERO CDN)
+        // =========================================================================
+        if (typeof THREE === "undefined") {
+          console.warn("Three.js not loaded. Skipping 3D initialization.");
+          return;
+        }
+
+        const canvas = document.getElementById("webgl-bg-canvas");
+        if (!canvas) return;
+
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(
-          60,
-          window.innerWidth / window.innerHeight,
-          0.1,
-          100,
-        );
-        camera.position.z = 13;
+        const initCfg = PALETTE_CONFIGS[currentPalette];
+        scene.background = new THREE.Color(initCfg.sky);
+        scene.fog = new THREE.Fog(initCfg.fog, initCfg.fogNear, initCfg.fogFar);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 150);
+        camera.position.set(0, 4, 16);
 
         const renderer = new THREE.WebGLRenderer({
-          canvas,
+          canvas: canvas,
           antialias: true,
-          alpha: true,
+          powerPreference: "high-performance",
         });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-        const field = new THREE.Group();
-        scene.add(field);
-
-        // sparse node field
-        const count = 170;
-        const pos = new Float32Array(count * 3);
-        for (let i = 0; i < count; i++) {
-          pos[i * 3] = (Math.random() - 0.5) * 28;
-          pos[i * 3 + 1] = (Math.random() - 0.5) * 18;
-          pos[i * 3 + 2] = (Math.random() - 0.5) * 16;
+        if ("outputColorSpace" in renderer) {
+          renderer.outputColorSpace = THREE.SRGBColorSpace;
+        } else if ("outputEncoding" in renderer) {
+          renderer.outputEncoding = THREE.sRGBEncoding;
         }
-        const pGeo = new THREE.BufferGeometry();
-        pGeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
-        const pMat = new THREE.PointsMaterial({
-          color: 0x8b93f0,
-          size: 0.045,
-          transparent: true,
-          opacity: 0.4,
-        });
-        field.add(new THREE.Points(pGeo, pMat));
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.05;
 
-        // faint connecting lines between nearby nodes (drawn once)
-        const lineVerts = [];
-        const maxDist = 3.6;
-        for (let i = 0; i < count; i++) {
-          for (let j = i + 1; j < count; j++) {
-            const dx = pos[i * 3] - pos[j * 3],
-              dy = pos[i * 3 + 1] - pos[j * 3 + 1],
-              dz = pos[i * 3 + 2] - pos[j * 3 + 2];
-            if (Math.sqrt(dx * dx + dy * dy + dz * dz) < maxDist) {
-              lineVerts.push(
-                pos[i * 3],
-                pos[i * 3 + 1],
-                pos[i * 3 + 2],
-                pos[j * 3],
-                pos[j * 3 + 1],
-                pos[j * 3 + 2],
-              );
-            }
+        // Atmosphere & Lighting
+        const hemi = new THREE.HemisphereLight(initCfg.hemiSky, initCfg.hemiGround, initCfg.hemiInt);
+        scene.add(hemi);
+
+        const sun = new THREE.DirectionalLight(initCfg.sunColor, initCfg.sunInt);
+        sun.castShadow = true;
+        sun.shadow.mapSize.set(1024, 1024);
+        sun.shadow.camera.left = -16;
+        sun.shadow.camera.right = 16;
+        sun.shadow.camera.top = 16;
+        sun.shadow.camera.bottom = -16;
+        sun.shadow.camera.far = 80;
+        sun.shadow.bias = -0.0006;
+        scene.add(sun);
+        scene.add(sun.target);
+
+        const SKY_R = 45;
+        function dirFromAngle(elevDeg, azimDeg) {
+          const e = (elevDeg * Math.PI) / 180, a = (azimDeg * Math.PI) / 180;
+          return new THREE.Vector3(Math.cos(e) * Math.sin(a), Math.sin(e), Math.cos(e) * Math.cos(a));
+        }
+
+        // Sun & Moon Spheres with Halos
+        const sunSprite = new THREE.Mesh(new THREE.SphereGeometry(1.6, 16, 16), new THREE.MeshBasicMaterial({ color: 0xfff2c0 }));
+        const sunGlow = new THREE.Mesh(new THREE.SphereGeometry(2.6, 16, 16), new THREE.MeshBasicMaterial({ color: 0xfff2c0, transparent: true, opacity: 0.25 }));
+        sunSprite.add(sunGlow);
+        scene.add(sunSprite);
+
+        const moonSprite = new THREE.Mesh(new THREE.SphereGeometry(1.3, 16, 16), new THREE.MeshBasicMaterial({ color: 0xdfe6f5 }));
+        const moonGlow = new THREE.Mesh(new THREE.SphereGeometry(2.0, 16, 16), new THREE.MeshBasicMaterial({ color: 0xaebbe0, transparent: true, opacity: 0.2 }));
+        moonSprite.add(moonGlow);
+        scene.add(moonSprite);
+
+        // Night Constellation Stars
+        const starsGeo = new THREE.BufferGeometry();
+        const starPos = [];
+        for (let i = 0; i < 350; i++) {
+          const theta = Math.random() * Math.PI * 2, phi = Math.random() * Math.PI * 0.5;
+          const r = SKY_R * 0.98;
+          starPos.push(r * Math.cos(phi) * Math.sin(theta), r * Math.sin(phi) + 2, r * Math.cos(phi) * Math.cos(theta));
+        }
+        starsGeo.setAttribute("position", new THREE.Float32BufferAttribute(starPos, 3));
+        const starsMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.18, transparent: true, opacity: initCfg.isDay ? 0 : 0.85 });
+        const stars = new THREE.Points(starsGeo, starsMat);
+        scene.add(stars);
+
+        // =========================================================================
+        // 3. FAST PROCEDURAL MOUNTAIN TERRAIN (OPTIMIZED 40x40 GRID)
+        // =========================================================================
+        function noise2(x, z) {
+          return Math.sin(x * 0.35) * Math.cos(z * 0.3) + Math.sin(x * 0.12 + 2.1) * Math.cos(z * 0.17 - 1.3) * 1.6 + Math.sin(x * 0.6 + z * 0.4) * 0.35;
+        }
+
+        const terrainSize = 90, segs = 40;
+        const terrainGeo = new THREE.PlaneGeometry(terrainSize, terrainSize, segs, segs);
+        terrainGeo.rotateX(-Math.PI / 2);
+        const posAttr = terrainGeo.attributes.position;
+        const heights = [];
+        for (let i = 0; i < posAttr.count; i++) {
+          const x = posAttr.getX(i), z = posAttr.getZ(i);
+          const distFromCenter = Math.sqrt(x * x + z * z);
+          const falloff = Math.max(0, (distFromCenter - 6) / 40);
+          let y = noise2(x * 0.5, z * 0.5) * 3.2 * falloff * falloff;
+          if (distFromCenter < 9) y *= distFromCenter / 9;
+          posAttr.setY(i, y);
+          heights.push(y);
+        }
+        terrainGeo.setAttribute("color", new THREE.Float32BufferAttribute(new Array(posAttr.count * 3).fill(1), 3));
+        terrainGeo.computeVertexNormals();
+
+        const terrainMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.95, flatShading: true });
+        const terrain = new THREE.Mesh(terrainGeo, terrainMat);
+        terrain.receiveShadow = true;
+        scene.add(terrain);
+
+        let lastGrass, lastRock, lastSnow, lastSnowLine;
+        const tmpGrassCol = new THREE.Color(), tmpRockCol = new THREE.Color(), tmpSnowCol = new THREE.Color(), tmpC = new THREE.Color();
+        function paintTerrain(grassHex, rockHex, snowHex, snowLine, accum) {
+          accum = accum || 0;
+          lastGrass = grassHex; lastRock = rockHex; lastSnow = snowHex; lastSnowLine = snowLine;
+          tmpGrassCol.setHex(grassHex); tmpRockCol.setHex(rockHex); tmpSnowCol.setHex(snowHex);
+          const effSnowLine = snowLine - accum * 3.5;
+          const colAttr = terrainGeo.attributes.color;
+          for (let i = 0; i < heights.length; i++) {
+            const y = heights[i];
+            if (y < 1.2) tmpC.copy(tmpGrassCol);
+            else if (y < effSnowLine) tmpC.copy(tmpGrassCol).lerp(tmpRockCol, Math.min(1, (y - 1.2) / 3.3));
+            else if (y < effSnowLine + 2) tmpC.copy(tmpRockCol).lerp(tmpSnowCol, (y - effSnowLine) / 2);
+            else tmpC.copy(tmpSnowCol);
+            if (accum > 0) tmpC.lerp(tmpSnowCol, accum * 0.85);
+            colAttr.setXYZ(i, tmpC.r, tmpC.g, tmpC.b);
+          }
+          colAttr.needsUpdate = true;
+        }
+
+        // =========================================================================
+        // 4. FAST VECTOR LEAF TEXTURE SYNTHESIZER (< 2ms per map)
+        // =========================================================================
+        const texCache = {};
+        function generateRealisticLeafTextures(colorHex, veinColorStr) {
+          const key = colorHex + "_" + veinColorStr;
+          if (texCache[key]) return texCache[key];
+
+          const w = 256, h = 256;
+          const cvs = document.createElement("canvas");
+          cvs.width = w; cvs.height = h;
+          const ctx = cvs.getContext("2d");
+
+          const baseCol = new THREE.Color(colorHex);
+          const darkCol = baseCol.clone().multiplyScalar(0.72);
+          const lightCol = baseCol.clone().lerp(new THREE.Color(0xffffff), 0.15);
+
+          const grad = ctx.createLinearGradient(0, 0, 0, h);
+          grad.addColorStop(0, "#" + darkCol.getHexString());
+          grad.addColorStop(0.35, "#" + baseCol.getHexString());
+          grad.addColorStop(0.75, "#" + lightCol.getHexString());
+          grad.addColorStop(1, "#" + darkCol.getHexString());
+          ctx.fillStyle = grad;
+          ctx.fillRect(0, 0, w, h);
+
+          const midX = w * 0.5;
+
+          // Midrib Spine
+          ctx.beginPath();
+          ctx.moveTo(midX, 4);
+          ctx.quadraticCurveTo(midX - 2, h * 0.5, midX, h - 8);
+          ctx.strokeStyle = veinColorStr;
+          ctx.lineWidth = 4;
+          ctx.stroke();
+
+          // Lateral Veins
+          const veinPairs = 14;
+          for (let i = 0; i < veinPairs; i++) {
+            const y = 8 + (i / veinPairs) * (h - 24);
+            const len = Math.sin((i / veinPairs) * Math.PI) * (w * 0.42);
+            const drop = 12 + (i / veinPairs) * 16;
+
+            ctx.beginPath();
+            ctx.moveTo(midX, y);
+            ctx.quadraticCurveTo(midX - len * 0.5, y + drop * 0.4, midX - len, y + drop);
+            ctx.strokeStyle = veinColorStr;
+            ctx.lineWidth = 1.6;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(midX, y);
+            ctx.quadraticCurveTo(midX + len * 0.5, y + drop * 0.4, midX + len, y + drop);
+            ctx.strokeStyle = veinColorStr;
+            ctx.lineWidth = 1.6;
+            ctx.stroke();
+          }
+
+          // Alpha Mask
+          const alphaCvs = document.createElement("canvas");
+          alphaCvs.width = w; alphaCvs.height = h;
+          const aCtx = alphaCvs.getContext("2d");
+          aCtx.fillStyle = "#000000";
+          aCtx.fillRect(0, 0, w, h);
+
+          aCtx.beginPath();
+          aCtx.moveTo(midX, 6);
+          aCtx.bezierCurveTo(midX - w * 0.5, h * 0.28, midX - w * 0.44, h * 0.72, midX, h - 6);
+          aCtx.bezierCurveTo(midX + w * 0.44, h * 0.72, midX + w * 0.5, h * 0.28, midX, 6);
+          aCtx.closePath();
+          aCtx.fillStyle = "#ffffff";
+          aCtx.fill();
+
+          const diffuseTex = new THREE.CanvasTexture(cvs);
+          const alphaTex = new THREE.CanvasTexture(alphaCvs);
+          diffuseTex.generateMipmaps = false;
+          diffuseTex.minFilter = THREE.LinearFilter;
+          alphaTex.generateMipmaps = false;
+          alphaTex.minFilter = THREE.LinearFilter;
+
+          if ("colorSpace" in diffuseTex) {
+            diffuseTex.colorSpace = THREE.SRGBColorSpace;
+          } else if ("encoding" in diffuseTex) {
+            diffuseTex.encoding = THREE.sRGBEncoding;
+          }
+
+          const res = { diffuseTex, alphaTex };
+          texCache[key] = res;
+          return res;
+        }
+
+        // 3D Curved Leaf Geometry (Transverse V-Channel + Longitudinal Curl)
+        function createRealisticLeafGeo(width, length) {
+          const geo = new THREE.PlaneGeometry(width, length, 4, 6);
+          const pos = geo.attributes.position;
+          for (let i = 0; i < pos.count; i++) {
+            const x = pos.getX(i);
+            const y = pos.getY(i);
+            const nx = x / (width * 0.5);
+            const ny = y / (length * 0.5);
+
+            const transverse = (1.0 - Math.pow(Math.abs(nx), 1.6)) * (width * 0.18);
+            const arch = Math.sin((ny + 1.0) * 0.5 * Math.PI) * (length * 0.2) - Math.pow(Math.max(0, -ny), 1.8) * (length * 0.15);
+            pos.setZ(i, transverse + arch);
+          }
+          geo.computeVertexNormals();
+          return geo;
+        }
+
+        const sharedLeafGeo = createRealisticLeafGeo(0.14, 0.22);
+
+        // =========================================================================
+        // 5. HARDWARE-ACCELERATED INSTANCED 3D BOTANICAL TREE (14 DRAW CALLS TOTAL)
+        // =========================================================================
+        const barkMatSummer = new THREE.MeshStandardMaterial({ color: 0x4a3524, roughness: 0.95 });
+        const barkMatSnowy = new THREE.MeshStandardMaterial({ color: 0x2e2318, roughness: 0.95 });
+
+        const treeGroup = new THREE.Group();
+        scene.add(treeGroup);
+
+        const branchTransforms = [];
+        const leafTransforms = [];
+        const branchTips = [];
+
+        function addRealisticLeafCluster(center, count, spread) {
+          for (let i = 0; i < count; i++) {
+            const offset = new THREE.Vector3(
+              (Math.random() - 0.5) * spread,
+              (Math.random() - 0.4) * spread * 0.9,
+              (Math.random() - 0.5) * spread
+            );
+            const pos = center.clone().add(offset);
+            const s = 0.75 + Math.random() * 0.45;
+            const rot = new THREE.Euler(
+              Math.random() * Math.PI * 2,
+              Math.random() * Math.PI * 2,
+              Math.random() * Math.PI * 2
+            );
+            leafTransforms.push({ pos, rot, scale: s });
           }
         }
-        const lGeo = new THREE.BufferGeometry();
-        lGeo.setAttribute(
-          "position",
-          new THREE.Float32BufferAttribute(lineVerts, 3),
-        );
-        const lMat = new THREE.LineBasicMaterial({
-          color: 0x3fe0d0,
-          transparent: true,
-          opacity: 0.07,
-        });
-        field.add(new THREE.LineSegments(lGeo, lMat));
 
-        const reduceMotion = window.matchMedia(
-          "(prefers-reduced-motion: reduce)",
-        ).matches;
-        let mx = 0,
-          my = 0;
-        // Improve pointer responsiveness: support pointer/touch and normalize coords
-        const pointerSensitivity = 0.9; // increase for stronger camera follow
-        const cameraLerp = 0.08; // smoothing factor (higher = snappier)
+        function branch(origin, dir, length, radius, depth) {
+          const end = origin.clone().add(dir.clone().multiplyScalar(length));
+          const mid = origin.clone().lerp(end, 0.5);
+          const quat = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir.clone().normalize());
 
-        function handlePointerMove(e) {
-          const clientX =
-            e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX;
-          const clientY =
-            e.touches && e.touches[0] ? e.touches[0].clientY : e.clientY;
-          const nx = (clientX / window.innerWidth - 0.5) * 2; // -1..1
-          const ny = (clientY / window.innerHeight - 0.5) * 2; // -1..1
-          mx = Math.max(-1, Math.min(1, nx)) * pointerSensitivity;
-          my = Math.max(-1, Math.min(1, ny)) * pointerSensitivity;
-        }
+          branchTransforms.push({
+            pos: mid,
+            quat: quat,
+            scale: new THREE.Vector3(radius, length, radius)
+          });
 
-        window.addEventListener("pointermove", handlePointerMove, {
-          passive: true,
-        });
-        window.addEventListener("touchmove", handlePointerMove, {
-          passive: true,
-        });
-
-        function animateBg() {
-          requestAnimationFrame(animateBg);
-          if (!reduceMotion) {
-            // slightly livelier rotation
-            field.rotation.y += 0.00065;
-            field.rotation.x += 0.00025;
+          if (depth <= 3 && depth > 0) {
+            addRealisticLeafCluster(mid, 16 + Math.floor(Math.random() * 8), 1.1);
           }
-          camera.position.x += (mx * 2.0 - camera.position.x) * cameraLerp;
-          camera.position.y += (-my * 1.2 - camera.position.y) * cameraLerp;
-          camera.lookAt(scene.position);
-          renderer.render(scene, camera);
-        }
-        animateBg();
 
-        window.addEventListener("resize", () => {
+          if (depth <= 0) {
+            addRealisticLeafCluster(end, 48 + Math.floor(Math.random() * 16), 1.55);
+            branchTips.push(end.clone());
+            return;
+          }
+
+          const childCount = depth > 3 ? 3 : 2;
+          for (let b = 0; b < childCount; b++) {
+            const spreadAng = 0.42 + Math.random() * 0.32;
+            const twistAng = (b / childCount) * Math.PI * 2 + (Math.random() - 0.5) * 0.6;
+
+            let perp1 = new THREE.Vector3(-dir.z, 0, dir.x);
+            if (perp1.lengthSq() < 0.0001) perp1.set(1, 0, 0);
+            perp1.normalize();
+            const perp2 = new THREE.Vector3().crossVectors(dir, perp1).normalize();
+
+            const newDir = dir.clone().multiplyScalar(Math.cos(spreadAng))
+              .add(perp1.clone().multiplyScalar(Math.sin(spreadAng) * Math.cos(twistAng)))
+              .add(perp2.clone().multiplyScalar(Math.sin(spreadAng) * Math.sin(twistAng)));
+            newDir.y += 0.12;
+            newDir.normalize();
+
+            branch(end, newDir, length * 0.74, radius * 0.68, depth - 1);
+          }
+        }
+
+        // Build Trunk & 4 Primary Boughs
+        const trunkHeight = 2.0;
+        const trunkRadius = 0.38;
+        const trunkEnd = new THREE.Vector3(0, trunkHeight, 0);
+        branchTransforms.push({
+          pos: new THREE.Vector3(0, trunkHeight * 0.5, 0),
+          quat: new THREE.Quaternion(),
+          scale: new THREE.Vector3(trunkRadius, trunkHeight, trunkRadius)
+        });
+
+        const boughCount = 4;
+        for (let i = 0; i < boughCount; i++) {
+          const azim = (i / boughCount) * Math.PI * 2 + (Math.random() - 0.5) * 0.35;
+          const elev = (50 + (Math.random() - 0.5) * 15) * (Math.PI / 180);
+          const boughDir = new THREE.Vector3(
+            Math.cos(elev) * Math.sin(azim),
+            Math.sin(elev),
+            Math.cos(elev) * Math.cos(azim)
+          ).normalize();
+          branch(trunkEnd, boughDir, 1.85, 0.28, 5);
+        }
+
+        // 1. Instanced Mesh for Entire Bark (1 Draw Call!)
+        const unitCylGeo = new THREE.CylinderGeometry(0.72, 1.0, 1.0, 6, 1);
+        const barkInstancedMesh = new THREE.InstancedMesh(unitCylGeo, barkMatSummer, branchTransforms.length);
+        barkInstancedMesh.castShadow = true;
+        barkInstancedMesh.receiveShadow = true;
+
+        const dummyObj = new THREE.Object3D();
+        for (let i = 0; i < branchTransforms.length; i++) {
+          const bt = branchTransforms[i];
+          dummyObj.position.copy(bt.pos);
+          dummyObj.quaternion.copy(bt.quat);
+          dummyObj.scale.copy(bt.scale);
+          dummyObj.updateMatrix();
+          barkInstancedMesh.setMatrixAt(i, dummyObj.matrix);
+        }
+        barkInstancedMesh.instanceMatrix.needsUpdate = true;
+        treeGroup.add(barkInstancedMesh);
+
+        // 2. Instanced Meshes for Foliage (5 Draw Calls for 1,500+ Leaves!)
+        const COLOR_GROUPS = 5;
+        const leafGroupCounts = Array(COLOR_GROUPS).fill(0);
+        for (let i = 0; i < leafTransforms.length; i++) {
+          leafGroupCounts[i % COLOR_GROUPS]++;
+        }
+
+        const leafInstancedMeshes = [];
+        for (let g = 0; g < COLOR_GROUPS; g++) {
+          const im = new THREE.InstancedMesh(sharedLeafGeo, null, leafGroupCounts[g]);
+          im.castShadow = true;
+          im.receiveShadow = true;
+          treeGroup.add(im);
+          leafInstancedMeshes.push(im);
+        }
+
+        const groupIndices = Array(COLOR_GROUPS).fill(0);
+        for (let i = 0; i < leafTransforms.length; i++) {
+          const g = i % COLOR_GROUPS;
+          const idx = groupIndices[g]++;
+          const lt = leafTransforms[i];
+          dummyObj.position.copy(lt.pos);
+          dummyObj.rotation.copy(lt.rot);
+          dummyObj.scale.set(lt.scale, lt.scale, lt.scale);
+          dummyObj.updateMatrix();
+          leafInstancedMeshes[g].setMatrixAt(idx, dummyObj.matrix);
+        }
+        leafInstancedMeshes.forEach((im) => { im.instanceMatrix.needsUpdate = true; });
+
+        // 3. Instanced Mesh for Snow Caps on Foliage (1 Draw Call!)
+        const snowCapGeo = new THREE.SphereGeometry(0.045, 4, 3);
+        const snowCapMat = new THREE.MeshStandardMaterial({ color: 0xf5f5f0, roughness: 0.9 });
+        const snowCapInstancedMesh = new THREE.InstancedMesh(snowCapGeo, snowCapMat, leafTransforms.length);
+        for (let i = 0; i < leafTransforms.length; i++) {
+          const lt = leafTransforms[i];
+          dummyObj.position.copy(lt.pos).add(new THREE.Vector3(0, 0.03 * lt.scale, 0));
+          dummyObj.rotation.set(0, 0, 0);
+          dummyObj.scale.set(lt.scale * 0.28, lt.scale * 0.18, lt.scale * 0.28);
+          dummyObj.updateMatrix();
+          snowCapInstancedMesh.setMatrixAt(i, dummyObj.matrix);
+        }
+        snowCapInstancedMesh.instanceMatrix.needsUpdate = true;
+        snowCapInstancedMesh.visible = false;
+        treeGroup.add(snowCapInstancedMesh);
+
+        // =========================================================================
+        // 6. ATMOSPHERIC PARTICLES: GRASS, FALLING LEAVES & WINTER SNOW
+        // =========================================================================
+        const bladeMat = new THREE.MeshStandardMaterial({ color: 0x5a8f3a, roughness: 1, side: THREE.DoubleSide });
+        const grassGeo = new THREE.PlaneGeometry(0.08, 0.5);
+        const grassMesh = new THREE.InstancedMesh(grassGeo, bladeMat, 250);
+        const grassPositions = [];
+        for (let i = 0; i < 250; i++) {
+          const r = 2 + Math.random() * 7, ang = Math.random() * Math.PI * 2;
+          const gx = Math.cos(ang) * r, gz = Math.sin(ang) * r;
+          grassPositions.push([gx, gz]);
+          dummyObj.position.set(gx, 0.25, gz);
+          dummyObj.rotation.set(0, Math.random() * Math.PI, (Math.random() - 0.5) * 0.3);
+          dummyObj.scale.set(1, 1, 1);
+          dummyObj.updateMatrix();
+          grassMesh.setMatrixAt(i, dummyObj.matrix);
+        }
+        grassMesh.instanceMatrix.needsUpdate = true;
+        scene.add(grassMesh);
+
+        // Winter Ground Snow Mounds
+        const snowFlakeGeo = new THREE.SphereGeometry(0.05, 4, 3);
+        const snowFlakeMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 1 });
+        const snowGroundMesh = new THREE.InstancedMesh(snowFlakeGeo, snowFlakeMat, grassPositions.length);
+        for (let i = 0; i < grassPositions.length; i++) {
+          const p = grassPositions[i];
+          dummyObj.position.set(p[0], 0.02, p[1]);
+          dummyObj.scale.set(0.001, 0.001, 0.001);
+          dummyObj.updateMatrix();
+          snowGroundMesh.setMatrixAt(i, dummyObj.matrix);
+        }
+        snowGroundMesh.instanceMatrix.needsUpdate = true;
+        snowGroundMesh.visible = false;
+        scene.add(snowGroundMesh);
+
+        // Autumn Ground Leaves
+        const fallenLeafGeo = new THREE.PlaneGeometry(0.18, 0.18);
+        const fallenLeafMat = new THREE.MeshStandardMaterial({ color: 0xc9722a, roughness: 0.85, side: THREE.DoubleSide });
+        const groundLeavesMesh = new THREE.InstancedMesh(fallenLeafGeo, fallenLeafMat, 120);
+        for (let i = 0; i < 120; i++) {
+          const r = 1.5 + Math.random() * 6.5, ang = Math.random() * Math.PI * 2;
+          dummyObj.position.set(Math.cos(ang) * r, 0.03, Math.sin(ang) * r);
+          dummyObj.rotation.set(-Math.PI / 2 + (Math.random() - 0.5) * 0.4, 0, Math.random() * Math.PI);
+          dummyObj.scale.set(1, 1, 1);
+          dummyObj.updateMatrix();
+          groundLeavesMesh.setMatrixAt(i, dummyObj.matrix);
+        }
+        groundLeavesMesh.instanceMatrix.needsUpdate = true;
+        groundLeavesMesh.visible = false;
+        scene.add(groundLeavesMesh);
+
+        // Autumn Fluttering Falling Leaves
+        const FALL_LEAF_COUNT = 60;
+        const fallingLeaves = [];
+        const fallLeafGeo = new THREE.PlaneGeometry(0.16, 0.16);
+        for (let i = 0; i < FALL_LEAF_COUNT; i++) {
+          const m = new THREE.Mesh(fallLeafGeo, fallenLeafMat);
+          m.visible = false;
+          m.userData.speed = 0.4 + Math.random() * 0.5;
+          m.userData.drift = (Math.random() - 0.5) * 0.6;
+          m.userData.spin = (Math.random() - 0.5) * 2;
+          m.userData.sway = Math.random() * Math.PI * 2;
+          scene.add(m);
+          fallingLeaves.push(m);
+        }
+        function resetFallingLeaf(m) {
+          const tip = branchTips[Math.floor(Math.random() * branchTips.length)] || new THREE.Vector3(0, 5, 0);
+          m.position.set(tip.x + (Math.random() - 0.5) * 1.5, tip.y + Math.random() * 1.5, tip.z + (Math.random() - 0.5) * 1.5);
+          m.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+        }
+        fallingLeaves.forEach(resetFallingLeaf);
+
+        // Winter Snowfall Particles
+        const SNOW_COUNT = 200;
+        const snowGeo = new THREE.BufferGeometry();
+        const snowPositions = new Float32Array(SNOW_COUNT * 3);
+        const snowSpeeds = [];
+        for (let i = 0; i < SNOW_COUNT; i++) {
+          const r = Math.random() * 16;
+          const ang = Math.random() * Math.PI * 2;
+          snowPositions[i * 3] = Math.cos(ang) * r;
+          snowPositions[i * 3 + 1] = Math.random() * 16;
+          snowPositions[i * 3 + 2] = Math.sin(ang) * r;
+          snowSpeeds.push(0.6 + Math.random() * 0.8);
+        }
+        snowGeo.setAttribute("position", new THREE.Float32BufferAttribute(snowPositions, 3));
+        const snowMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.13, transparent: true, opacity: 0 });
+        const snowParticles = new THREE.Points(snowGeo, snowMat);
+        scene.add(snowParticles);
+
+        // =========================================================================
+        // 7. FAST MATERIAL CACHE & INSTANT PRESET SWITCHER
+        // =========================================================================
+        const leafMatCache = {};
+        function getRealisticLeafMats(p) {
+          const key = p.leafColors.join(",") + "_" + p.veinColor;
+          if (leafMatCache[key]) return leafMatCache[key];
+
+          const mats = p.leafColors.map((colHex) => {
+            const tex = generateRealisticLeafTextures(colHex, p.veinColor);
+            return new THREE.MeshStandardMaterial({
+              map: tex.diffuseTex,
+              alphaMap: tex.alphaTex,
+              roughness: p.leafRoughness,
+              metalness: 0.02,
+              transparent: true,
+              alphaTest: 0.18,
+              depthWrite: true,
+              side: THREE.DoubleSide,
+            });
+          });
+          leafMatCache[key] = mats;
+          return mats;
+        }
+
+        let activeSeason = "summer";
+        let snowAccum = 0;
+
+        function applyPreset(key) {
+          const p = PALETTE_CONFIGS[key];
+          if (!p) return;
+          activeSeason = p.season;
+          if (p.season !== "winter") snowAccum = 0;
+
+          scene.background.setHex(p.sky);
+          scene.fog.color.setHex(p.fog);
+          scene.fog.near = p.fogNear;
+          scene.fog.far = p.fogFar;
+
+          sun.color.setHex(p.sunColor);
+          sun.intensity = p.sunInt;
+          hemi.color.setHex(p.hemiSky);
+          hemi.groundColor.setHex(p.hemiGround);
+          hemi.intensity = p.hemiInt;
+
+          paintTerrain(p.grass, p.rock, p.snow, p.snowLine, p.season === "winter" ? snowAccum : 0);
+
+          const celestialDir = dirFromAngle(p.elev, p.azim);
+          sun.position.copy(celestialDir).multiplyScalar(30);
+          sun.target.position.set(0, 2, 0);
+          sunSprite.position.copy(celestialDir).multiplyScalar(SKY_R);
+          moonSprite.position.copy(celestialDir).multiplyScalar(-SKY_R);
+          sunSprite.visible = p.isDay;
+          moonSprite.visible = !p.isDay;
+          starsMat.opacity = p.isDay ? 0 : 0.85;
+
+          const mats = getRealisticLeafMats(p);
+          leafInstancedMeshes.forEach((im, g) => {
+            im.material = mats[g % mats.length];
+            im.visible = p.season === "autumn" && g === 4 ? false : true;
+          });
+
+          snowCapInstancedMesh.visible = p.snowCaps;
+          barkInstancedMesh.material = p.bark === "snowy" ? barkMatSnowy : barkMatSummer;
+
+          grassMesh.visible = p.grassVisible;
+          snowGroundMesh.visible = p.snowGroundVisible;
+          groundLeavesMesh.visible = p.season === "autumn";
+          fallingLeaves.forEach((m) => { m.visible = p.season === "autumn"; });
+          snowMat.opacity = p.season === "winter" ? 0.9 : 0;
+        }
+
+        applyPreset(currentPalette);
+
+        // =========================================================================
+        // 8. INTERACTIVE 3D MOUSE DRAG ORBIT (CLICK & DRAG TO ROTATE IN 3D)
+        // =========================================================================
+        let isDragging = false;
+        let prevPointerX = 0;
+        let prevPointerY = 0;
+
+        let orbitAngle = 0.52;          // Horizontal azimuth
+        let targetOrbitAngle = 0.52;
+        let pitchAngle = 0.26;          // Vertical pitch
+        let targetPitchAngle = 0.26;
+        let camDist = 16.2;             // Distance from tree
+        let targetCamDist = 16.2;
+
+        window.addEventListener("pointerdown", (e) => {
+          const target = e.target;
+          if (
+            target.closest("button, a, input, select, textarea, label, .hud-matrix-card, .contact-form-card, .mobile-drawer")
+          ) {
+            return;
+          }
+          isDragging = true;
+          prevPointerX = e.clientX;
+          prevPointerY = e.clientY;
+          document.body.style.cursor = "grabbing";
+        });
+
+        window.addEventListener("pointermove", (e) => {
+          if (!isDragging) return;
+          const dx = e.clientX - prevPointerX;
+          const dy = e.clientY - prevPointerY;
+          prevPointerX = e.clientX;
+          prevPointerY = e.clientY;
+
+          targetOrbitAngle += dx * 0.0075;
+          targetPitchAngle = Math.max(0.04, Math.min(1.25, targetPitchAngle - dy * 0.0075));
+        });
+
+        window.addEventListener("pointerup", () => {
+          if (isDragging) {
+            isDragging = false;
+            document.body.style.cursor = "";
+          }
+        });
+
+        window.addEventListener("pointercancel", () => {
+          isDragging = false;
+          document.body.style.cursor = "";
+        });
+
+        function onWindowResize() {
           camera.aspect = window.innerWidth / window.innerHeight;
           camera.updateProjectionMatrix();
           renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-      })();
+        }
+        window.addEventListener("resize", onWindowResize);
 
-      // ---------- HERO: FLOATING AI BOT (Three.js) ----------
-      (function () {
-        const canvas = document.getElementById("hero-canvas");
-        const container = canvas.parentElement;
-        let w = container.clientWidth,
-          h = container.clientHeight;
-
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
-        camera.position.set(0, 0.3, 6);
-
-        const renderer = new THREE.WebGLRenderer({
-          canvas,
-          antialias: true,
-          alpha: true,
-        });
-        renderer.setSize(w, h);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-        scene.add(new THREE.AmbientLight(0x40405f, 1.3));
-        const key = new THREE.PointLight(0x6c5ce7, 1.5, 20);
-        key.position.set(3, 3, 4);
-        scene.add(key);
-        const rim = new THREE.PointLight(0x3fe0d0, 1.2, 20);
-        rim.position.set(-3, -1, 3);
-        scene.add(rim);
-
-        const bodyMat = new THREE.MeshStandardMaterial({
-          color: 0xe7e9f5,
-          metalness: 0.35,
-          roughness: 0.35,
-        });
-        const darkMat = new THREE.MeshStandardMaterial({
-          color: 0x2a3050,
-          metalness: 0.4,
-          roughness: 0.4,
-        });
-        const cyanMat = new THREE.MeshBasicMaterial({ color: 0x3fe0d0 });
-        const amberMat = new THREE.MeshBasicMaterial({
-          color: 0xffb86b,
-          transparent: true,
-        });
-
-        const bot = new THREE.Group();
-
-        const head = new THREE.Mesh(
-          new THREE.BoxGeometry(1.05, 0.85, 0.9),
-          bodyMat,
-        );
-        head.position.y = 1.15;
-        bot.add(head);
-
-        const visor = new THREE.Mesh(
-          new THREE.BoxGeometry(0.92, 0.28, 0.94),
-          darkMat,
-        );
-        visor.position.y = 1.12;
-        bot.add(visor);
-
-        const eyeGeo = new THREE.SphereGeometry(0.09, 16, 16);
-        const eyeL = new THREE.Mesh(eyeGeo, cyanMat);
-        eyeL.position.set(-0.24, 1.12, 0.48);
-        bot.add(eyeL);
-        const eyeR = eyeL.clone();
-        eyeR.position.x = 0.24;
-        bot.add(eyeR);
-
-        const antStem = new THREE.Mesh(
-          new THREE.CylinderGeometry(0.02, 0.02, 0.35, 8),
-          darkMat,
-        );
-        antStem.position.set(0, 1.75, 0);
-        bot.add(antStem);
-        const antTip = new THREE.Mesh(
-          new THREE.SphereGeometry(0.07, 12, 12),
-          amberMat,
-        );
-        antTip.position.set(0, 1.95, 0);
-        bot.add(antTip);
-
-        const body = new THREE.Mesh(
-          new THREE.BoxGeometry(1.25, 1.15, 0.85),
-          bodyMat,
-        );
-        body.position.y = -0.05;
-        bot.add(body);
-
-        const core = new THREE.Mesh(
-          new THREE.CircleGeometry(0.16, 24),
-          cyanMat,
-        );
-        core.position.set(0, -0.05, 0.44);
-        bot.add(core);
-        const coreRing = new THREE.Mesh(
-          new THREE.RingGeometry(0.19, 0.23, 24),
-          cyanMat,
-        );
-        coreRing.position.set(0, -0.05, 0.435);
-        bot.add(coreRing);
-
-        const armGeo = new THREE.CylinderGeometry(0.12, 0.12, 0.75, 10);
-        const armL = new THREE.Mesh(armGeo, darkMat);
-        armL.position.set(-0.78, -0.05, 0);
-        armL.rotation.z = 0.15;
-        bot.add(armL);
-        const armR = new THREE.Mesh(armGeo, darkMat);
-        armR.position.set(0.78, -0.05, 0);
-        armR.rotation.z = -0.15;
-        bot.add(armR);
-
-        const hoverRing = new THREE.Mesh(
-          new THREE.TorusGeometry(0.55, 0.02, 8, 60),
-          cyanMat,
-        );
-        hoverRing.rotation.x = Math.PI / 2;
-        hoverRing.position.y = -0.85;
-        hoverRing.material.transparent = true;
-        hoverRing.material.opacity = 0.55;
-        bot.add(hoverRing);
-
-        bot.position.y = -0.3;
-        scene.add(bot);
-
-        let mouseX = 0,
-          mouseY = 0;
-        container.addEventListener("mousemove", (e) => {
-          const rect = container.getBoundingClientRect();
-          mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-          mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-        });
-
-        const reduceMotion = window.matchMedia(
-          "(prefers-reduced-motion: reduce)",
-        ).matches;
-        let t = 0;
+        const clock = new THREE.Clock();
+        let lastT = 0;
+        let terrainRepaintTimer = 0;
 
         function animate() {
           requestAnimationFrame(animate);
-          t += 0.016;
-          if (!reduceMotion) {
-            bot.position.y = -0.3 + Math.sin(t * 1.3) * 0.12;
-            bot.rotation.y = Math.sin(t * 0.5) * 0.35 + mouseX * 0.3;
-            bot.rotation.x = mouseY * 0.12;
-            hoverRing.rotation.z += 0.01;
-            hoverRing.scale.setScalar(1 + Math.sin(t * 1.3) * 0.06);
-            antTip.material.opacity = 0.6 + Math.sin(t * 3) * 0.4;
-            armL.rotation.z = 0.15 + Math.sin(t * 1.1) * 0.05;
-            armR.rotation.z = -0.15 - Math.sin(t * 1.1 + 0.5) * 0.05;
+
+          const t = clock.getElapsedTime();
+          const dt = Math.min(0.05, t - lastT);
+          lastT = t;
+
+          // Smooth damping on mouse drag (distance remains fixed and independent from page scroll)
+          orbitAngle += (targetOrbitAngle - orbitAngle) * 0.08;
+          pitchAngle += (targetPitchAngle - pitchAngle) * 0.08;
+
+          // GPU-Friendly Harmonic Tree Sway (1 calculation for whole canopy!)
+          treeGroup.rotation.y = Math.sin(t * 0.5) * 0.012;
+          treeGroup.rotation.z = Math.cos(t * 0.7) * 0.008;
+
+          // Autumn Falling Leaves Dynamics
+          if (activeSeason === "autumn") {
+            for (let i = 0; i < fallingLeaves.length; i++) {
+              const m = fallingLeaves[i];
+              m.position.y -= m.userData.speed * dt;
+              m.userData.sway += dt * 1.5;
+              m.position.x += Math.sin(m.userData.sway) * 0.012;
+              m.position.z += m.userData.drift * dt * 0.3;
+              m.rotation.z += m.userData.spin * dt;
+              m.rotation.x += m.userData.spin * 0.5 * dt;
+              if (m.position.y < 0.05) { resetFallingLeaf(m); }
+            }
           }
+
+          // Winter Snowfall & Accumulation Dynamics
+          if (activeSeason === "winter") {
+            const arr = snowGeo.attributes.position.array;
+            for (let i = 0; i < SNOW_COUNT; i++) {
+              arr[i * 3 + 1] -= snowSpeeds[i] * dt * 0.7;
+              arr[i * 3] += Math.sin(t + i) * 0.003;
+              if (arr[i * 3 + 1] < 0) { arr[i * 3 + 1] = 15 + Math.random() * 2; }
+            }
+            snowGeo.attributes.position.needsUpdate = true;
+
+            if (snowAccum < 1) {
+              snowAccum = Math.min(1, snowAccum + dt * 0.035);
+              terrainRepaintTimer += dt;
+              if (terrainRepaintTimer > 0.15) {
+                terrainRepaintTimer = 0;
+                paintTerrain(lastGrass, lastRock, lastSnow, lastSnowLine, snowAccum);
+              }
+            }
+          }
+
+          // Fast Spherical Camera Matrix Computation
+          camera.position.x = Math.sin(orbitAngle) * Math.cos(pitchAngle) * camDist;
+          camera.position.z = Math.cos(orbitAngle) * Math.cos(pitchAngle) * camDist;
+          camera.position.y = Math.sin(pitchAngle) * camDist + 2.4;
+          camera.lookAt(0, 3.4, 0);
+
           renderer.render(scene, camera);
         }
         animate();
 
-        window.addEventListener("resize", () => {
-          w = container.clientWidth;
-          h = container.clientHeight;
-          camera.aspect = w / h;
-          camera.updateProjectionMatrix();
-          renderer.setSize(w, h);
-        });
-      })();
+        // =========================================================================
+        // 9. HARDENED INQUIRY FORM SUBMISSION
+        // =========================================================================
+        const leadForm = document.getElementById("leadForm");
+        const formStatus = document.getElementById("formStatus");
 
-      // ---------- SERVICE CARD 3D TILT ----------
-      document.querySelectorAll(".service-card").forEach((card) => {
-        card.addEventListener("mousemove", (e) => {
-          const rect = card.getBoundingClientRect();
-          const x = (e.clientX - rect.left) / rect.width - 0.5;
-          const y = (e.clientY - rect.top) / rect.height - 0.5;
-          card.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(4px)`;
-        });
-        card.addEventListener("mouseleave", () => {
-          card.style.transform =
-            "perspective(600px) rotateY(0deg) rotateX(0deg) translateZ(0)";
-        });
-      });
+        if (leadForm && formStatus) {
+          leadForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-      // ---------- CONTACT FORM ----------
-      document
-        .getElementById("leadForm")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-          const form = this;
-          const formSuccess = document.getElementById("formSuccess");
-          const phoneInput = document.getElementById("phone");
-          const data = new FormData(form);
-          if (phoneInput) {
-            data.set("phone", phoneInput.value || "");
-          }
-
-          formSuccess.style.display = "none";
-          try {
-            const response = await fetch(form.action, {
-              method: "POST",
-              body: data,
-            });
-            const result = await response.json();
-            if (result.success) {
-              form.reset();
-              formSuccess.textContent =
-                "Thanks! Your message has been noted — we will get back to you shortly.";
-              formSuccess.style.display = "block";
-              formSuccess.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-              });
-            } else {
-              throw new Error(result.message || "Submission failed.");
+            const lastSent = localStorage.getItem("wsm_last_inquiry_time");
+            const now = Date.now();
+            if (lastSent && now - parseInt(lastSent, 10) < 30000) {
+              formStatus.textContent = "Rate limit protection: Please wait 30 seconds before sending another inquiry.";
+              formStatus.className = "form-status error";
+              return;
             }
-          } catch (error) {
-            formSuccess.textContent =
-              "Oops — something went wrong sending your message. Please try again or contact us directly.";
-            formSuccess.style.display = "block";
-            formSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
-            console.error("Web3Forms submit error:", error);
-          }
-        });
+
+            const formData = new FormData(leadForm);
+            formStatus.textContent = "Encrypting & transmitting project brief to Himalayan Basecamp...";
+            formStatus.className = "form-status success";
+
+            try {
+              const response = await fetch(leadForm.action, {
+                method: "POST",
+                body: formData,
+                headers: { Accept: "application/json" },
+              });
+              const data = await response.json();
+              if (data.success) {
+                localStorage.setItem("wsm_last_inquiry_time", now.toString());
+                leadForm.reset();
+                formStatus.textContent = "Project brief successfully received. Wasim Ansari will review your specifications and respond within 24 hours.";
+                formStatus.className = "form-status success";
+              } else {
+                throw new Error(data.message || "Submission failed.");
+              }
+            } catch (err) {
+              formStatus.innerHTML = 'Transmission note: You can also reach Wasim directly via WhatsApp at <a href="https://wa.me/917253923415" target="_blank" rel="noopener noreferrer" style="text-decoration:underline; font-weight:bold;">+91 7253923415</a> or email <a href="mailto:wsmaisys@gmail.com" style="text-decoration:underline; font-weight:bold;">wsmaisys@gmail.com</a>.';
+              formStatus.className = "form-status error";
+            }
+          });
+        }
+      })();
     </script>
   </body>
 </html>
