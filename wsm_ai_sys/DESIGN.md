@@ -36,18 +36,36 @@ The website background now features a **Living Himalayan Botanical Tree & Mounta
 
 | Atmosphere Mode | Sky / Fog | Sun / Celestial | Foliage Palette | Bark | Terrain & Atmospheric Physics |
 |---|---|---|---|---|---|
-| **Summer Day** | `#aed4ef` / Sky blue | Sun at $55^\circ$ elev | Rich emerald & forest greens | Warm summer wood | Green grass (`0x4a6b2f`), subtle breeze |
-| **Summer Night** | `#060910` / Midnight blue | Moon & stars dome | Deep nocturne greens with teal sheen | Deep wood | Nocturne grass, starfield opacity $0.85$ |
-| **Autumn Day** | `#e8c98a` / Warm ochre | Golden sunlight | Flame amber, copper, russet, gold | Warm summer wood | Amber turf, fluttering falling leaves |
-| **Autumn Night** | `#140b12` / Dusky ember | Low warm moon | Rich russet, umber, and dark ochre | Deep wood | Ground fallen leaves, gentle leaf fall |
-| **Winter Day** | `#d8e8f0` / Crisp alpine | Soft pale sunlight | Frosted silver, ice cyan, and snow white | Frosted snowy bark | Snow caps on foliage, snowfall, snow accumulation |
-| **Winter Night** | `#080f1a` / Aurora navy | Cool blue moonlight | Frosted navy & silver-blue foliage | Frosted snowy bark | Dense snowfall, glittering snow ground mounds |
-| **Spring Day** | `#bfe3f0` / Radiant azure | Bright spring sun | Fresh apple green & cherry blossom pink | Warm summer wood | Vibrant spring grass, soft floral glow |
-| **Spring Night** | `#0c1424` / Deep twilight | Soft spring moon | Twilight green & blossom magenta | Deep wood | Soft breeze, starfield dome |
+| **Summer Day** | `#aed4ef` / Sky blue | Sun at $55^\circ$ elev | Rich chlorophyll & emerald greens | Warm summer wood | Lush emerald meadow turf (`0x487a2b`), granite rocks (`0x6e695f`), gentle breeze |
+| **Summer Night** | `#060910` / Midnight blue | Moon & stars dome | Deep nocturne greens with teal sheen | Deep wood | Nocturnal forest turf (`0x142616`), night stone (`0x202426`), starfield dome |
+| **Autumn Day** | `#e8c98a` / Warm ochre | Golden sunlight | Flame amber, copper, russet, gold | Warm summer wood | Golden-amber meadow turf (`0x8a6324`), rustic stone (`0x786b5e`), fluttering falling leaves |
+| **Autumn Night** | `#140b12` / Dusky ember | Low warm moon | Rich russet, umber, and dark ochre | Deep wood | Nocturnal amber turf (`0x2a1c12`), dark stone (`0x221a16`), gentle leaf fall |
+| **Winter Day** | `#d8e8f0` / Crisp alpine | Soft pale sunlight | Frosted silver, ice cyan, and snow white | Frosted snowy bark | Snow-dusted frost field (`0xdde6f0`), frosted slate (`0x8a929c`), snowfall, snow caps |
+| **Winter Night** | `#080f1a` / Aurora navy | Cool blue moonlight | Frosted navy & silver-blue foliage | Frosted snowy bark | Moonlit frost ground (`0x121a28`), cool night stone (`0x1c2432`), dense snowfall |
+| **Spring Day** | `#bfe3f0` / Radiant azure | Bright spring sun | Fresh tender emerald & spring greens | Warm summer wood | Vibrant young spring shoots (`0x4fa82c`), alpine granite (`0x5e666a`), wildflowers |
+| **Spring Night** | `#0c1424` / Deep twilight | Soft spring moon | Fresh nocturne forest greens | Deep wood | Nocturnal dew meadow (`0x162c16`), night stone (`0x1e2422`), starfield dome |
 
 ---
 
-## 4. Interactive Camera & Spatial Web Polish
-- **Mouse Parallax**: Responsive orbital pitch and yaw on cursor movement.
-- **Scroll Tracking**: Camera gracefully tracks and orbits around the tree and mountain landscape as the user navigates down the page.
+## 4. Photorealistic Grass & Alpine Landscape Engineering
+
+### A. Multi-Octave Fractal Ridge Mountain System
+- **Fractal Elevation Generator**: 4 octaves of harmonic elevation (`Macro Massifs` + `Alpine Foothills` + `Rocky Crags & Gullies` + `Micro Earth Humus`).
+- **Nature-Authentic Seasonal Terrain Shading**:
+  - Center root zone transitions naturally into fertile organic soil.
+  - Valley clearings and rolling meadow flats adopt the exact botanical color of each season (verdant emerald in summer, golden-amber in autumn, snow frost in winter, and fresh lime shoots in spring).
+  - Steep mountain ridges ($> 28^\circ$) dynamically expose weathered alpine mountain rock.
+  - High peaks ($y \ge \text{snowLine}$) wear snow caps across all seasons, with full accumulation in winter.
+
+### B. 3D Organic Curved Grass Clumps & Wind Sway
+- **3-Blade Star Clump Geometry**: 3 curved, arched blades tapering from a root base ($w=0.055$) to sharp tips with double-sided normals.
+- **Procedural Grass Alpha & Fiber Striations**: $128 \times 256$ canvas texture with dark root gradient, lush chlorophyll mid-blade tone, translucent sunny tips, and vertical fibrous striations.
+- **Dynamic Wind Breeze Physics**: Real-time harmonic undulating wave sway in `animate()` (`sin(t * 1.6)`).
+- **Alpine Wildflowers & Boulders**: Instanced mountain boulders and seasonal wildflower blossoms (white Himalayan edelweiss and alpine blue poppies) blooming dynamically in Spring and Summer.
+
+---
+
+## 5. Interactive Camera & Spatial Web Polish
+- **Mouse & Touch Parallax**: Responsive orbital pitch and yaw on cursor/touch drag.
+- **Responsive Viewport Scaling**: Unified `worldGroup` scales smoothly (`0.50x` mobile, `0.72x` tablet, `1.0x` desktop) to maintain composition without exploding or zooming into the camera lens.
 - **Strict Zero CDN**: All scripts, shaders, geometries, and textures are 100% self-hosted locally.

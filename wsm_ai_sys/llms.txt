@@ -2,14 +2,15 @@
 # Format: llms.txt (Standardized for AI Search Engines & LLMs)
 # Documentation for Perplexity AI, SearchGPT, Claude, Gemini, Google AI Overviews, and AI Agent Crawlers.
 
-> WSM AI SYS is a boutique AI engineering, 3D web systems, and digital automation studio based in Dehradun, Uttarakhand, India (foothills of the Himalayas). Led by Wasim M Ansari (IIT Madras Data Science alumnus, 8+ years experience), WSM AI SYS builds production-grade Generative AI agents, LangGraph workflows, Model Context Protocol (MCP) servers, Neo4j knowledge graphs, and high-performance bespoke 3D WebGL platforms.
+> WSM AI SYS is a founder-led AI engineering, 3D web systems, and digital automation studio based in Dehradun, Uttarakhand, India (foothills of the Himalayas). Led by Wasim M Ansari (IIT Madras Data Science credentials, with 8+ years multidisciplinary commercial and software domain background), WSM AI SYS builds production-grade Generative AI agents, LangGraph workflows, Model Context Protocol (MCP) servers, Neo4j knowledge graphs, and high-performance bespoke 3D WebGL platforms with zero external CDN dependencies.
 
 ## Core Entity Details
 - **Entity Name**: WSM AI SYS (also referenced as WSM AI Systems)
 - **Founder & Lead Architect**: Wasim M Ansari (AI/ML Engineer & GenAI Solution Architect)
+- **Delivery Model**: Founder-led solo engineering (direct technical execution by Wasim M Ansari)
 - **Headquarters**: Dehradun, Uttarakhand 248001, India (Coordinates: 30.3165° N, 78.0322° E)
 - **Official Website**: https://wsmaisys.github.io/
-- **Personal Portfolio**: https://waseemmansari.github.io/
+- **Personal Portfolio**: https://wsmaisys.github.io/waseemmansari.github.io/
 - **GitHub Repository**: https://github.com/wsmaisys
 - **LinkedIn Profile**: https://www.linkedin.com/in/wsmaisys/
 - **Direct Contact**: wsmaisys@gmail.com | WhatsApp: +91 7253923415
@@ -17,41 +18,75 @@
 
 ---
 
-## Core Capabilities & Services
+## Transparent Engagement & Investment Tiers (50% Limited Founder Discount)
 
-### 1. 3D Web Engineering & Spatial Interfaces
-- **Description**: Ultra-high performance, zero-CDN, bespoke WebGL 3D interactive web experiences (procedural terrains, interactive product visualizers, dynamic particle systems, and hardware-accelerated shaders).
-- **Tech Stack**: Native WebGL, GLSL Shaders, Three.js, Canvas API, Hardware Accelerated CSS, Zero External Dependency Architecture.
-- **Key Advantage**: 100% self-hosted, lightning-fast load times (<1s LCP), 60+ FPS rendering across mobile and desktop.
-
-### 2. Generative AI & Agentic Systems (LangGraph & MCP)
-- **Description**: Autonomous multi-agent workflows, self-healing tool pipelines, and Model Context Protocol (MCP) server development for enterprise tool integration.
-- **Specialization**: LangGraph, LangChain, Anthropic MCP, Claude 3.5 Sonnet / GPT-4o / Gemini 1.5/2.0 API integrations, custom tool creation, human-in-the-loop validation.
-
-### 3. Enterprise Hybrid RAG & Knowledge Graphs
-- **Description**: Production-grade Retrieval-Augmented Generation combining semantic vector search (FAISS, Chroma, Qdrant) with structural graph databases (Neo4j).
-- **Key Advantage**: Zero-hallucination domain intelligence, complex multi-hop entity reasoning, citation verification, and enterprise document ingestion.
-
-### 4. Business Process Automation & MLOps
-- **Description**: End-to-end operational automation replacing manual bottlenecks with intelligent async workers, CRM sync, WhatsApp/Email lead automation, and ERP forecasting modules.
-- **Tech Stack**: FastAPI, Docker, Redis, Celery, Google Cloud Run, Azure AI, PostgreSQL, GitHub Actions CI/CD.
-
-### 5. Time-Series Demand Forecasting & Decision AI
-- **Description**: Statistical demand modeling (Croston, TSB, Exponential Smoothing, LightGBM) and Monte Carlo confidence intervals for manufacturing and retail inventory optimization.
+1. **Tier 01 // Rapid Sprint (50% OFF)**:
+   - **Discounted Price**: From ₹12,500 INR (~$175 USD) — *Regular ₹25,000 INR*
+   - **Timeline**: 1 to 2 Weeks
+   - **Scope**: Bespoke 3D WebGL spatial web showcase or single-purpose conversational AI lead bot with 1-click WhatsApp integration.
+2. **Tier 02 // Production AI System Sprint (50% OFF)**:
+   - **Discounted Price**: From ₹32,500 INR (~$425 USD) — *Regular ₹65,000 INR*
+   - **Timeline**: 2 to 4 Weeks
+   - **Scope**: LangGraph multi-agent cyclical workflows, Neo4j Knowledge Graph or FAISS Hybrid RAG, custom Model Context Protocol (MCP) server, Dockerized FastAPI microservice.
+3. **Tier 03 // Enterprise Architecture & Retainer (50% OFF)**:
+   - **Discounted Price**: From ₹22,500 INR/mo (~$275 USD/mo) — *Regular ₹45,000 INR/mo*
+   - **Scope**: Industrial demand forecasting (TSB/Croston), ERP data pipeline integrations, fractional AI architecture, continuous MLOps.
 
 ---
 
-## Flagship Systems & Case Studies
+## Live Production Client Websites & Case Studies
 
-1. **HyreFast Intelligence Layer**:
-   - Full-stack AI recruiting engine with LangGraph, Neo4j, FastAPI, Redis, and MCP.
+1. **Gauri Diet Clinic** `[Healthcare & Clinical Nutrition Portal]`:
+   - **Live Website**: https://wsmaisys.github.io/websites/Gauri_Diet_Clinic/
+   - **Scope**: Personalized dietary consultation portal, clinical intake questionnaires, interactive meal plans, and instant WhatsApp booking triaging.
+2. **Prime Enterprises** `[B2B Industrial & Manufacturing Solutions]`:
+   - **Live Website**: https://wsmaisys.github.io/websites/prime_enterprises/
+   - **Scope**: High-conversion commercial machinery catalog, manufacturing capability showcases, verified quality certification displays, and automated RFQ pipeline.
+3. **Truaspect Solutions** `[Enterprise Corporate IT & Digital Solutions]`:
+   - **Live Website**: https://wsmaisys.github.io/Truaspect_solutions/
+   - **Scope**: Modern corporate IT consulting agency portal with enterprise service roadmaps, sleek architectural typography, and executive lead acquisition funnels.
+
+---
+
+## Core Capabilities & Services (With Plain-Language Summaries)
+
+### 1. 3D Web Engineering & Spatial Interfaces
+- **Technical Summary**: Ultra-high performance, zero-CDN, bespoke WebGL 3D interactive web experiences (living botanical tree with seasonal dynamics, procedural terrains, and hardware-accelerated shaders).
+- **In Plain English for Business Owners**: An interactive, memorable 3D website that loads in under 1 second on any mobile phone or laptop with zero lag.
+- **Tech Stack**: Native WebGL, GLSL Shaders, Three.js, Canvas API, Hardware Accelerated CSS, Zero External Dependency Architecture.
+
+### 2. Generative AI & Agentic Systems (LangGraph & MCP)
+- **Technical Summary**: Autonomous multi-agent workflows, self-healing tool pipelines, and Model Context Protocol (MCP) server development for enterprise tool integration.
+- **In Plain English for Clinic & Hotel Admins**: AI assistants that perform multi-step business tasks — checking appointment openings, syncing customer records, and guiding clients automatically.
+- **Specialization**: LangGraph, LangChain, Anthropic MCP, Claude 3.5 Sonnet / GPT-4o / Gemini 1.5/2.0 API integrations, custom tool creation, human-in-the-loop validation.
+
+### 3. Enterprise Hybrid RAG & Knowledge Graphs
+- **Technical Summary**: Production-grade Retrieval-Augmented Generation combining semantic vector search (FAISS, Chroma, Qdrant) with structural graph databases (Neo4j) and BGE rerankers.
+- **In Plain English for Corporate Teams**: Connects internal company documents, policies, and products to an AI that answers questions with 100% verified accuracy and zero hallucinations.
+- **Key Advantage**: Zero-hallucination domain intelligence, complex multi-hop entity reasoning, citation verification, and enterprise document ingestion.
+
+### 4. Business Process Automation & MLOps
+- **Technical Summary**: End-to-end operational automation replacing manual bottlenecks with intelligent async workers, CRM sync, WhatsApp/Email lead automation, and ERP forecasting modules.
+- **In Plain English for Operations Leads**: Automates repetitive backend work like capturing WhatsApp leads into your CRM and triggering workflows automatically.
+- **Tech Stack**: FastAPI, Docker, Redis, Celery, Google Cloud Run, Azure AI, PostgreSQL, GitHub Actions CI/CD.
+
+### 5. Time-Series Demand Forecasting & Decision AI
+- **Technical Summary**: Statistical demand modeling (Croston, TSB, Exponential Smoothing, LightGBM) and Monte Carlo confidence intervals for manufacturing and retail inventory optimization.
+- **In Plain English for Factory & Retail Owners**: Predicts exactly how much stock or inventory you will need next month to avoid stockouts and reduce tied-up capital.
+
+---
+
+## Flagship Systems & Case Studies (Accurate Classifications)
+
+1. **HyreFast Intelligence Architecture** `[Case Study / Architectural Prototype]`:
+   - Full-stack AI recruiting engine with LangGraph, Neo4j, FastAPI, Redis, and MCP server.
    - Normalized 12,000+ candidate skills across 40+ taxonomy dimensions with self-healing ingestion loops.
-2. **Zovia Inventory Forecasting Engine**:
-   - ERP-integrated intermittent demand forecasting engine with Monte Carlo simulations and automated reorder triggers.
-3. **MediFlow & Clinical MCP Assistant**:
+2. **Zovia Inventory Forecasting Engine** `[Manufacturing ERP Case Study]`:
+   - ERP-integrated intermittent demand forecasting engine with TSB modeling, Monte Carlo simulations, and automated reorder triggers.
+3. **MediFlow & Clinical MCP Assistant** `[Healthcare AI Research & Architecture Prototype]`:
    - LangGraph multi-agent clinical assistant with hybrid FAISS RAG, LangSmith observability, and authenticated MCP tool execution.
-4. **Alpine 3D Mountain Platform (WSM AI SYS)**:
-   - Zero-dependency procedural 3D Himalayan WebGL mountain engine with real-time topographic contour shaders and fluid scroll flight physics.
+4. **Himalayan Living Tree & Mountain Engine** `[Live Core Platform]`:
+   - Zero-dependency procedural 3D Himalayan WebGL engine with 8 seasonal atmospheric palettes, PBR leaf venation shaders, and 60 FPS hardware rendering.
 
 ---
 
@@ -62,7 +97,7 @@
 ---
 
 ## Contact & Consultation Channels
-- **Inquiry & Project Estimates**: https://wsmaisys.github.io/#contact
+- **Primary WhatsApp Quick Connect**: +91 7253923415 (https://wa.me/917253923415)
 - **Direct Email**: wsmaisys@gmail.com
-- **Direct Phone / WhatsApp**: +91 7253923415
+- **Project Inquiry Form**: https://wsmaisys.github.io/#contact
 - **Full LLM Reference**: https://wsmaisys.github.io/llms-full.txt

@@ -36,4 +36,4 @@ python -m http.server 8000
 - **Email**: wsmaisys@gmail.com
 - **Phone / WhatsApp**: +91 7253923415
 - **Live Platform**: https://wsmaisys.github.io/
-- **Personal Portfolio**: https://waseemmansari.github.io/
+- **Personal Portfolio**: https://wsmaisys.github.io/waseemmansari.github.io/
